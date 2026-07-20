@@ -45,8 +45,8 @@ I specialize in bridging the gap between business strategy, system architecture,
 
 This repository (`nmtrucworking/nmtrucworking`) contains the source code for my **Bilingual Personal Portfolio Website** built with Next.js App Router, Tailwind CSS, and JSON Schema Data Validation.
 
-- 📧 **Direct Email:** [hello@jin-systems.dev](mailto:hello@jin-systems.dev)
-- 💼 **LinkedIn:** [linkedin.com/in/jin-systems](https://www.linkedin.com/in/jin-systems)
+- 📧 **Direct Email:** [hello@jin-systems.dev](mailto:nmtruc.work@gmail.com)
+- 💼 **LinkedIn:** [linkedin.com/in/jin-systems](https://www.linkedin.com/in/minh-truc-nguyen/)
 - 🐙 **GitHub:** [@nmtrucworking](https://github.com/nmtrucworking)
 
 <details>
