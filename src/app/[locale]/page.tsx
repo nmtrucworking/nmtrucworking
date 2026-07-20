@@ -1,11 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Locale, loadMessages } from '@/content/load';
 import { getProfile, getFeaturedProjects } from '@/content/selectors';
+import { ProtectedPortrait } from '@/components/brand/ProtectedPortrait';
 import { SignalFlow } from '@/components/brand/SignalFlow';
 import { ArrowRight, CheckCircle2, Cpu, Database, FileCode, Layers, LineChart } from 'lucide-react';
-import nmtrucImg from '@/asset/img/nmtruc.png';
 
 interface HomePageProps {
   params: { locale: string };
@@ -96,12 +95,8 @@ export default function HomePage({ params }: HomePageProps) {
               <span className="home-portrait-node home-portrait-node-three" />
             </div>
 
-            <Image
-              src={nmtrucImg}
+            <ProtectedPortrait
               alt="Nguyễn Minh Trúc"
-              priority
-              sizes="(max-width: 767px) 92vw, (max-width: 1023px) 45vw, 40vw"
-              className="home-hero-portrait"
             />
           </div>
         </div>

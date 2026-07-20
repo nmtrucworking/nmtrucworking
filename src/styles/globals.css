@@ -214,6 +214,9 @@
   max-width: 112%;
   object-fit: contain;
   object-position: right bottom;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
   opacity: 0;
   transform: translateY(22px);
   animation: home-hero-portrait-in 720ms 80ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
