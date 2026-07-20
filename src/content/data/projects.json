@@ -441,56 +441,233 @@
     },
     {
       "id": "pronaflow",
-      "title": "PronaFlow",
-      "category": "Web Application",
-      "role": "Full-stack Developer",
+      "slug": "pronaflow",
+      "status": "published",
+      "stage": "prototype",
+      "visibility": "public",
+      "featured": false,
+      "order": 5,
+      "yearStart": 2026,
+      "yearEnd": null,
+      "domains": ["project-management", "ai-ml"],
+      "roles": {
+        "primary": "SA",
+        "secondary": ["PRODUCT"]
+      },
+      "capabilities": ["system-architecture", "full-stack-development", "data-modeling"],
       "technologies": [
-        "Python",
-        "React",
-        "Vite",
-        "Electron",
-        "PostgreSQL",
-        "Supabase"
+        "python",
+        "react",
+        "vite",
+        "electron",
+        "postgresql",
+        "supabase"
       ],
-      "description": "Nền tảng quản lý dự án tích hợp trí tuệ nhân tạo (AI-enhanced project management platform), hỗ trợ tối ưu hóa quy trình làm việc và theo dõi tiến độ.",
-      "achievements": [
-        "Xây dựng kiến trúc hệ thống với backend bằng Python và frontend bằng React/Vite.",
-        "Thiết lập liên kết cơ sở dữ liệu và xây dựng tài liệu cấu trúc thư mục (folder documentation).",
-        "Triển khai cấu trúc monorepo và Git submodules để quản lý mã nguồn đa thành phần."
-      ]
+      "team": {
+        "type": "solo",
+        "size": 1
+      },
+      "localized": {
+        "en": {
+          "title": "PronaFlow",
+          "summary": "An AI-enhanced project management platform that streamlines workflows and progress tracking.",
+          "contribution": "Built the Python backend and React/Vite frontend, connected the database, documented the folder structure, and established a monorepo with Git submodules.",
+          "seoTitle": "PronaFlow Project Management Platform — Jin",
+          "seoDescription": "A full-stack AI-enhanced project management platform built with Python, React, Electron, PostgreSQL, and Supabase."
+        },
+        "vi": {
+          "title": "PronaFlow",
+          "summary": "Nền tảng quản lý dự án tích hợp trí tuệ nhân tạo, hỗ trợ tối ưu hóa quy trình làm việc và theo dõi tiến độ.",
+          "contribution": "Xây dựng backend Python và frontend React/Vite, kết nối cơ sở dữ liệu, lập tài liệu cấu trúc thư mục và triển khai monorepo với Git submodules.",
+          "seoTitle": "Nền tảng Quản lý Dự án PronaFlow — Jin",
+          "seoDescription": "Nền tảng quản lý dự án tích hợp AI được xây dựng với Python, React, Electron, PostgreSQL và Supabase."
+        }
+      },
+      "assets": [],
+      "links": [],
+      "caseStudy": [
+        {
+          "id": "architecture",
+          "type": "architecture",
+          "localized": {
+            "en": {
+              "heading": "Cross-Platform System Architecture",
+              "body": "Designed a Python backend and React/Vite frontend with Electron desktop packaging and PostgreSQL/Supabase persistence."
+            },
+            "vi": {
+              "heading": "Kiến trúc Hệ thống Đa nền tảng",
+              "body": "Xây dựng kiến trúc backend bằng Python và frontend bằng React/Vite, đóng gói ứng dụng desktop với Electron và lưu trữ trên PostgreSQL/Supabase."
+            }
+          }
+        },
+        {
+          "id": "repository-structure",
+          "type": "process",
+          "localized": {
+            "en": {
+              "heading": "Repository and Data Foundation",
+              "body": "Connected the data layer, documented the folder structure, and organized multiple components through a monorepo and Git submodules."
+            },
+            "vi": {
+              "heading": "Nền tảng Kho mã nguồn và Dữ liệu",
+              "body": "Thiết lập liên kết cơ sở dữ liệu, xây dựng tài liệu cấu trúc thư mục và tổ chức các thành phần bằng monorepo cùng Git submodules."
+            }
+          }
+        }
+      ],
+      "metrics": []
     },
     {
       "id": "mtec-operations-hub",
-      "title": "MTEC Operations Hub",
-      "category": "Management System",
-      "role": "Founder & Director",
+      "slug": "mtec-operations-hub",
+      "status": "published",
+      "stage": "production",
+      "visibility": "public",
+      "featured": false,
+      "order": 6,
+      "yearStart": 2025,
+      "yearEnd": null,
+      "domains": ["operations", "management-system"],
+      "roles": {
+        "primary": "PRODUCT",
+        "secondary": ["SA"]
+      },
+      "capabilities": ["product-leadership", "deployment", "authentication"],
       "technologies": [
-        "Vercel",
-        "Render",
-        "React",
-        "Node.js"
+        "vercel",
+        "render",
+        "react",
+        "nodejs"
       ],
-      "description": "Hệ thống quản lý trực tuyến dành cho Câu lạc bộ Truyền thông và Công nghệ (MTEC), phục vụ việc quản lý nhân sự và quy trình vận hành nội bộ.",
-      "achievements": [
-        "Triển khai dịch vụ backend trên Render và giao diện người dùng trên Vercel.",
-        "Cấu hình biến môi trường (environment variables) cho môi trường production.",
-        "Xử lý luồng xác thực người dùng thực tế và khắc phục các lỗi truy xuất dữ liệu trực tiếp (live data-fetching)."
-      ]
+      "team": {
+        "type": "team",
+        "size": 2
+      },
+      "localized": {
+        "en": {
+          "title": "MTEC Operations Hub",
+          "summary": "An online management system for MTEC's people operations and internal workflows.",
+          "contribution": "Led the product, deployed the backend and frontend, configured the production environment, and resolved authentication and live data-fetching issues.",
+          "seoTitle": "MTEC Operations Hub — Jin",
+          "seoDescription": "A production management system for MTEC personnel and internal operations, deployed on Render and Vercel."
+        },
+        "vi": {
+          "title": "MTEC Operations Hub",
+          "summary": "Hệ thống quản lý trực tuyến dành cho Câu lạc bộ Truyền thông và Công nghệ, phục vụ quản lý nhân sự và quy trình vận hành nội bộ.",
+          "contribution": "Dẫn dắt sản phẩm, triển khai backend và frontend, cấu hình môi trường production, đồng thời xử lý luồng xác thực và truy xuất dữ liệu trực tiếp.",
+          "seoTitle": "Hệ thống Vận hành MTEC — Jin",
+          "seoDescription": "Hệ thống quản lý nhân sự và vận hành nội bộ MTEC được triển khai trên Render và Vercel."
+        }
+      },
+      "assets": [],
+      "links": [],
+      "caseStudy": [
+        {
+          "id": "deployment",
+          "type": "process",
+          "localized": {
+            "en": {
+              "heading": "Production Deployment",
+              "body": "Deployed the Node.js backend on Render and the React frontend on Vercel, including production environment configuration."
+            },
+            "vi": {
+              "heading": "Triển khai Production",
+              "body": "Triển khai backend Node.js trên Render và frontend React trên Vercel, bao gồm cấu hình biến môi trường production."
+            }
+          }
+        },
+        {
+          "id": "authentication",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "Authentication and Live Data Reliability",
+              "body": "Implemented real user authentication flows and resolved production issues affecting live data retrieval."
+            },
+            "vi": {
+              "heading": "Độ tin cậy của Xác thực và Dữ liệu Trực tiếp",
+              "body": "Xử lý luồng xác thực người dùng thực tế và khắc phục các lỗi production ảnh hưởng đến việc truy xuất dữ liệu trực tiếp."
+            }
+          }
+        }
+      ],
+      "metrics": []
     },
     {
       "id": "lotus-seed-sorting",
-      "title": "Lotus Seed Sorting System",
-      "category": "Computer Vision / Hackathon",
-      "role": "Project Coordinator",
+      "slug": "lotus-seed-sorting",
+      "status": "published",
+      "stage": "academic",
+      "visibility": "public",
+      "featured": false,
+      "order": 7,
+      "yearStart": 2025,
+      "yearEnd": 2025,
+      "domains": ["ai-ml", "agritech"],
+      "roles": {
+        "primary": "PRODUCT",
+        "secondary": ["DS"]
+      },
+      "capabilities": ["project-coordination", "computer-vision", "commercialization-strategy"],
       "technologies": [
-        "Python",
-        "Computer Vision",
-        "Machine Learning"
+        "python",
+        "computer-vision",
+        "machine-learning"
       ],
-      "description": "Mô hình thị giác máy tính phục vụ phân loại nguyên liệu nông sản (hạt sen) thành 3 cấp độ, được phát triển trong khuôn khổ cuộc thi Hackathon sinh viên.",
-      "achievements": [
-        "Điều phối nhóm đa chuyên môn (cross-functional team) để phát triển giải pháp công nghệ.",
-        "Tổng hợp tài liệu tổng quan kỹ thuật và xây dựng chiến lược thương mại hóa cho hệ thống phân loại."
+      "team": {
+        "type": "team",
+        "size": 3
+      },
+      "localized": {
+        "en": {
+          "title": "Lotus Seed Sorting System",
+          "summary": "A computer-vision model that grades lotus seeds into three quality levels, developed for a student hackathon.",
+          "contribution": "Coordinated a cross-functional team, consolidated the technical research, and developed the system's commercialization strategy.",
+          "seoTitle": "Lotus Seed Sorting Computer Vision System — Jin",
+          "seoDescription": "A student hackathon project using computer vision and machine learning to grade lotus seeds into three quality levels."
+        },
+        "vi": {
+          "title": "Hệ thống Phân loại Hạt sen",
+          "summary": "Mô hình thị giác máy tính phân loại hạt sen thành ba cấp độ, được phát triển trong khuôn khổ cuộc thi hackathon sinh viên.",
+          "contribution": "Điều phối nhóm đa chuyên môn, tổng hợp tài liệu kỹ thuật và xây dựng chiến lược thương mại hóa cho hệ thống.",
+          "seoTitle": "Hệ thống Thị giác Máy tính Phân loại Hạt sen — Jin",
+          "seoDescription": "Dự án hackathon sinh viên ứng dụng thị giác máy tính và học máy để phân loại hạt sen thành ba cấp độ."
+        }
+      },
+      "assets": [],
+      "links": [],
+      "caseStudy": [
+        {
+          "id": "coordination",
+          "type": "process",
+          "localized": {
+            "en": {
+              "heading": "Cross-Functional Project Coordination",
+              "body": "Coordinated a multidisciplinary student team to develop a computer-vision approach for three-level lotus seed grading."
+            },
+            "vi": {
+              "heading": "Điều phối Dự án Đa chuyên môn",
+              "body": "Điều phối nhóm sinh viên đa chuyên môn để phát triển giải pháp thị giác máy tính phân loại hạt sen thành ba cấp độ."
+            }
+          }
+        },
+        {
+          "id": "commercialization",
+          "type": "reflection",
+          "localized": {
+            "en": {
+              "heading": "Technical Review and Commercialization",
+              "body": "Consolidated the technical landscape and translated the prototype into an initial commercialization strategy."
+            },
+            "vi": {
+              "heading": "Tổng quan Kỹ thuật và Thương mại hóa",
+              "body": "Tổng hợp tài liệu tổng quan kỹ thuật và chuyển hóa nguyên mẫu thành chiến lược thương mại hóa ban đầu."
+            }
+          }
+        }
+      ],
+      "metrics": [
+        {"label": "Quality Grades", "value": "3 Levels"}
       ]
     }
 
