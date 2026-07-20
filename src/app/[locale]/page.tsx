@@ -28,42 +28,36 @@ export default function HomePage({ params }: HomePageProps) {
   return (
     <div className="space-y-20 py-6">
       {/* Hero Viewport */}
-      <section className="space-y-8 pt-4 pb-8">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-graphite text-canvas text-xs font-mono">
-            <span className="w-2 h-2 rounded-full bg-signal animate-pulse-slow" />
-            <span>{profile.availabilityLabel}</span>
-          </div>
-          <span className="mono-label text-muted text-xs">
-            {profile.locationText}
-          </span>
-        </div>
+      <section className="home-hero">
+        <div className="home-hero-stage">
+          <div className="home-hero-copy">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full bg-graphite px-3 py-1 font-mono text-xs text-canvas">
+              <span className="h-2 w-2 rounded-full bg-signal animate-pulse-slow" />
+              <span>{profile.availabilityLabel}</span>
+            </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
-          <div className="lg:col-span-7 space-y-6">
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ink leading-[1.08]">
+            <h1 className="home-hero-title font-display font-bold text-ink">
               {locale === 'en' ? (
                 <>
-                  Systems in Motion.<br />
-                  <span className="text-muted font-normal underline decoration-signal decoration-4 underline-offset-8">
-                    Evidence-Driven
-                  </span> Architecture & Data.
+                  <span className="block">Systems in Motion.</span>
+                  <span className="home-hero-emphasis block text-muted font-normal">Evidence-Driven</span>
+                  <span className="block">Architecture</span>
+                  <span className="block">&amp; Data.</span>
                 </>
               ) : (
                 <>
-                  Hệ thống vận hành.<br />
-                  <span className="text-muted font-normal underline decoration-signal decoration-4 underline-offset-8">
-                    Kiến trúc & Dữ liệu
-                  </span> dựa trên minh chứng.
+                  <span className="block">Hệ thống vận hành.</span>
+                  <span className="home-hero-emphasis block text-muted font-normal">Kiến trúc &amp; Dữ liệu</span>
+                  <span className="block">dựa trên minh chứng.</span>
                 </>
               )}
             </h1>
 
-            <p className="text-xl sm:text-2xl text-muted font-light leading-relaxed max-w-2xl">
+            <p className="home-hero-description max-w-2xl font-light leading-relaxed text-muted">
               {profile.positioningText}
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-1 sm:gap-4">
               <Link
                 href={`/${locale}/work`}
                 className="px-6 py-3.5 rounded-lg bg-ink text-canvas font-semibold text-sm hover:bg-graphite hover:shadow-lg transition-all flex items-center gap-2 group"
@@ -88,36 +82,32 @@ export default function HomePage({ params }: HomePageProps) {
             </div>
           </div>
 
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative group w-full max-w-sm">
-              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-graphite via-line to-graphite opacity-30 blur group-hover:opacity-50 transition-all duration-500" />
-              <div className="relative rounded-2xl border border-line/80 bg-paper p-3 shadow-xl space-y-3">
-                <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-canvas">
-                  <Image
-                    src={nmtrucImg}
-                    alt={profile.displayName || 'Nguyen Minh Truc'}
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 360px"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 ring-1 ring-inset ring-ink/10 rounded-xl pointer-events-none" />
-                </div>
-                <div className="flex items-center justify-between px-1 text-xs font-mono text-muted">
-                  <span className="truncate">OPERATOR // NMTRUC</span>
-                  <span className="flex items-center gap-1.5 shrink-0">
-                    <span className="w-1.5 h-1.5 rounded-full bg-signal" />
-                    <span>SYS_ACTIVE</span>
-                  </span>
-                </div>
-              </div>
+          <div className="home-hero-visual">
+            <div className="home-hero-location mono-label text-muted" aria-label={profile.locationText}>
+              <span>{profile.locationText}</span>
+              <span className="h-2 w-2 rounded-full bg-signal" aria-hidden="true" />
             </div>
+
+            <div className="home-portrait-effects" aria-hidden="true">
+              <span className="home-portrait-orbit home-portrait-orbit-primary" />
+              <span className="home-portrait-orbit home-portrait-orbit-secondary" />
+              <span className="home-portrait-node home-portrait-node-one" />
+              <span className="home-portrait-node home-portrait-node-two" />
+              <span className="home-portrait-node home-portrait-node-three" />
+            </div>
+
+            <Image
+              src={nmtrucImg}
+              alt="Nguyễn Minh Trúc"
+              priority
+              sizes="(max-width: 767px) 92vw, (max-width: 1023px) 45vw, 40vw"
+              className="home-hero-portrait"
+            />
           </div>
         </div>
-      </section>
 
-      {/* Signal Flow Motif Banner */}
-      <SignalFlow locale={locale} />
+        <SignalFlow locale={locale} compact />
+      </section>
 
       {/* Role Lenses Section */}
       <section className="space-y-8">

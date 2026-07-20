@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
     <header className="sticky top-0 z-50 w-full border-b border-line/60 bg-canvas/90 backdrop-blur-md transition-colors">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Brand Mark */}
-        <Link href={`/${locale}`} className="group flex items-center gap-3">
+        <Link href={`/${locale}`} className="group flex shrink-0 items-center gap-3">
           <div className="w-8 h-8 rounded bg-graphite flex items-center justify-center text-signal font-mono font-bold text-sm group-hover:scale-105 transition-transform">
             J
           </div>
@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
         </Link>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-6 sm:gap-8">
+        <nav className="min-w-0 flex items-center gap-6 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-8">
           {navItems.map((item) => {
             const isActive = pathname?.startsWith(item.href);
             return (
