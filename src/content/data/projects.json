@@ -438,6 +438,61 @@
         {"label": "Cart Abandonment Drop", "value": "-18%"},
         {"label": "Average Order Value", "value": "+12%"}
       ]
+    },
+    {
+      "id": "pronaflow",
+      "title": "PronaFlow",
+      "category": "Web Application",
+      "role": "Full-stack Developer",
+      "technologies": [
+        "Python",
+        "React",
+        "Vite",
+        "Electron",
+        "PostgreSQL",
+        "Supabase"
+      ],
+      "description": "Nền tảng quản lý dự án tích hợp trí tuệ nhân tạo (AI-enhanced project management platform), hỗ trợ tối ưu hóa quy trình làm việc và theo dõi tiến độ.",
+      "achievements": [
+        "Xây dựng kiến trúc hệ thống với backend bằng Python và frontend bằng React/Vite.",
+        "Thiết lập liên kết cơ sở dữ liệu và xây dựng tài liệu cấu trúc thư mục (folder documentation).",
+        "Triển khai cấu trúc monorepo và Git submodules để quản lý mã nguồn đa thành phần."
+      ]
+    },
+    {
+      "id": "mtec-operations-hub",
+      "title": "MTEC Operations Hub",
+      "category": "Management System",
+      "role": "Founder & Director",
+      "technologies": [
+        "Vercel",
+        "Render",
+        "React",
+        "Node.js"
+      ],
+      "description": "Hệ thống quản lý trực tuyến dành cho Câu lạc bộ Truyền thông và Công nghệ (MTEC), phục vụ việc quản lý nhân sự và quy trình vận hành nội bộ.",
+      "achievements": [
+        "Triển khai dịch vụ backend trên Render và giao diện người dùng trên Vercel.",
+        "Cấu hình biến môi trường (environment variables) cho môi trường production.",
+        "Xử lý luồng xác thực người dùng thực tế và khắc phục các lỗi truy xuất dữ liệu trực tiếp (live data-fetching)."
+      ]
+    },
+    {
+      "id": "lotus-seed-sorting",
+      "title": "Lotus Seed Sorting System",
+      "category": "Computer Vision / Hackathon",
+      "role": "Project Coordinator",
+      "technologies": [
+        "Python",
+        "Computer Vision",
+        "Machine Learning"
+      ],
+      "description": "Mô hình thị giác máy tính phục vụ phân loại nguyên liệu nông sản (hạt sen) thành 3 cấp độ, được phát triển trong khuôn khổ cuộc thi Hackathon sinh viên.",
+      "achievements": [
+        "Điều phối nhóm đa chuyên môn (cross-functional team) để phát triển giải pháp công nghệ.",
+        "Tổng hợp tài liệu tổng quan kỹ thuật và xây dựng chiến lược thương mại hóa cho hệ thống phân loại."
+      ]
     }
+
   ]
 }
