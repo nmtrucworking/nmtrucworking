@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Locale, loadMessages } from '@/content/load';
 import { getProfile, getFeaturedProjects } from '@/content/selectors';
 import { SignalFlow } from '@/components/brand/SignalFlow';
 import { ArrowRight, CheckCircle2, Cpu, Database, FileCode, Layers, LineChart } from 'lucide-react';
+import nmtrucImg from '@/asset/img/nmtruc.png';
 
 interface HomePageProps {
   params: { locale: string };
@@ -37,51 +39,79 @@ export default function HomePage({ params }: HomePageProps) {
           </span>
         </div>
 
-        <div className="space-y-6 max-w-5xl">
-          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-ink leading-[1.08]">
-            {locale === 'en' ? (
-              <>
-                Systems in Motion.<br />
-                <span className="text-muted font-normal underline decoration-signal decoration-4 underline-offset-8">
-                  Evidence-Driven
-                </span> Architecture & Data.
-              </>
-            ) : (
-              <>
-                Hệ thống vận hành.<br />
-                <span className="text-muted font-normal underline decoration-signal decoration-4 underline-offset-8">
-                  Kiến trúc & Dữ liệu
-                </span> dựa trên minh chứng.
-              </>
-            )}
-          </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+          <div className="lg:col-span-7 space-y-6">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ink leading-[1.08]">
+              {locale === 'en' ? (
+                <>
+                  Systems in Motion.<br />
+                  <span className="text-muted font-normal underline decoration-signal decoration-4 underline-offset-8">
+                    Evidence-Driven
+                  </span> Architecture & Data.
+                </>
+              ) : (
+                <>
+                  Hệ thống vận hành.<br />
+                  <span className="text-muted font-normal underline decoration-signal decoration-4 underline-offset-8">
+                    Kiến trúc & Dữ liệu
+                  </span> dựa trên minh chứng.
+                </>
+              )}
+            </h1>
 
-          <p className="text-xl sm:text-2xl text-muted font-light leading-relaxed max-w-3xl">
-            {profile.positioningText}
-          </p>
+            <p className="text-xl sm:text-2xl text-muted font-light leading-relaxed max-w-2xl">
+              {profile.positioningText}
+            </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <Link
-              href={`/${locale}/work`}
-              className="px-6 py-3.5 rounded-lg bg-ink text-canvas font-semibold text-sm hover:bg-graphite hover:shadow-lg transition-all flex items-center gap-2 group"
-            >
-              <span>{messages.hero.ctaWork}</span>
-              <ArrowRight className="w-4 h-4 text-signal group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <Link
+                href={`/${locale}/work`}
+                className="px-6 py-3.5 rounded-lg bg-ink text-canvas font-semibold text-sm hover:bg-graphite hover:shadow-lg transition-all flex items-center gap-2 group"
+              >
+                <span>{messages.hero.ctaWork}</span>
+                <ArrowRight className="w-4 h-4 text-signal group-hover:translate-x-1 transition-transform" />
+              </Link>
 
-            <Link
-              href={`/${locale}/contact`}
-              className="px-6 py-3.5 rounded-lg border border-line bg-paper text-ink font-semibold text-sm hover:bg-canvas hover:border-ink transition-all"
-            >
-              {messages.hero.ctaContact}
-            </Link>
+              <Link
+                href={`/${locale}/contact`}
+                className="px-6 py-3.5 rounded-lg border border-line bg-paper text-ink font-semibold text-sm hover:bg-canvas hover:border-ink transition-all"
+              >
+                {messages.hero.ctaContact}
+              </Link>
 
-            <Link
-              href={`/${locale}/cv`}
-              className="px-6 py-3.5 rounded-lg border border-line/60 text-muted font-mono text-xs hover:text-ink hover:border-ink transition-all"
-            >
-              {messages.nav.cv} →
-            </Link>
+              <Link
+                href={`/${locale}/cv`}
+                className="px-6 py-3.5 rounded-lg border border-line/60 text-muted font-mono text-xs hover:text-ink hover:border-ink transition-all"
+              >
+                {messages.nav.cv} →
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative group w-full max-w-sm">
+              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-graphite via-line to-graphite opacity-30 blur group-hover:opacity-50 transition-all duration-500" />
+              <div className="relative rounded-2xl border border-line/80 bg-paper p-3 shadow-xl space-y-3">
+                <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-canvas">
+                  <Image
+                    src={nmtrucImg}
+                    alt={profile.displayName || 'Nguyen Minh Truc'}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 360px"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-ink/10 rounded-xl pointer-events-none" />
+                </div>
+                <div className="flex items-center justify-between px-1 text-xs font-mono text-muted">
+                  <span className="truncate">OPERATOR // NMTRUC</span>
+                  <span className="flex items-center gap-1.5 shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-signal" />
+                    <span>SYS_ACTIVE</span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
