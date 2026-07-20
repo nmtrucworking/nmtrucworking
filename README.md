@@ -1,12 +1,20 @@
-# JIN — Systems in Motion (Bilingual Portfolio)
+# nmtrucworking — Portfolio (JIN / Systems in Motion)
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-nmtrucworking%2Fnmtrucworking-181717?style=flat-square&logo=github)](https://github.com/nmtrucworking/nmtrucworking)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
 > **Information Systems × Data × Product**  
-> A high-performance, bilingual (EN/VI) personal portfolio website designed for evidence-driven showcase across Data Analysis, Data Science, Business Analysis, System Architecture, and Product Management roles.
+> Personal bilingual (EN/VI) portfolio repository by [@nmtrucworking](https://github.com/nmtrucworking) — showcase across Data Analysis, Data Science, Business Analysis, System Architecture, and Product Management roles.
 
 ---
 
 ## 🌟 Brand & Visual Principles
 
+- **Working Brand:** **JIN / Systems in Motion**
+- **Developer & GitHub Handle:** [@nmtrucworking](https://github.com/nmtrucworking)
+- **Repository:** [`nmtrucworking/nmtrucworking`](https://github.com/nmtrucworking/nmtrucworking)
 - **Visual Concept:** *Systems in Motion* — Editorial typography, controlled asymmetry, and high-contrast color fields.
 - **Color Tokens:**
   - **Canvas:** `#F2F0E9` (Primary light background)
@@ -44,7 +52,7 @@ The portfolio provides dedicated filters and evidence-based case studies across 
 ## 📂 Directory Structure
 
 ```text
-jin-portfolio/
+nmtrucworking/
 ├── scripts/
 │   └── validate-data.mjs          # AJV Schema validator script
 ├── src/
@@ -86,8 +94,10 @@ jin-portfolio/
 
 ## ⚙️ Getting Started
 
-### 1. Install Dependencies
+### 1. Clone & Install Dependencies
 ```bash
+git clone git@github.com:nmtrucworking/nmtrucworking.git
+cd nmtrucworking
 npm install
 ```
 
@@ -111,4 +121,4 @@ npm run build
 
 ## 📜 License & Attribution
 
-Built for **JIN / Systems in Motion**. Designed and implemented following `JIN_Portfolio_Implementation_Docs`.
+Maintained by [@nmtrucworking](https://github.com/nmtrucworking) for **JIN / Systems in Motion**. Designed and implemented following `JIN_Portfolio_Implementation_Docs`.
