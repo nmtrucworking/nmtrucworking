@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/profile.schema.json",
+  "title": "Portfolio Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "displayName", "positioning", "descriptor", "location", "availability", "targetRoles", "capabilities", "cv", "contact"],
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "vi"],
+      "properties": {
+        "en": {"type": "string", "minLength": 1},
+        "vi": {"type": "string", "minLength": 1}
+      }
+    },
+    "role": {"enum": ["DA", "DS", "BA", "SA", "PRODUCT"]}
+  },
+  "properties": {
+    "$schema": {"type": "string"},
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+    "displayName": {"type": "string", "minLength": 1},
+    "positioning": {"$ref": "#/$defs/localizedString"},
+    "descriptor": {"type": "string", "minLength": 1},
+    "location": {"$ref": "#/$defs/localizedString"},
+    "availability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "intents", "label"],
+      "properties": {
+        "status": {"enum": ["open", "selective", "unavailable"]},
+        "intents": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"enum": ["employment", "freelance", "collaboration"]}
+        },
+        "label": {"$ref": "#/$defs/localizedString"}
+      }
+    },
+    "targetRoles": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/role"}
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "roles"],
+        "properties": {
+          "id": {"type": "string"},
+          "roles": {"type": "array", "items": {"$ref": "#/$defs/role"}}
+        }
+      }
+    },
+    "cv": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["updatedAt", "files"],
+      "properties": {
+        "updatedAt": {"type": "string", "format": "date"},
+        "files": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["en", "vi"],
+          "properties": {
+            "en": {"type": "string"},
+            "vi": {"type": "string"}
+          }
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["email", "linkedin", "github"],
+      "properties": {
+        "email": {"type": "string", "format": "email"},
+        "linkedin": {"type": "string", "format": "uri"},
+        "github": {"type": "string", "format": "uri"},
+        "zalo": {"type": "string", "format": "uri"}
+      }
+    }
+  }
+}

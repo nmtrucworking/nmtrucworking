@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "cv": "CV"
+  },
+  "actions": {
+    "viewWork": "View selected work",
+    "viewProject": "View case study",
+    "downloadCv": "Download CV",
+    "clearFilters": "Clear filters",
+    "contact": "Start a conversation"
+  },
+  "filters": {
+    "role": "Role",
+    "domain": "Domain",
+    "stage": "Stage",
+    "noResults": "No projects match the selected filters."
+  }
+}

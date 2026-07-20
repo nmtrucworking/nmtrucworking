@@ -1,0 +1,86 @@
+{
+  "$schema": "../schemas/projects.schema.json",
+  "projects": [
+    {
+      "id": "operations-hub",
+      "slug": "operations-hub",
+      "status": "published",
+      "stage": "prototype",
+      "visibility": "public",
+      "featured": true,
+      "order": 1,
+      "yearStart": 2026,
+      "yearEnd": null,
+      "domains": ["enterprise-saas", "operations"],
+      "roles": {
+        "primary": "SA",
+        "secondary": ["BA", "PRODUCT"]
+      },
+      "capabilities": ["multi-tenancy", "requirements", "system-architecture"],
+      "technologies": ["microservices", "rest-api", "relational-data-model"],
+      "team": {
+        "type": "team",
+        "size": 3
+      },
+      "localized": {
+        "en": {
+          "title": "Operations Hub",
+          "summary": "A tenant-first SaaS architecture for multi-organization operations, designed around domain services, membership, roles and data isolation.",
+          "contribution": "Defined the use-case baseline, tenant model, role constraints, business rules and service boundaries.",
+          "seoTitle": "Operations Hub Case Study — Jin",
+          "seoDescription": "System analysis and tenant-first SaaS architecture case study covering roles, memberships, business rules and domain services."
+        },
+        "vi": {
+          "title": "Operations Hub",
+          "summary": "Kiến trúc SaaS đa tổ chức theo hướng tenant-first, được thiết kế quanh các dịch vụ miền, membership, vai trò và cô lập dữ liệu.",
+          "contribution": "Xác định baseline use case, mô hình tenant, ràng buộc vai trò, business rule và ranh giới dịch vụ.",
+          "seoTitle": "Nghiên cứu tình huống Operations Hub — Jin",
+          "seoDescription": "Nghiên cứu phân tích hệ thống và kiến trúc SaaS tenant-first về vai trò, membership, business rule và dịch vụ miền."
+        }
+      },
+      "assets": [
+        {
+          "id": "operations-hub-hero",
+          "src": "/media/projects/operations-hub/hero.webp",
+          "type": "image",
+          "width": 1600,
+          "height": 1000,
+          "purpose": "hero",
+          "status": "prototype",
+          "alt": {
+            "en": "Operations Hub tenant and service architecture overview",
+            "vi": "Tổng quan kiến trúc tenant và dịch vụ của Operations Hub"
+          }
+        }
+      ],
+      "links": [],
+      "caseStudy": [
+        {
+          "id": "context",
+          "type": "lead",
+          "localized": {
+            "en": {"heading": "Context", "body": "The project reframed an earlier concept into a multi-organization operations platform with explicit tenant isolation."},
+            "vi": {"heading": "Bối cảnh", "body": "Dự án tái định hướng một ý tưởng trước đó thành nền tảng vận hành đa tổ chức với yêu cầu cô lập tenant rõ ràng."}
+          }
+        },
+        {
+          "id": "decision-tenant",
+          "type": "decision",
+          "localized": {
+            "en": {"heading": "Tenant-first model", "body": "A user may belong to multiple organizations through memberships, with different roles in each organization."},
+            "vi": {"heading": "Mô hình tenant-first", "body": "Một người dùng có thể thuộc nhiều tổ chức thông qua membership và có vai trò khác nhau tại từng tổ chức."}
+          }
+        },
+        {
+          "id": "reflection",
+          "type": "reflection",
+          "localized": {
+            "en": {"heading": "Current limitation", "body": "The architecture is documented but production scalability and operational behavior remain to be validated."},
+            "vi": {"heading": "Giới hạn hiện tại", "body": "Kiến trúc đã được tài liệu hóa nhưng khả năng mở rộng và hành vi vận hành thực tế chưa được kiểm chứng trên production."}
+          }
+        }
+      ],
+      "metrics": []
+    }
+  ]
+}

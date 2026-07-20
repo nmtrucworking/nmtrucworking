@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "work": "Dự án",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "cv": "Hồ sơ / CV",
+    "home": "Trang chủ"
+  },
+  "hero": {
+    "badge": "Hệ thống vận hành (Systems in Motion)",
+    "tagline": "Hệ thống Thông tin × Dữ liệu × Sản phẩm",
+    "ctaWork": "Khám phá Nghiên cứu tình huống",
+    "ctaContact": "Liên hệ làm việc",
+    "availability": "Sẵn sàng cho các vị trí & dự án phù hợp"
+  },
+  "roles": {
+    "all": "Tất cả vai trò",
+    "DA": "Chuyên viên Phân tích Dữ liệu (DA)",
+    "DS": "Khoa học Dữ liệu (DS)",
+    "BA": "Phân tích Nghiệp vụ (BA)",
+    "SA": "Phân tích Hệ thống (SA)",
+    "PRODUCT": "Quản lý Sản phẩm (Product)"
+  },
+  "work": {
+    "title": "Dự án & Nghiên cứu Tình huống",
+    "subtitle": "Minh chứng thực tế qua kiến trúc hệ thống, mô hình dự báo, phân tích dữ liệu và chiến lược sản phẩm.",
+    "filterRole": "Lọc theo Vai trò",
+    "filterDomain": "Lọc theo Lĩnh vực",
+    "searchPlaceholder": "Tìm dự án, công nghệ, năng lực...",
+    "viewProject": "Xem chi tiết Case Study",
+    "stage": "Giai đoạn",
+    "year": "Năm",
+    "technologies": "Công nghệ",
+    "capabilities": "Năng lực",
+    "contribution": "Đóng góp chuyên môn",
+    "metrics": "Tác động & Chỉ số chính",
+    "caseStudyTitle": "Nghiên cứu tình huống",
+    "noProjects": "Không tìm thấy dự án nào phù hợp với bộ lọc hiện tại."
+  },
+  "about": {
+    "title": "Về Jin",
+    "subtitle": "Cầu nối giữa yêu cầu kinh doanh và kiến trúc hệ thống hiện đại dựa trên dữ liệu.",
+    "positioningHeading": "Định vị & Triết lý làm việc",
+    "capabilitiesHeading": "Ma trận Năng lực",
+    "methodologyHeading": "Phương pháp luận Hệ thống",
+    "contactHeading": "Kết nối trực tiếp"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Bạn có yêu cầu về hệ thống phức tạp, luồng dữ liệu hoặc chiến lược sản phẩm? Hãy kết nối ngay.",
+    "emailLabel": "Email trực tiếp",
+    "githubLabel": "Không gian GitHub",
+    "linkedinLabel": "Hồ sơ LinkedIn",
+    "formHeading": "Gửi tin nhắn",
+    "name": "Họ và tên",
+    "email": "Địa chỉ Email",
+    "message": "Nội dung trao đổi / Dự án",
+    "send": "Gửi thông tin",
+    "success": "Đã gửi thông tin thành công! Tôi sẽ phản hồi trong vòng 24 giờ.",
+    "error": "Có lỗi xảy ra. Vui lòng gửi email trực tiếp đến hello@jin-systems.dev."
+  },
+  "cv": {
+    "title": "Hồ sơ Năng lực (CV)",
+    "subtitle": "Bản tổng hợp chi tiết kinh nghiệm làm việc, năng lực kỹ thuật và quá trình đào tạo.",
+    "downloadEN": "Tải CV tiếng Anh (PDF)",
+    "downloadVI": "Tải CV tiếng Việt (PDF)",
+    "updated": "Cập nhật lần cuối"
+  },
+  "signalFlow": {
+    "input": "ĐẦU VÀO",
+    "interpret": "PHÂN TÍCH",
+    "structure": "CẤU TRÚC",
+    "build": "XÂY DỰNG",
+    "evaluate": "ĐÁNH GIÁ"
+  },
+  "footer": {
+    "rights": "Giữ toàn bộ bản quyền.",
+    "privacy": "Chính sách Bảo mật"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/projects.schema.json",
+  "title": "Portfolio Projects",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["projects"],
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "vi"],
+      "properties": {
+        "en": {"type": "string", "minLength": 1},
+        "vi": {"type": "string", "minLength": 1}
+      }
+    },
+    "role": {"enum": ["DA", "DS", "BA", "SA", "PRODUCT"]},
+    "localeContent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "summary", "contribution", "seoTitle", "seoDescription"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "summary": {"type": "string", "minLength": 1},
+        "contribution": {"type": "string", "minLength": 1},
+        "seoTitle": {"type": "string", "minLength": 1},
+        "seoDescription": {"type": "string", "minLength": 1}
+      }
+    },
+    "caseLocaleContent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["heading", "body"],
+      "properties": {
+        "heading": {"type": "string", "minLength": 1},
+        "body": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "properties": {
+    "$schema": {"type": "string"},
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "slug", "status", "stage", "visibility", "featured", "order", "yearStart", "yearEnd", "domains", "roles", "capabilities", "technologies", "team", "localized", "assets", "links", "caseStudy", "metrics"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "status": {"enum": ["draft", "review", "approved", "published", "archived"]},
+          "stage": {"enum": ["production", "prototype", "concept", "academic", "archived"]},
+          "visibility": {"enum": ["public", "private", "unlisted"]},
+          "featured": {"type": "boolean"},
+          "order": {"type": "integer", "minimum": 0},
+          "yearStart": {"type": "integer", "minimum": 2000, "maximum": 2100},
+          "yearEnd": {"type": ["integer", "null"], "minimum": 2000, "maximum": 2100},
+          "domains": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+          "roles": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["primary", "secondary"],
+            "properties": {
+              "primary": {"$ref": "#/$defs/role"},
+              "secondary": {"type": "array", "maxItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/role"}}
+            }
+          },
+          "capabilities": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+          "technologies": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+          "team": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["type", "size"],
+            "properties": {
+              "type": {"enum": ["solo", "team"]},
+              "size": {"type": "integer", "minimum": 1}
+            }
+          },
+          "localized": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["en", "vi"],
+            "properties": {
+              "en": {"$ref": "#/$defs/localeContent"},
+              "vi": {"$ref": "#/$defs/localeContent"}
+            }
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "src", "type", "width", "height", "purpose", "status", "alt"],
+              "properties": {
+                "id": {"type": "string"},
+                "src": {"type": "string"},
+                "type": {"enum": ["image", "video", "diagram", "document"]},
+                "width": {"type": "integer", "minimum": 1},
+                "height": {"type": "integer", "minimum": 1},
+                "purpose": {"enum": ["hero", "thumbnail", "gallery", "diagram", "og", "artifact"]},
+                "status": {"enum": ["final", "prototype", "concept", "placeholder"]},
+                "alt": {"$ref": "#/$defs/localizedString"}
+              }
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["type", "url", "visibility", "label"],
+              "properties": {
+                "type": {"enum": ["live", "repository", "document", "prototype", "other"]},
+                "url": {"type": "string", "format": "uri"},
+                "visibility": {"enum": ["public", "private"]},
+                "label": {"$ref": "#/$defs/localizedString"}
+              }
+            }
+          },
+          "caseStudy": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "type", "localized"],
+              "properties": {
+                "id": {"type": "string"},
+                "type": {"enum": ["text", "lead", "quote", "media", "gallery", "metric", "decision", "process", "architecture", "table", "artifact-links", "reflection"]},
+                "localized": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["en", "vi"],
+                  "properties": {
+                    "en": {"$ref": "#/$defs/caseLocaleContent"},
+                    "vi": {"$ref": "#/$defs/caseLocaleContent"}
+                  }
+                }
+              }
+            }
+          },
+          "metrics": {"type": "array"}
+        }
+      }
+    }
+  }
+}

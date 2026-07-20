@@ -1,0 +1,42 @@
+{
+  "$schema": "../schemas/profile.schema.json",
+  "id": "jin",
+  "displayName": "Jin",
+  "positioning": {
+    "en": "I design data-informed systems and products, turning ambiguous problems into structures teams can understand, build, and evaluate.",
+    "vi": "Tôi thiết kế hệ thống và sản phẩm dựa trên dữ liệu, chuyển các vấn đề chưa rõ ràng thành cấu trúc mà đội ngũ có thể hiểu, triển khai và đánh giá."
+  },
+  "descriptor": "Information Systems × Data × Product",
+  "location": {
+    "en": "Ho Chi Minh City, Vietnam",
+    "vi": "Thành phố Hồ Chí Minh, Việt Nam"
+  },
+  "availability": {
+    "status": "open",
+    "intents": ["employment", "freelance", "collaboration"],
+    "label": {
+      "en": "Open to selected roles and projects",
+      "vi": "Sẵn sàng trao đổi về cơ hội và dự án phù hợp"
+    }
+  },
+  "targetRoles": ["DA", "DS", "BA", "SA", "PRODUCT"],
+  "capabilities": [
+    {"id": "data-analysis", "roles": ["DA", "PRODUCT"]},
+    {"id": "machine-learning", "roles": ["DS"]},
+    {"id": "requirements", "roles": ["BA", "SA", "PRODUCT"]},
+    {"id": "system-architecture", "roles": ["SA"]},
+    {"id": "product-framing", "roles": ["PRODUCT", "BA"]}
+  ],
+  "cv": {
+    "updatedAt": "2026-07-20",
+    "files": {
+      "en": "/cv/jin-cv-en.pdf",
+      "vi": "/cv/jin-cv-vi.pdf"
+    }
+  },
+  "contact": {
+    "email": "hello@jin-systems.dev",
+    "linkedin": "https://www.linkedin.com/in/jin-systems",
+    "github": "https://github.com/nmtrucworking/nmtrucworking"
+  }
+}

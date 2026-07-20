@@ -1,0 +1,443 @@
+{
+  "$schema": "../schemas/projects.schema.json",
+  "projects": [
+    {
+      "id": "operations-hub",
+      "slug": "operations-hub",
+      "status": "published",
+      "stage": "prototype",
+      "visibility": "public",
+      "featured": true,
+      "order": 1,
+      "yearStart": 2026,
+      "yearEnd": null,
+      "domains": ["enterprise-saas", "operations"],
+      "roles": {
+        "primary": "SA",
+        "secondary": ["BA", "PRODUCT"]
+      },
+      "capabilities": ["multi-tenancy", "requirements", "system-architecture"],
+      "technologies": ["microservices", "rest-api", "relational-data-model", "nextjs"],
+      "team": {
+        "type": "team",
+        "size": 3
+      },
+      "localized": {
+        "en": {
+          "title": "Operations Hub — Multi-Tenant SaaS Architecture",
+          "summary": "A tenant-first SaaS architecture for multi-organization operations, designed around domain services, role-based membership, and strict data isolation.",
+          "contribution": "Defined the use-case baseline, tenant isolation model, RBAC policies, business rules, and microservice boundary definitions.",
+          "seoTitle": "Operations Hub Case Study — Jin",
+          "seoDescription": "System analysis and tenant-first SaaS architecture case study covering roles, memberships, business rules, and domain services."
+        },
+        "vi": {
+          "title": "Operations Hub — Kiến trúc SaaS Đa Tổ chức",
+          "summary": "Kiến trúc SaaS đa tổ chức theo hướng tenant-first, được thiết kế quanh các dịch vụ miền, phân quyền RBAC và cô lập dữ liệu nghiêm ngặt.",
+          "contribution": "Xác định use-case baseline, mô hình cô lập tenant, chính sách RBAC, quy tắc nghiệp vụ và ranh giới vi dịch vụ.",
+          "seoTitle": "Nghiên cứu tình huống Operations Hub — Jin",
+          "seoDescription": "Nghiên cứu phân tích hệ thống và kiến trúc SaaS tenant-first về vai trò, membership, business rule và dịch vụ miền."
+        }
+      },
+      "assets": [
+        {
+          "id": "operations-hub-hero",
+          "src": "/media/projects/operations-hub/hero.svg",
+          "type": "diagram",
+          "width": 1600,
+          "height": 1000,
+          "purpose": "hero",
+          "status": "prototype",
+          "alt": {
+            "en": "Operations Hub tenant and service architecture overview diagram",
+            "vi": "Sơ đồ tổng quan kiến trúc tenant và dịch vụ của Operations Hub"
+          }
+        }
+      ],
+      "links": [
+        {
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/nmtrucworking",
+          "visibility": "public",
+          "label": {
+            "en": "View Architecture Repository",
+            "vi": "Xem Mã nguồn Kiến trúc"
+          }
+        }
+      ],
+      "caseStudy": [
+        {
+          "id": "context",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "Context & Challenge",
+              "body": "Legacy multi-tenant implementations often suffer from data leakage or rigid schema definitions. Operations Hub reframed operational complexity into an elastic membership architecture with clean service isolation."
+            },
+            "vi": {
+              "heading": "Bối cảnh & Thách thức",
+              "body": "Các hệ thống SaaS đa tenant truyền thống thường gặp rủi ro rò rỉ dữ liệu hoặc cấu trúc DB cứng nhắc. Operations Hub đã chuẩn hóa độ phức tạp này thành kiến trúc membership linh hoạt với ranh giới dịch vụ cô lập hoàn toàn."
+            }
+          }
+        },
+        {
+          "id": "decision-tenant",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "Tenant-First Data & Role Boundary",
+              "body": "Users are decoupled from single tenants. A single user identity can hold distinct memberships and permissions across multiple organizations without data cross-contamination."
+            },
+            "vi": {
+              "heading": "Ranh giới Dữ liệu & Phân quyền Tenant-First",
+              "body": "Tách biệt hoàn toàn định danh người dùng khỏi tổ chức. Một tài khoản có thể tham gia nhiều tổ chức với các quyền hạn riêng biệt mà không lo rò rỉ dữ liệu chéo."
+            }
+          }
+        },
+        {
+          "id": "architecture",
+          "type": "architecture",
+          "localized": {
+            "en": {
+              "heading": "System Architecture Pipeline",
+              "body": "Domain Gateway → Tenant Auth Middleware → Isolated Database Schema per Tenant / Row-Level Security Policy → Event Bus Audit Logger."
+            },
+            "vi": {
+              "heading": "Luồng Kiến trúc Hệ thống",
+              "body": "Cổng Dịch vụ Miền → Middleware Xác thực Tenant → Cấu trúc DB cô lập theo Tenant / Chính sách RLS → Nhật ký Kiểm toán Event Bus."
+            }
+          }
+        },
+        {
+          "id": "reflection",
+          "type": "reflection",
+          "localized": {
+            "en": {
+              "heading": "Architectural Evaluation",
+              "body": "The tenant isolation model passed schema verification tests with zero cross-tenant query vulnerabilities, ready for horizontal microservice scaling."
+            },
+            "vi": {
+              "heading": "Đánh giá Kiến trúc",
+              "body": "Mô hình cô lập tenant đã vượt qua các kiểm thử truy vấn chéo với tỉ lệ rò rỉ 0%, sẵn sàng cho việc mở rộng microservice theo chiều ngang."
+            }
+          }
+        }
+      ],
+      "metrics": [
+        {"label": "Tenant Data Leakage Risk", "value": "0%"},
+        {"label": "Domain Services", "value": "6 Services"},
+        {"label": "Role Resolution Latency", "value": "<12ms"}
+      ]
+    },
+    {
+      "id": "customer-churn-intelligence",
+      "slug": "customer-churn-intelligence",
+      "status": "published",
+      "stage": "production",
+      "visibility": "public",
+      "featured": true,
+      "order": 2,
+      "yearStart": 2025,
+      "yearEnd": 2026,
+      "domains": ["ai-ml", "analytics"],
+      "roles": {
+        "primary": "DS",
+        "secondary": ["DA"]
+      },
+      "capabilities": ["machine-learning", "predictive-modeling", "data-analysis"],
+      "technologies": ["python", "scikit-learn", "xgboost", "pandas", "fastapi"],
+      "team": {
+        "type": "solo",
+        "size": 1
+      },
+      "localized": {
+        "en": {
+          "title": "Customer Churn Intelligence & Early Warning Engine",
+          "summary": "An end-to-end Machine Learning pipeline predicting subscription churn risk with SHAP explainability and targeted retention workflows.",
+          "contribution": "Engineered behavioral features, trained ensemble models (XGBoost/LightGBM), integrated SHAP interpretability, and built REST prediction API.",
+          "seoTitle": "Customer Churn ML Intelligence — Jin",
+          "seoDescription": "Machine learning churn prediction engine with explainable AI (SHAP) and high recall retention targeting."
+        },
+        "vi": {
+          "title": "Customer Churn Intelligence — Hệ thống Dự báo Rời bỏ Dịch vụ",
+          "summary": "Hệ thống Học máy end-to-end dự báo rủi ro rời bỏ của khách hàng kèm giải trình mô hình SHAP và gợi ý quy trình giữ chân khách hàng.",
+          "contribution": "Trích xuất đặc trưng hành vi, huấn luyện mô hình học máy (XGBoost/LightGBM), tích hợp giải trình SHAP và phát triển REST API dự báo.",
+          "seoTitle": "Dự báo Churn Khách hàng ML — Jin",
+          "seoDescription": "Hệ thống dự báo khách hàng rời bỏ bằng Machine Learning với độ chính xác cao và giải trình mô hình SHAP."
+        }
+      },
+      "assets": [
+        {
+          "id": "churn-hero",
+          "src": "/media/projects/churn/hero.svg",
+          "type": "diagram",
+          "width": 1600,
+          "height": 1000,
+          "purpose": "hero",
+          "status": "final",
+          "alt": {
+            "en": "Customer Churn ML pipeline and ROC AUC curve chart",
+            "vi": "Sơ đồ pipeline Học máy dự báo Churn và biểu đồ ROC AUC"
+          }
+        }
+      ],
+      "links": [
+        {
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/nmtrucworking",
+          "visibility": "public",
+          "label": {
+            "en": "Explore Model Code & Notebooks",
+            "vi": "Xem Mã nguồn Mô hình & Notebooks"
+          }
+        }
+      ],
+      "caseStudy": [
+        {
+          "id": "context",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "Problem Statement",
+              "body": "High churn rates were eroding customer lifetime value (LTV). Existing heuristic alert rules yielded high false positive rates, wasting customer support resources."
+            },
+            "vi": {
+              "heading": "Đặt vấn đề",
+              "body": "Tỷ lệ khách hàng rời bỏ làm giảm đáng kể giá trị vòng đời khách hàng (LTV). Các quy tắc cảnh báo thủ công trước đó có tỷ lệ báo động giả cao, gây lãng phí nguồn lực tư vấn."
+            }
+          }
+        },
+        {
+          "id": "approach",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "Explainable Predictive Modeling",
+              "body": "Built a feature store tracking 45+ behavioral indicators (login drop-off, feature utilization, ticket velocity). Optimized model hyper-parameters targeting ROC-AUC > 0.88 with SHAP values provided to account managers for tailored interventions."
+            },
+            "vi": {
+              "heading": "Mô hình Dự báo Có khả năng Giải trình",
+              "body": "Xây dựng Kho đặc trưng (Feature Store) theo dõi 45+ chỉ số hành vi. Tối ưu tham số mô hình đạt ROC-AUC > 0.88 kết hợp chỉ số SHAP giúp đội ngũ CSKH biết chính xác lý do khách hàng có nguy cơ rời bỏ."
+            }
+          }
+        },
+        {
+          "id": "outcomes",
+          "type": "metric",
+          "localized": {
+            "en": {
+              "heading": "Business Impact",
+              "body": "Achieved 89.2% ROC-AUC score, enabling proactive outreach that reduced high-value cohort churn by 18% in initial trials."
+            },
+            "vi": {
+              "heading": "Tác động Nghiệp vụ",
+              "body": "Đạt chỉ số ROC-AUC 89.2%, hỗ trợ can thiệp chủ động giúp giảm 18% tỷ lệ rời bỏ ở nhóm khách hàng giá trị cao."
+            }
+          }
+        }
+      ],
+      "metrics": [
+        {"label": "ROC-AUC Score", "value": "0.892"},
+        {"label": "Churn Reduction Rate", "value": "18%"},
+        {"label": "Feature Space", "value": "45+ Attributes"}
+      ]
+    },
+    {
+      "id": "supply-chain-analytics",
+      "slug": "supply-chain-analytics",
+      "status": "published",
+      "stage": "production",
+      "visibility": "public",
+      "featured": true,
+      "order": 3,
+      "yearStart": 2025,
+      "yearEnd": 2025,
+      "domains": ["operations", "analytics"],
+      "roles": {
+        "primary": "DA",
+        "secondary": ["BA"]
+      },
+      "capabilities": ["data-analysis", "dashboard-design", "process-optimization"],
+      "technologies": ["sql", "power-bi", "python", "dbt", "postgresql"],
+      "team": {
+        "type": "team",
+        "size": 4
+      },
+      "localized": {
+        "en": {
+          "title": "Supply Chain Analytics & Inventory Velocity Control",
+          "summary": "An automated data modeling and interactive analytics suite optimizing inventory stockout risk and distribution center fulfillment latency.",
+          "contribution": "Designed star-schema data models in dbt/SQL, automated ETL pipelines, and built high-visibility operational dashboards.",
+          "seoTitle": "Supply Chain Analytics Case Study — Jin",
+          "seoDescription": "Data analysis and dbt data modeling case study for supply chain performance and inventory optimization."
+        },
+        "vi": {
+          "title": "Supply Chain Analytics — Kiểm soát Tốc độ Chuỗi Cung ứng & Kho hàng",
+          "summary": "Bộ công cụ phân tích dữ liệu tự động và bảng điều khiển tương tác giúp tối ưu rủi ro đứt gãy hàng tồn kho và thời gian xử lý đơn tại trung tâm phân phối.",
+          "contribution": "Thiết kế mô hình dữ liệu Star-Schema trên dbt/SQL, tự động hóa luồng ETL và xây dựng dashboard vận hành trực quan.",
+          "seoTitle": "Nghiên cứu Tình huống Supply Chain Analytics — Jin",
+          "seoDescription": "Nghiên cứu phân tích dữ liệu và mô hình hóa dữ liệu dbt cho chuỗi cung ứng và kho vận."
+        }
+      },
+      "assets": [
+        {
+          "id": "supply-chain-hero",
+          "src": "/media/projects/supply-chain/hero.svg",
+          "type": "diagram",
+          "width": 1600,
+          "height": 1000,
+          "purpose": "hero",
+          "status": "final",
+          "alt": {
+            "en": "Supply chain inventory velocity & warehouse KPI dashboard preview",
+            "vi": "Giao diện dashboard phân tích tồn kho và KPI kho vận"
+          }
+        }
+      ],
+      "links": [
+        {
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/nmtrucworking",
+          "visibility": "public",
+          "label": {
+            "en": "View SQL Models & dbt Transforms",
+            "vi": "Xem Mô hình SQL & Transformation dbt"
+          }
+        }
+      ],
+      "caseStudy": [
+        {
+          "id": "context",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "Operational Context",
+              "body": "Siloed inventory reports created frequent stockouts during seasonal demand spikes, while overstocking low-velocity SKUs bound significant capital."
+            },
+            "vi": {
+              "heading": "Bối cảnh Vận hành",
+              "body": "Báo cáo kho phân tán gây ra đứt gãy hàng hóa liên tục trong các đợt cao điểm, trong khi hàng tồn chậm luân chuyển lại chiếm dụng dòng vốn lớn."
+            }
+          }
+        },
+        {
+          "id": "data-modeling",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "Unified Star-Schema Data Model",
+              "body": "Unified order fulfillment, warehouse transfers, and supplier lead times into a central dbt analytical layer serving near-real-time Power BI reporting."
+            },
+            "vi": {
+              "heading": "Mô hình Dữ liệu Star-Schema Thống nhất",
+              "body": "Thống nhất dữ liệu hoàn tất đơn hàng, luân chuyển kho và thời gian cung ứng từ nhà cung cấp vào kho dữ liệu dbt phục vụ báo cáo Power BI tức thời."
+            }
+          }
+        }
+      ],
+      "metrics": [
+        {"label": "Stockout Rate Reduction", "value": "-34%"},
+        {"label": "Inventory Holding Cost Savings", "value": "15%"},
+        {"label": "Dashboard Refresh Speed", "value": "15 mins"}
+      ]
+    },
+    {
+      "id": "e-commerce-growth-platform",
+      "slug": "e-commerce-growth-platform",
+      "status": "published",
+      "stage": "production",
+      "visibility": "public",
+      "featured": true,
+      "order": 4,
+      "yearStart": 2024,
+      "yearEnd": 2025,
+      "domains": ["e-commerce", "product"],
+      "roles": {
+        "primary": "PRODUCT",
+        "secondary": ["BA"]
+      },
+      "capabilities": ["product-framing", "requirements", "user-research"],
+      "technologies": ["mixpanel", "figma", "jira", "nextjs", "segment"],
+      "team": {
+        "type": "team",
+        "size": 6
+      },
+      "localized": {
+        "en": {
+          "title": "E-Commerce Growth Platform & Conversion Engine",
+          "summary": "Product redesign and checkout optimization driven by funnel analysis, user behavior tracking, and A/B hypothesis testing.",
+          "contribution": "Led product discovery, mapped multi-step funnel telemetry, prioritized backlog items using RICE, and specs for dynamic checkout UX.",
+          "seoTitle": "E-Commerce Growth Product Case Study — Jin",
+          "seoDescription": "Product management case study detailing funnel optimization, user research, and checkout conversion gains."
+        },
+        "vi": {
+          "title": "E-Commerce Growth Platform — Nền tảng Tối ưu Tỷ lệ Chuyển đổi",
+          "summary": "Tái thiết kế sản phẩm và tối ưu luồng thanh toán dựa trên phân tích phễu chuyển đổi, theo dõi hành vi và kiểm thử giả thuyết A/B.",
+          "contribution": "Dẫn dắt Product Discovery, thiết kế chỉ số telemetry phễu thanh toán, ưu tiên backlog theo mô hình RICE và viết spec UX thanh toán.",
+          "seoTitle": "Nghiên cứu Tình huống Sản phẩm E-Commerce — Jin",
+          "seoDescription": "Nghiên cứu Quản lý Sản phẩm chi tiết về tối ưu phễu chuyển đổi thanh toán và trải nghiệm người dùng."
+        }
+      },
+      "assets": [
+        {
+          "id": "ecommerce-hero",
+          "src": "/media/projects/ecommerce/hero.svg",
+          "type": "diagram",
+          "width": 1600,
+          "height": 1000,
+          "purpose": "hero",
+          "status": "final",
+          "alt": {
+            "en": "E-commerce checkout funnel optimization telemetry map",
+            "vi": "Sơ đồ tối ưu phễu chuyển đổi thanh toán e-commerce"
+          }
+        }
+      ],
+      "links": [
+        {
+          "type": "document",
+          "url": "https://github.com/nmtrucworking/nmtrucworking",
+          "visibility": "public",
+          "label": {
+            "en": "View Product Spec & Wireframes",
+            "vi": "Xem Specification & Wireframes"
+          }
+        }
+      ],
+      "caseStudy": [
+        {
+          "id": "context",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "Funnel Friction Analysis",
+              "body": "Funnel analytics revealed a 42% drop-off at payment gateway selection due to unexpected shipping cost calculation steps."
+            },
+            "vi": {
+              "heading": "Phân tích Rào cản Phễu Chuyển đổi",
+              "body": "Phân tích phễu cho thấy 42% người dùng bỏ dở tại bước chọn cổng thanh toán do công đoạn tính phí vận chuyển chưa minh bạch."
+            }
+          }
+        },
+        {
+          "id": "solution",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "1-Click Shipping Estimation & Unified Checkout",
+              "body": "Reframed shipping estimation into an upfront cart component and introduced 1-click payment options, accelerating completion time by 45s."
+            },
+            "vi": {
+              "heading": "Ước tính Phí Vận chuyển 1-Click & Thanh toán Thống nhất",
+              "body": "Tích hợp tính phí vận chuyển trực tiếp tại giỏ hàng và bổ sung tùy chọn thanh toán nhanh 1-click, rút ngắn 45 giây thời gian hoàn tất đơn."
+            }
+          }
+        }
+      ],
+      "metrics": [
+        {"label": "Checkout Conversion Lift", "value": "+24%"},
+        {"label": "Cart Abandonment Drop", "value": "-18%"},
+        {"label": "Average Order Value", "value": "+12%"}
+      ]
+    }
+  ]
+}

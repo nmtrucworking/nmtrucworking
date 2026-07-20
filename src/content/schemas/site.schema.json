@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/site.schema.json",
+  "title": "Site Configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["siteName", "baseUrl", "defaultLocale", "locales", "navigation", "socials", "features"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "siteName": {"type": "string", "minLength": 1},
+    "baseUrl": {"type": "string", "format": "uri"},
+    "defaultLocale": {"enum": ["en", "vi"]},
+    "locales": {"type": "array", "items": {"enum": ["en", "vi"]}},
+    "navigation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "href"],
+        "properties": {
+          "id": {"type": "string"},
+          "href": {"type": "string"}
+        }
+      }
+    },
+    "socials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "url"],
+        "properties": {
+          "type": {"type": "string"},
+          "url": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analytics", "contactForm", "notes", "themeToggle"],
+      "properties": {
+        "analytics": {"type": "boolean"},
+        "contactForm": {"type": "boolean"},
+        "notes": {"type": "boolean"},
+        "themeToggle": {"type": "boolean"}
+      }
+    }
+  }
+}

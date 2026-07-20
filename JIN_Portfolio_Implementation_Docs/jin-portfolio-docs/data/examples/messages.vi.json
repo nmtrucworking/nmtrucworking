@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "work": "Dự án",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "cv": "CV"
+  },
+  "actions": {
+    "viewWork": "Xem dự án tiêu biểu",
+    "viewProject": "Xem nghiên cứu tình huống",
+    "downloadCv": "Tải CV",
+    "clearFilters": "Xóa bộ lọc",
+    "contact": "Bắt đầu trao đổi"
+  },
+  "filters": {
+    "role": "Vai trò",
+    "domain": "Lĩnh vực",
+    "stage": "Giai đoạn",
+    "noResults": "Không có dự án phù hợp với bộ lọc đã chọn."
+  }
+}

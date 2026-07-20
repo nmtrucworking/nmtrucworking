@@ -1,0 +1,17 @@
+:root {
+  --color-canvas: #F2F0E9;
+  --color-ink: #121310;
+  --color-signal: #C8FF36;
+  --color-graphite: #191B18;
+  --color-muted: #71756D;
+  --color-line: #C9CBC3;
+  --color-paper: #FAF9F5;
+  --color-danger: #B42318;
+  --color-success: #157A48;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Baseline remains light editorial as per design doc section 10, but custom dark overrides if needed */
+  }
+}

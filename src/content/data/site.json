@@ -1,0 +1,23 @@
+{
+  "$schema": "../schemas/site.schema.json",
+  "siteName": "JIN / Systems in Motion",
+  "baseUrl": "https://jin-systems.dev",
+  "defaultLocale": "en",
+  "locales": ["en", "vi"],
+  "navigation": [
+    {"id": "work", "href": "/work"},
+    {"id": "about", "href": "/about"},
+    {"id": "contact", "href": "/contact"},
+    {"id": "cv", "href": "/cv"}
+  ],
+  "socials": [
+    {"type": "github", "url": "https://github.com/nmtrucworking/nmtrucworking"},
+    {"type": "linkedin", "url": "https://www.linkedin.com/in/jin-systems"}
+  ],
+  "features": {
+    "analytics": false,
+    "contactForm": true,
+    "notes": false,
+    "themeToggle": false
+  }
+}

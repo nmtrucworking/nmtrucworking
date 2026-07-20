@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "cv": "CV / Resume",
+    "home": "Home"
+  },
+  "hero": {
+    "badge": "Systems in Motion",
+    "tagline": "Information Systems × Data × Product",
+    "ctaWork": "Explore Case Studies",
+    "ctaContact": "Initiate Contact",
+    "availability": "Available for Select Roles & Projects"
+  },
+  "roles": {
+    "all": "All Roles",
+    "DA": "Data Analyst",
+    "DS": "Data Scientist",
+    "BA": "Business Analyst",
+    "SA": "System Analyst",
+    "PRODUCT": "Product Manager"
+  },
+  "work": {
+    "title": "Selected Work & Case Studies",
+    "subtitle": "Traceable evidence across system architecture, predictive modeling, data analytics, and product strategy.",
+    "filterRole": "Filter by Role",
+    "filterDomain": "Filter by Domain",
+    "searchPlaceholder": "Search projects, technologies, capabilities...",
+    "viewProject": "View Case Study",
+    "stage": "Stage",
+    "year": "Year",
+    "technologies": "Technologies",
+    "capabilities": "Capabilities",
+    "contribution": "My Contribution",
+    "metrics": "Key Impact & Metrics",
+    "caseStudyTitle": "Case Study",
+    "noProjects": "No projects match your current filters."
+  },
+  "about": {
+    "title": "About Jin",
+    "subtitle": "Bridging abstract business requirements and robust, data-informed system architectures.",
+    "positioningHeading": "Positioning & Philosophy",
+    "capabilitiesHeading": "Capabilities Matrix",
+    "methodologyHeading": "System Methodology",
+    "contactHeading": "Let's Connect"
+  },
+  "contact": {
+    "title": "Initiate Contact",
+    "subtitle": "Have a complex system, data pipeline, or product strategy to discuss? Reach out directly.",
+    "emailLabel": "Direct Email",
+    "githubLabel": "GitHub Workspace",
+    "linkedinLabel": "LinkedIn Profile",
+    "formHeading": "Send a Message",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Project Description / Inquiry",
+    "send": "Send Inquiry",
+    "success": "Message sent successfully! I will respond within 24 hours.",
+    "error": "Failed to send message. Please email hello@jin-systems.dev directly."
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "subtitle": "Comprehensive record of experience, technical capabilities, and education.",
+    "downloadEN": "Download Resume (English PDF)",
+    "downloadVI": "Download Resume (Vietnamese PDF)",
+    "updated": "Last updated"
+  },
+  "signalFlow": {
+    "input": "INPUT",
+    "interpret": "INTERPRET",
+    "structure": "STRUCTURE",
+    "build": "BUILD",
+    "evaluate": "EVALUATE"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Notice"
+  }
+}

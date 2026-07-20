@@ -1,0 +1,23 @@
+{
+  "$schema": "../schemas/site.schema.json",
+  "siteName": "JIN / Systems in Motion",
+  "baseUrl": "https://example.com",
+  "defaultLocale": "en",
+  "locales": ["en", "vi"],
+  "navigation": [
+    {"id": "work", "href": "/work"},
+    {"id": "about", "href": "/about"},
+    {"id": "contact", "href": "/contact"},
+    {"id": "cv", "href": "/cv"}
+  ],
+  "socials": [
+    {"type": "github", "url": "https://github.com/example"},
+    {"type": "linkedin", "url": "https://www.linkedin.com/in/example"}
+  ],
+  "features": {
+    "analytics": false,
+    "contactForm": false,
+    "notes": false,
+    "themeToggle": false
+  }
+}
