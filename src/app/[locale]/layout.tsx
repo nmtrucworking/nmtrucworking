@@ -8,14 +8,14 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'vi' }];
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   if (locale !== 'en' && locale !== 'vi') {
     notFound();

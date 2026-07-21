@@ -2,11 +2,12 @@ import React from 'react';
 import { Locale, loadMessages } from '@/content/load';
 
 interface PrivacyPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export default function PrivacyPage({ params }: PrivacyPageProps) {
-  const locale = params.locale as Locale;
+export default async function PrivacyPage({ params }: PrivacyPageProps) {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
   const messages = loadMessages(locale);
 
   return (

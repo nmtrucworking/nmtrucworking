@@ -5,17 +5,21 @@ import { getProjects } from '@/content/selectors';
 import { Search, Filter, ArrowRight } from 'lucide-react';
 
 interface WorkPageProps {
-  params: { locale: string };
-  searchParams?: { role?: string; domain?: string; query?: string };
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<{ role?: string; domain?: string; query?: string }>;
 }
 
-export default function WorkPage({ params, searchParams }: WorkPageProps) {
-  const locale = params.locale as Locale;
+export default async function WorkPage({ params, searchParams }: WorkPageProps) {
+  const [{ locale: localeParam }, resolvedSearchParams = {}] = await Promise.all([
+    params,
+    searchParams,
+  ]);
+  const locale = localeParam as Locale;
   const messages = loadMessages(locale);
 
-  const activeRole = searchParams?.role || 'all';
-  const activeDomain = searchParams?.domain || 'all';
-  const query = searchParams?.query || '';
+  const activeRole = resolvedSearchParams.role || 'all';
+  const activeDomain = resolvedSearchParams.domain || 'all';
+  const query = resolvedSearchParams.query || '';
 
   const projects = getProjects(locale, {
     role: activeRole,

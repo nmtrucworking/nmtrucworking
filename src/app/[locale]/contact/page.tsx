@@ -1,15 +1,16 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { Locale, loadMessages, loadProfile } from '@/content/load';
 import { Mail, Github, Linkedin, CheckCircle2, AlertCircle, Send } from 'lucide-react';
 
 interface ContactPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default function ContactPage({ params }: ContactPageProps) {
-  const locale = params.locale as Locale;
+  const { locale: localeParam } = use(params);
+  const locale = localeParam as Locale;
   const messages = loadMessages(locale);
   const profile = loadProfile();
 

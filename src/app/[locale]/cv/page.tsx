@@ -3,11 +3,12 @@ import { Locale, loadMessages, loadProfile } from '@/content/load';
 import { Download, FileText, Calendar, MapPin, Mail, ExternalLink } from 'lucide-react';
 
 interface CVPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export default function CVPage({ params }: CVPageProps) {
-  const locale = params.locale as Locale;
+export default async function CVPage({ params }: CVPageProps) {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
   const messages = loadMessages(locale);
   const profile = loadProfile();
 
