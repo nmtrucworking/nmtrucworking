@@ -1,0 +1,21 @@
+:root {
+  --truc-charcoal: #0D0D0F;
+  --truc-graphite: #282B2F;
+  --truc-ivory: #F7F7F2;
+  --truc-gold: #D4A75A;
+}
+
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 2.25rem;
+}
+
+.brand-logo--hero {
+  height: clamp(4rem, 9vw, 8rem);
+}
+
+.brand-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+}

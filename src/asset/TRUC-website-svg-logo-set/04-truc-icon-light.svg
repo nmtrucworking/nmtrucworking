@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">TRÚC light app icon</title>
+<desc id="desc">Rounded square T slash icon.</desc>
+<rect width="256" height="256" rx="58" fill="#F7F7F2"/>
+<path d="M64.349609375 102.466796875H93.998046875V184.0H111.20703125V102.466796875H140.791015625V87.96484375H64.349609375Z" fill="#0D0D0F"/>
+<path d="M 161.14 186 L 213.14 72" stroke="#D4A75A" stroke-width="16" stroke-linecap="square"/>
+</svg>
