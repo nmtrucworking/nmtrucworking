@@ -6,7 +6,7 @@ import { getProjectBySlug } from '@/content/selectors';
 import { ArrowLeft, ExternalLink, Github, Layers, ShieldCheck, Terminal } from 'lucide-react';
 
 interface ProjectDetailPageProps {
-  params: { locale: string; slug: string };
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export function generateStaticParams() {
@@ -22,17 +22,18 @@ export function generateStaticParams() {
   return params;
 }
 
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-  const locale = params.locale as Locale;
+export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+  const { locale: localeParam, slug } = await params;
+  const locale = localeParam as Locale;
   const messages = loadMessages(locale);
-  const project = getProjectBySlug(params.slug, locale);
+  const project = getProjectBySlug(slug, locale);
 
   if (!project) {
     notFound();
   }
 
   const allProjects = loadProjects();
-  const currentIndex = allProjects.findIndex((p) => p.slug === params.slug);
+  const currentIndex = allProjects.findIndex((p) => p.slug === slug);
   const nextProject = allProjects[(currentIndex + 1) % allProjects.length];
 
   return (

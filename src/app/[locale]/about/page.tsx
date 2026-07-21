@@ -5,11 +5,12 @@ import { getProfile } from '@/content/selectors';
 import { ArrowUpRight, CheckCircle2, Cpu, Database, Layers, LineChart } from 'lucide-react';
 
 interface AboutPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export default function AboutPage({ params }: AboutPageProps) {
-  const locale = params.locale as Locale;
+export default async function AboutPage({ params }: AboutPageProps) {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
   const messages = loadMessages(locale);
   const profile = getProfile(locale);
 

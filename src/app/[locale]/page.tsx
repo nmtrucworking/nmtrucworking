@@ -7,11 +7,12 @@ import { SignalFlow } from '@/components/brand/SignalFlow';
 import { ArrowRight, CheckCircle2, Cpu, Database, FileCode, Layers, LineChart } from 'lucide-react';
 
 interface HomePageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export default function HomePage({ params }: HomePageProps) {
-  const locale = params.locale as Locale;
+export default async function HomePage({ params }: HomePageProps) {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
   const messages = loadMessages(locale);
   const profile = getProfile(locale);
   const featuredProjects = getFeaturedProjects(locale);
