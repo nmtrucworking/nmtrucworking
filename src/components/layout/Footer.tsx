@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Locale, loadMessages, loadProfile, loadSiteConfig } from '@/content/load';
-import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 interface FooterProps {
   locale: Locale;
@@ -15,33 +15,40 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
   const site = loadSiteConfig();
 
   return (
-    <footer className="w-full border-t border-line/60 bg-paper py-12 text-ink sm:py-16">
+    <footer className="w-full border-t border-white/10 bg-ink py-12 text-canvas sm:py-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:grid-cols-2 sm:px-6 md:grid-cols-12 md:gap-12 lg:px-8">
         {/* Availability & Identity */}
         <div className="md:col-span-6 flex flex-col justify-between space-y-6">
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-graphite text-canvas text-xs font-mono">
+            <img
+              src="/brand/01-truc-wordmark-dark.svg"
+              width="122"
+              height="32"
+              alt="TRÚC."
+              className="h-auto w-[7.6rem]"
+            />
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-canvas">
               <span className="w-2 h-2 rounded-full bg-signal animate-pulse-slow" />
               <span>{profile.availability.label[locale]}</span>
             </div>
-            <h3 className="font-display text-2xl font-bold tracking-tight">
+            <h3 className="max-w-2xl font-display text-2xl font-semibold tracking-tight text-canvas">
               {profile.positioning[locale]}
             </h3>
           </div>
-          <p className="text-sm text-muted">
+          <p className="text-sm text-canvas/55">
             {profile.location[locale]} — {profile.descriptor}
           </p>
         </div>
 
         {/* Quick Links & Socials */}
         <div className="sm:col-span-1 md:col-span-3 space-y-4">
-          <h4 className="mono-label text-xs font-semibold text-muted">Navigation</h4>
+          <h4 className="mono-label text-xs font-semibold text-signal">Navigation</h4>
           <ul className="space-y-2 text-sm">
             {site.navigation.map((item) => (
               <li key={item.id}>
                 <Link
                   href={`/${locale}${item.href}`}
-                  className="text-ink hover:text-muted flex items-center gap-1 transition-colors"
+                  className="flex items-center gap-1 text-canvas/70 transition-colors hover:text-canvas"
                 >
                   {messages.nav[item.id as keyof typeof messages.nav] || item.id}
                 </Link>
@@ -51,13 +58,13 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
         </div>
 
         <div className="min-w-0 sm:col-span-1 md:col-span-3 space-y-4">
-          <h4 className="mono-label text-xs font-semibold text-muted">Direct Contact</h4>
+          <h4 className="mono-label text-xs font-semibold text-signal">Direct Contact</h4>
           <div className="space-y-3 text-sm">
             <a
               href={`mailto:${profile.contact.email}`}
-              className="flex min-h-11 min-w-0 items-center gap-2 break-all font-mono text-ink hover:underline"
+              className="flex min-h-11 min-w-0 items-center gap-2 break-all text-canvas/75 hover:text-canvas hover:underline"
             >
-              <Mail className="w-4 h-4 text-muted" />
+              <Mail className="h-4 w-4 text-signal" />
               {profile.contact.email}
             </a>
             <div className="flex items-center gap-4 pt-2">
@@ -65,7 +72,7 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
                 href={profile.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded border border-line bg-canvas hover:border-ink transition-colors"
+                className="rounded border border-white/15 bg-white/5 p-2 transition-colors hover:border-signal"
                 aria-label="GitHub"
               >
                 <Github className="w-4 h-4" />
@@ -74,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
                 href={profile.contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded border border-line bg-canvas hover:border-ink transition-colors"
+                className="rounded border border-white/15 bg-white/5 p-2 transition-colors hover:border-signal"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -84,12 +91,12 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-line/40 px-4 pt-6 text-xs text-muted sm:mt-12 sm:flex-row sm:items-center sm:px-6 sm:pt-8 lg:px-8">
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-white/10 px-4 pt-6 text-xs text-canvas/45 sm:mt-12 sm:flex-row sm:items-center sm:px-6 sm:pt-8 lg:px-8">
         <div>
-          © {new Date().getFullYear()} JIN. {messages.footer.rights}
+          © {new Date().getFullYear()} NGUYỄN MINH TRÚC. {messages.footer.rights}
         </div>
         <div className="flex items-center gap-6">
-          <Link href={`/${locale}/privacy`} className="hover:text-ink transition-colors">
+          <Link href={`/${locale}/privacy`} className="transition-colors hover:text-canvas">
             {messages.footer.privacy}
           </Link>
         </div>

@@ -1,12 +1,12 @@
 {
   "$schema": "../schemas/profile.schema.json",
-  "id": "jin",
-  "displayName": "Jin",
+  "id": "nguyen-minh-truc",
+  "displayName": "Nguyễn Minh Trúc",
   "positioning": {
     "en": "I design data-informed systems and products, turning ambiguous problems into structures teams can understand, build, and evaluate.",
     "vi": "Tôi thiết kế hệ thống và sản phẩm dựa trên dữ liệu, chuyển các vấn đề chưa rõ ràng thành cấu trúc mà đội ngũ có thể hiểu, triển khai và đánh giá."
   },
-  "descriptor": "Information Systems × Data × Product",
+  "descriptor": "Data / Systems / Product",
   "location": {
     "en": "Ho Chi Minh City, Vietnam",
     "vi": "Thành phố Hồ Chí Minh, Việt Nam"

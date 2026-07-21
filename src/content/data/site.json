@@ -1,6 +1,6 @@
 {
   "$schema": "../schemas/site.schema.json",
-  "siteName": "JIN / Systems in Motion",
+  "siteName": "TRÚC. — Data / Systems / Product",
   "baseUrl": "https://jin-systems.dev",
   "defaultLocale": "en",
   "locales": ["en", "vi"],

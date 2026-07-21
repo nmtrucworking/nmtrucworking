@@ -27,14 +27,14 @@
           "title": "Operations Hub — Multi-Tenant SaaS Architecture",
           "summary": "A tenant-first SaaS architecture for multi-organization operations, designed around domain services, role-based membership, and strict data isolation.",
           "contribution": "Defined the use-case baseline, tenant isolation model, RBAC policies, business rules, and microservice boundary definitions.",
-          "seoTitle": "Operations Hub Case Study — Jin",
+          "seoTitle": "Operations Hub Case Study — Trúc",
           "seoDescription": "System analysis and tenant-first SaaS architecture case study covering roles, memberships, business rules, and domain services."
         },
         "vi": {
           "title": "Operations Hub — Kiến trúc SaaS Đa Tổ chức",
           "summary": "Kiến trúc SaaS đa tổ chức theo hướng tenant-first, được thiết kế quanh các dịch vụ miền, phân quyền RBAC và cô lập dữ liệu nghiêm ngặt.",
           "contribution": "Xác định use-case baseline, mô hình cô lập tenant, chính sách RBAC, quy tắc nghiệp vụ và ranh giới vi dịch vụ.",
-          "seoTitle": "Nghiên cứu tình huống Operations Hub — Jin",
+          "seoTitle": "Nghiên cứu tình huống Operations Hub — Trúc",
           "seoDescription": "Nghiên cứu phân tích hệ thống và kiến trúc SaaS tenant-first về vai trò, membership, business rule và dịch vụ miền."
         }
       },
@@ -154,14 +154,14 @@
           "title": "E-Commerce Growth Platform & Conversion Engine",
           "summary": "Product redesign and checkout optimization driven by funnel analysis, user behavior tracking, and A/B hypothesis testing.",
           "contribution": "Led product discovery, mapped multi-step funnel telemetry, prioritized backlog items using RICE, and specs for dynamic checkout UX.",
-          "seoTitle": "E-Commerce Growth Product Case Study — Jin",
+          "seoTitle": "E-Commerce Growth Product Case Study — Trúc",
           "seoDescription": "Product management case study detailing funnel optimization, user research, and checkout conversion gains."
         },
         "vi": {
           "title": "E-Commerce Growth Platform — Nền tảng Tối ưu Tỷ lệ Chuyển đổi",
           "summary": "Tái thiết kế sản phẩm và tối ưu luồng thanh toán dựa trên phân tích phễu chuyển đổi, theo dõi hành vi và kiểm thử giả thuyết A/B.",
           "contribution": "Dẫn dắt Product Discovery, thiết kế chỉ số telemetry phễu thanh toán, ưu tiên backlog theo mô hình RICE và viết spec UX thanh toán.",
-          "seoTitle": "Nghiên cứu Tình huống Sản phẩm E-Commerce — Jin",
+          "seoTitle": "Nghiên cứu Tình huống Sản phẩm E-Commerce — Trúc",
           "seoDescription": "Nghiên cứu Quản lý Sản phẩm chi tiết về tối ưu phễu chuyển đổi thanh toán và trải nghiệm người dùng."
         }
       },
@@ -260,14 +260,14 @@
           "title": "PronaFlow",
           "summary": "An AI-enhanced project management platform that streamlines workflows and progress tracking.",
           "contribution": "Built the Python backend and React/Vite frontend, connected the database, documented the folder structure, and established a monorepo with Git submodules.",
-          "seoTitle": "PronaFlow Project Management Platform — Jin",
+          "seoTitle": "PronaFlow Project Management Platform — Trúc",
           "seoDescription": "A full-stack AI-enhanced project management platform built with Python, React, Electron, PostgreSQL, and Supabase."
         },
         "vi": {
           "title": "PronaFlow",
           "summary": "Nền tảng quản lý dự án tích hợp trí tuệ nhân tạo, hỗ trợ tối ưu hóa quy trình làm việc và theo dõi tiến độ.",
           "contribution": "Xây dựng backend Python và frontend React/Vite, kết nối cơ sở dữ liệu, lập tài liệu cấu trúc thư mục và triển khai monorepo với Git submodules.",
-          "seoTitle": "Nền tảng Quản lý Dự án PronaFlow — Jin",
+          "seoTitle": "Nền tảng Quản lý Dự án PronaFlow — Trúc",
           "seoDescription": "Nền tảng quản lý dự án tích hợp AI được xây dựng với Python, React, Electron, PostgreSQL và Supabase."
         }
       },
@@ -346,14 +346,14 @@
           "title": "MTEC Operations Hub",
           "summary": "An online management system for MTEC's people operations and internal workflows.",
           "contribution": "Led the product, deployed the backend and frontend, configured the production environment, and resolved authentication and live data-fetching issues.",
-          "seoTitle": "MTEC Operations Hub — Jin",
+          "seoTitle": "MTEC Operations Hub — Trúc",
           "seoDescription": "A production management system for MTEC personnel and internal operations, deployed on Render and Vercel."
         },
         "vi": {
           "title": "MTEC Operations Hub",
           "summary": "Hệ thống quản lý trực tuyến dành cho Câu lạc bộ Truyền thông và Công nghệ, phục vụ quản lý nhân sự và quy trình vận hành nội bộ.",
           "contribution": "Dẫn dắt sản phẩm, triển khai backend và frontend, cấu hình môi trường production, đồng thời xử lý luồng xác thực và truy xuất dữ liệu trực tiếp.",
-          "seoTitle": "Hệ thống Vận hành MTEC — Jin",
+          "seoTitle": "Hệ thống Vận hành MTEC — Trúc",
           "seoDescription": "Hệ thống quản lý nhân sự và vận hành nội bộ MTEC được triển khai trên Render và Vercel."
         }
       },
@@ -431,14 +431,14 @@
           "title": "Lotus Seed Sorting System",
           "summary": "A computer-vision model that grades lotus seeds into three quality levels, developed for a student hackathon.",
           "contribution": "Coordinated a cross-functional team, consolidated the technical research, and developed the system's commercialization strategy.",
-          "seoTitle": "Lotus Seed Sorting Computer Vision System — Jin",
+          "seoTitle": "Lotus Seed Sorting Computer Vision System — Trúc",
           "seoDescription": "A student hackathon project using computer vision and machine learning to grade lotus seeds into three quality levels."
         },
         "vi": {
           "title": "Hệ thống Phân loại Hạt sen",
           "summary": "Mô hình thị giác máy tính phân loại hạt sen thành ba cấp độ, được phát triển trong khuôn khổ cuộc thi hackathon sinh viên.",
           "contribution": "Điều phối nhóm đa chuyên môn, tổng hợp tài liệu kỹ thuật và xây dựng chiến lược thương mại hóa cho hệ thống.",
-          "seoTitle": "Hệ thống Thị giác Máy tính Phân loại Hạt sen — Jin",
+          "seoTitle": "Hệ thống Thị giác Máy tính Phân loại Hạt sen — Trúc",
           "seoDescription": "Dự án hackathon sinh viên ứng dụng thị giác máy tính và học máy để phân loại hạt sen thành ba cấp độ."
         }
       },

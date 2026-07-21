@@ -20,9 +20,9 @@ const config: Config = {
         success: "var(--color-success)",
       },
       fontFamily: {
-        display: ["var(--font-bricolage)", "sans-serif"],
-        sans: ["var(--font-geist)", "Inter", "sans-serif"],
-        mono: ["var(--font-mono)", "IBM Plex Mono", "monospace"],
+        display: ["var(--font-space-grotesk)", "sans-serif"],
+        sans: ["var(--font-space-grotesk)", "sans-serif"],
+        mono: ["var(--font-space-grotesk)", "sans-serif"],
       },
       gridTemplateColumns: {
         "12": "repeat(12, minmax(0, 1fr))",

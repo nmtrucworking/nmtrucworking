@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { Locale, loadMessages } from '@/content/load';
 import { getProfile, getFeaturedProjects } from '@/content/selectors';
 import { ProtectedPortrait } from '@/components/brand/ProtectedPortrait';
-import { SignalFlow } from '@/components/brand/SignalFlow';
-import { ArrowRight, CheckCircle2, Cpu, Database, FileCode, Layers, LineChart } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Cpu, Database, Layers, LineChart } from 'lucide-react';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -31,36 +30,48 @@ export default async function HomePage({ params }: HomePageProps) {
       <section className="home-hero">
         <div className="home-hero-stage">
           <div className="home-hero-copy">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full bg-graphite px-3 py-1 font-mono text-xs text-canvas">
+            <img
+              src="/brand/01-truc-wordmark-dark.svg"
+              width="152"
+              height="40"
+              alt="TRÚC."
+              className="h-auto w-[9.5rem]"
+            />
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-canvas/75">
               <span className="h-2 w-2 rounded-full bg-signal animate-pulse-slow" />
               <span>{profile.availabilityLabel}</span>
             </div>
 
-            <h1 className="home-hero-title font-display font-bold text-ink">
+            <h1 className="home-hero-title font-display font-medium text-canvas">
               {locale === 'en' ? (
                 <>
-                  <span className="block">Systems in Motion.</span>
-                  <span className="home-hero-emphasis block text-muted font-normal">Evidence-Driven</span>
-                  <span className="block">Architecture</span>
-                  <span className="block">&amp; Data.</span>
+                  <span className="block">I turn complex</span>
+                  <span className="block text-signal">data</span>
+                  <span className="block">into meaningful</span>
+                  <span className="block text-signal">solutions.</span>
                 </>
               ) : (
                 <>
-                  <span className="block">Hệ thống vận hành.</span>
-                  <span className="home-hero-emphasis block text-muted font-normal">Kiến trúc &amp; Dữ liệu</span>
-                  <span className="block">dựa trên minh chứng.</span>
+                  <span className="block">Biến dữ liệu</span>
+                  <span className="block text-signal">phức tạp</span>
+                  <span className="block">thành giải pháp</span>
+                  <span className="block text-signal">thực tế.</span>
                 </>
               )}
             </h1>
 
-            <p className="home-hero-description max-w-2xl font-light leading-relaxed text-muted">
+            <p className="home-hero-description max-w-xl font-light leading-relaxed text-canvas/62">
               {profile.positioningText}
             </p>
+
+            <div className="home-hero-disciplines" aria-label="Data, Systems, Product">
+              <span>DATA</span><i>/</i><span>SYSTEMS</span><i>/</i><span>PRODUCT</span>
+            </div>
 
             <div className="grid grid-cols-1 gap-3 pt-1 min-[420px]:flex min-[420px]:flex-wrap min-[420px]:items-center sm:gap-4">
               <Link
                 href={`/${locale}/work`}
-                className="group flex min-h-12 items-center justify-center gap-2 rounded-lg bg-ink px-6 py-3.5 text-sm font-semibold text-canvas transition-all hover:bg-graphite hover:shadow-lg min-[420px]:justify-start"
+                className="group flex min-h-12 items-center justify-center gap-2 rounded-lg bg-canvas px-6 py-3.5 text-sm font-semibold text-ink transition-all hover:bg-white min-[420px]:justify-start"
               >
                 <span>{messages.hero.ctaWork}</span>
                 <ArrowRight className="w-4 h-4 text-signal group-hover:translate-x-1 transition-transform" />
@@ -68,14 +79,14 @@ export default async function HomePage({ params }: HomePageProps) {
 
               <Link
                 href={`/${locale}/contact`}
-                className="flex min-h-12 items-center justify-center rounded-lg border border-line bg-paper px-6 py-3.5 text-sm font-semibold text-ink transition-all hover:border-ink hover:bg-canvas"
+                className="flex min-h-12 items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-canvas transition-all hover:border-signal hover:bg-white/10"
               >
                 {messages.hero.ctaContact}
               </Link>
 
               <Link
                 href={`/${locale}/cv`}
-                className="flex min-h-12 items-center justify-center rounded-lg border border-line/60 px-6 py-3.5 text-xs font-mono text-muted transition-all hover:border-ink hover:text-ink"
+                className="flex min-h-12 items-center justify-center rounded-lg px-4 py-3.5 text-xs text-canvas/55 transition-all hover:text-canvas"
               >
                 {messages.nav.cv} →
               </Link>
@@ -83,7 +94,7 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
 
           <div className="home-hero-visual">
-            <div className="home-hero-location mono-label text-muted" aria-label={profile.locationText}>
+            <div className="home-hero-location mono-label text-canvas/50" aria-label={profile.locationText}>
               <span>{profile.locationText}</span>
               <span className="h-2 w-2 rounded-full bg-signal" aria-hidden="true" />
             </div>
@@ -96,13 +107,20 @@ export default async function HomePage({ params }: HomePageProps) {
               <span className="home-portrait-node home-portrait-node-three" />
             </div>
 
+            <span className="home-hero-slash" aria-hidden="true" />
+
             <ProtectedPortrait
-              alt="Nguyễn Minh Trúc"
+              alt={locale === 'vi' ? 'Chân dung Nguyễn Minh Trúc' : 'Portrait of Nguyễn Minh Trúc'}
             />
+
+            <div className="home-hero-traits" aria-label={locale === 'vi' ? 'Giá trị thương hiệu' : 'Brand values'}>
+              <div><LineChart /><span><strong>{locale === 'vi' ? 'PHÂN TÍCH' : 'ANALYTICAL'}</strong><small>{locale === 'vi' ? 'Tư duy phân tích' : 'Evidence first'}</small></span></div>
+              <div><Layers /><span><strong>{locale === 'vi' ? 'HỆ THỐNG' : 'SYSTEMATIC'}</strong><small>{locale === 'vi' ? 'Hệ thống & logic' : 'Systems & logic'}</small></span></div>
+              <div><Database /><span><strong>{locale === 'vi' ? 'SẢN PHẨM' : 'PRODUCT-DRIVEN'}</strong><small>{locale === 'vi' ? 'Tạo ra giá trị thực tế' : 'Built for outcomes'}</small></span></div>
+              <div><CheckCircle2 /><span><strong>{locale === 'vi' ? 'TÁC ĐỘNG' : 'IMPACTFUL'}</strong><small>{locale === 'vi' ? 'Tạo ảnh hưởng tích cực' : 'Positive impact'}</small></span></div>
+            </div>
           </div>
         </div>
-
-        <SignalFlow locale={locale} compact />
       </section>
 
       {/* Role Lenses Section */}

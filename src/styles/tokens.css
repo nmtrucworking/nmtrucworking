@@ -1,11 +1,11 @@
 :root {
-  --color-canvas: #F2F0E9;
-  --color-ink: #121310;
-  --color-signal: #C8FF36;
-  --color-graphite: #191B18;
-  --color-muted: #71756D;
-  --color-line: #C9CBC3;
-  --color-paper: #FAF9F5;
+  --color-canvas: #F7F7F2;
+  --color-ink: #0D0D0F;
+  --color-signal: #D4A75A;
+  --color-graphite: #282B2F;
+  --color-muted: #68686E;
+  --color-line: #D7D7DB;
+  --color-paper: #FFFFFF;
   --color-danger: #B42318;
   --color-success: #157A48;
 }
