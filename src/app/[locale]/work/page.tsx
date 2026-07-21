@@ -39,23 +39,23 @@ export default async function WorkPage({ params, searchParams }: WorkPageProps) 
   ];
 
   return (
-    <div className="space-y-12 py-6">
+    <div className="space-y-10 py-3 sm:space-y-12 sm:py-6">
       {/* Header & Title */}
       <div className="space-y-4 border-b border-line/60 pb-8">
         <span className="mono-label text-xs text-muted">Portfolio Index</span>
         <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink tracking-tight">
           {messages.work.title}
         </h1>
-        <p className="text-lg text-muted max-w-3xl leading-relaxed">
+        <p className="max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
           {messages.work.subtitle}
         </p>
       </div>
 
       {/* Filter Toolbar */}
-      <div className="p-6 rounded-xl border border-line/60 bg-paper space-y-6">
+      <div className="space-y-6 rounded-xl border border-line/60 bg-paper p-4 sm:p-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           {/* Search Form */}
-          <form method="GET" className="relative flex-1 max-w-md">
+          <form method="GET" className="relative w-full flex-1 md:max-w-md">
             {activeRole !== 'all' && <input type="hidden" name="role" value={activeRole} />}
             {activeDomain !== 'all' && <input type="hidden" name="domain" value={activeDomain} />}
             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-muted" />
@@ -103,7 +103,7 @@ export default async function WorkPage({ params, searchParams }: WorkPageProps) 
                 <Link
                   key={r}
                   href={href}
-                  className={`px-3 py-1.5 rounded-md text-xs font-mono font-medium transition-all ${
+                  className={`flex min-h-10 items-center rounded-md px-3 py-1.5 text-xs font-mono font-medium transition-all ${
                     isActive
                       ? 'bg-ink text-signal font-bold'
                       : 'bg-canvas border border-line/60 text-muted hover:text-ink hover:border-ink'
@@ -135,7 +135,7 @@ export default async function WorkPage({ params, searchParams }: WorkPageProps) 
                 <Link
                   key={d}
                   href={href}
-                  className={`px-2.5 py-1 rounded text-xs font-mono transition-all ${
+                  className={`flex min-h-10 items-center rounded px-2.5 py-1 text-xs font-mono transition-all ${
                     isActive
                       ? 'bg-graphite text-canvas font-semibold'
                       : 'text-muted hover:text-ink'
@@ -151,7 +151,7 @@ export default async function WorkPage({ params, searchParams }: WorkPageProps) 
 
       {/* Projects List Grid */}
       {projects.length === 0 ? (
-        <div className="p-12 text-center rounded-xl border border-line/60 bg-paper space-y-4">
+        <div className="space-y-4 rounded-xl border border-line/60 bg-paper p-8 text-center sm:p-12">
           <p className="text-muted text-base">{messages.work.noProjects}</p>
           <Link
             href={`/${locale}/work`}
@@ -161,15 +161,15 @@ export default async function WorkPage({ params, searchParams }: WorkPageProps) 
           </Link>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-8">
           {projects.map((project) => (
             <article
               key={project.id}
-              className="p-8 rounded-2xl border border-line/60 bg-paper hover:border-ink transition-all flex flex-col justify-between space-y-6 group"
+              className="group flex min-w-0 flex-col justify-between space-y-6 rounded-2xl border border-line/60 bg-paper p-5 transition-all hover:border-ink sm:p-8"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between text-xs font-mono text-muted">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-start justify-between gap-3 text-xs font-mono text-muted">
+                  <div className="flex min-w-0 flex-wrap items-center gap-2">
                     <span className="px-2.5 py-1 rounded bg-graphite text-signal font-semibold">
                       {project.roles.primary}
                     </span>
@@ -206,13 +206,13 @@ export default async function WorkPage({ params, searchParams }: WorkPageProps) 
                   </div>
                 )}
 
-                <div className="flex items-center justify-between pt-2">
+                <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
                   <span className="mono-label text-[10px] text-muted uppercase">
                     Stage: {project.stage}
                   </span>
                   <Link
                     href={`/${locale}/work/${project.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-ink group-hover:translate-x-1 transition-transform"
+                    className="inline-flex min-h-10 items-center gap-1.5 text-xs font-mono font-semibold text-ink transition-transform group-hover:translate-x-1"
                   >
                     <span>{messages.work.viewProject}</span>
                     <ArrowRight className="w-3.5 h-3.5" />

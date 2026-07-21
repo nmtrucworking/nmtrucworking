@@ -26,7 +26,7 @@ export default async function HomePage({ params }: HomePageProps) {
   };
 
   return (
-    <div className="space-y-20 py-6">
+    <div className="space-y-14 py-3 sm:space-y-20 sm:py-6">
       {/* Hero Viewport */}
       <section className="home-hero">
         <div className="home-hero-stage">
@@ -57,10 +57,10 @@ export default async function HomePage({ params }: HomePageProps) {
               {profile.positioningText}
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 pt-1 sm:gap-4">
+            <div className="grid grid-cols-1 gap-3 pt-1 min-[420px]:flex min-[420px]:flex-wrap min-[420px]:items-center sm:gap-4">
               <Link
                 href={`/${locale}/work`}
-                className="px-6 py-3.5 rounded-lg bg-ink text-canvas font-semibold text-sm hover:bg-graphite hover:shadow-lg transition-all flex items-center gap-2 group"
+                className="group flex min-h-12 items-center justify-center gap-2 rounded-lg bg-ink px-6 py-3.5 text-sm font-semibold text-canvas transition-all hover:bg-graphite hover:shadow-lg min-[420px]:justify-start"
               >
                 <span>{messages.hero.ctaWork}</span>
                 <ArrowRight className="w-4 h-4 text-signal group-hover:translate-x-1 transition-transform" />
@@ -68,14 +68,14 @@ export default async function HomePage({ params }: HomePageProps) {
 
               <Link
                 href={`/${locale}/contact`}
-                className="px-6 py-3.5 rounded-lg border border-line bg-paper text-ink font-semibold text-sm hover:bg-canvas hover:border-ink transition-all"
+                className="flex min-h-12 items-center justify-center rounded-lg border border-line bg-paper px-6 py-3.5 text-sm font-semibold text-ink transition-all hover:border-ink hover:bg-canvas"
               >
                 {messages.hero.ctaContact}
               </Link>
 
               <Link
                 href={`/${locale}/cv`}
-                className="px-6 py-3.5 rounded-lg border border-line/60 text-muted font-mono text-xs hover:text-ink hover:border-ink transition-all"
+                className="flex min-h-12 items-center justify-center rounded-lg border border-line/60 px-6 py-3.5 text-xs font-mono text-muted transition-all hover:border-ink hover:text-ink"
               >
                 {messages.nav.cv} →
               </Link>
@@ -156,7 +156,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
       {/* Featured Flagship Case Studies Section */}
       <section className="space-y-8">
-        <div className="flex items-center justify-between border-b border-line/60 pb-4">
+        <div className="flex flex-col gap-3 border-b border-line/60 pb-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <span className="mono-label text-xs text-muted">Evidence & Outcomes</span>
             <h2 className="font-display text-3xl font-bold text-ink">
@@ -165,7 +165,7 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
           <Link
             href={`/${locale}/work`}
-            className="text-sm font-mono font-semibold text-muted hover:text-ink flex items-center gap-1 transition-colors"
+            className="flex min-h-11 w-fit items-center gap-1 text-sm font-mono font-semibold text-muted transition-colors hover:text-ink"
           >
             {locale === 'en' ? 'View all projects' : 'Xem tất cả dự án'} →
           </Link>
@@ -175,7 +175,7 @@ export default async function HomePage({ params }: HomePageProps) {
           {featuredProjects.map((project, idx) => (
             <article
               key={project.id}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 rounded-2xl border border-line/60 bg-paper hover:border-ink transition-all relative overflow-hidden"
+              className="relative grid grid-cols-1 gap-6 overflow-hidden rounded-2xl border border-line/60 bg-paper p-5 transition-all hover:border-ink sm:p-8 lg:grid-cols-12 lg:gap-8"
             >
               {/* Left Column: Details & Copy */}
               <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
@@ -210,7 +210,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
                 {/* Metrics Grid */}
                 {project.metrics.length > 0 && (
-                  <div className="grid grid-cols-3 gap-4 pt-4 border-t border-line/40">
+                  <div className="grid grid-cols-1 gap-4 border-t border-line/40 pt-4 min-[420px]:grid-cols-3">
                     {project.metrics.map((m, idx) => (
                       <div key={idx} className="space-y-0.5">
                         <div className="font-display font-bold text-xl text-ink">
@@ -236,9 +236,9 @@ export default async function HomePage({ params }: HomePageProps) {
               </div>
 
               {/* Right Column: Visual Diagram / Mock Artifact */}
-              <div className="lg:col-span-5 flex flex-col justify-center rounded-xl bg-canvas p-6 border border-line/40 font-mono text-xs space-y-4">
-                <div className="flex items-center justify-between text-muted border-b border-line/40 pb-2">
-                  <span>SYSTEM_DIAGRAM // {project.slug}</span>
+              <div className="flex min-w-0 flex-col justify-center space-y-4 rounded-xl border border-line/40 bg-canvas p-4 font-mono text-xs sm:p-6 lg:col-span-5">
+                <div className="flex min-w-0 items-center justify-between gap-3 border-b border-line/40 pb-2 text-muted">
+                  <span className="min-w-0 break-all">SYSTEM_DIAGRAM // {project.slug}</span>
                   <span className="w-2 h-2 rounded-full bg-signal" />
                 </div>
 
@@ -262,7 +262,7 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* Capability Constellation Section */}
-      <section className="p-8 rounded-2xl border border-line/60 bg-paper space-y-8">
+      <section className="space-y-8 rounded-2xl border border-line/60 bg-paper p-5 sm:p-8">
         <div className="space-y-2">
           <span className="mono-label text-xs text-muted">Capability Architecture</span>
           <h2 className="font-display text-3xl font-bold text-ink">

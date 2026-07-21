@@ -37,7 +37,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   const nextProject = allProjects[(currentIndex + 1) % allProjects.length];
 
   return (
-    <article className="space-y-16 py-6">
+    <article className="space-y-12 py-3 sm:space-y-16 sm:py-6">
       {/* Back Button */}
       <div>
         <Link
@@ -60,21 +60,21 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               {sec}
             </span>
           ))}
-          <span className="mono-label text-xs text-muted ml-auto">
+          <span className="mono-label w-full text-xs text-muted sm:ml-auto sm:w-auto">
             {project.yearStart} {project.yearEnd ? `– ${project.yearEnd}` : ''} • STAGE: {project.stage.toUpperCase()}
           </span>
         </div>
 
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-ink tracking-tight leading-tight">
+        <h1 className="font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-5xl md:text-6xl">
           {project.localizedContent.title}
         </h1>
 
-        <p className="text-xl text-muted leading-relaxed max-w-4xl font-light">
+        <p className="max-w-4xl text-lg font-light leading-relaxed text-muted sm:text-xl">
           {project.localizedContent.summary}
         </p>
 
         {/* Metadata Summary Box */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-xl bg-paper border border-line/60 font-mono text-xs">
+        <div className="grid grid-cols-1 gap-5 rounded-xl border border-line/60 bg-paper p-4 font-mono text-xs sm:p-6 md:grid-cols-3 md:gap-6">
           <div className="space-y-1">
             <span className="text-muted block text-[10px] uppercase">My Contribution</span>
             <span className="text-ink font-sans text-sm block font-medium">
@@ -116,8 +116,8 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
       {/* Metrics Banner */}
       {project.metrics.length > 0 && (
-        <section className="p-8 rounded-2xl bg-graphite text-canvas space-y-6">
-          <div className="flex items-center justify-between border-b border-canvas/20 pb-4">
+        <section className="space-y-6 rounded-2xl bg-graphite p-5 text-canvas sm:p-8">
+          <div className="flex items-start justify-between gap-4 border-b border-canvas/20 pb-4">
             <span className="mono-label text-xs text-signal">SYSTEM IMPACT & MEASURED METRICS</span>
             <ShieldCheck className="w-5 h-5 text-signal" />
           </div>
@@ -142,7 +142,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         {project.caseStudyLocalized.map((block) => (
           <div
             key={block.id}
-            className={`space-y-4 p-8 rounded-2xl border ${
+            className={`space-y-4 rounded-2xl border p-5 sm:p-8 ${
               block.type === 'decision'
                 ? 'border-signal bg-paper/90 shadow-sm'
                 : block.type === 'architecture'
@@ -169,19 +169,19 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       </section>
 
       {/* Next Case Study Navigation */}
-      <footer className="pt-12 border-t border-line/60 flex items-center justify-between">
-        <div>
+      <footer className="flex flex-col items-start gap-6 border-t border-line/60 pt-10 sm:flex-row sm:items-center sm:justify-between sm:pt-12">
+        <div className="min-w-0">
           <span className="mono-label text-xs text-muted block">Up Next</span>
           <Link
             href={`/${locale}/work/${nextProject.slug}`}
-            className="font-display text-2xl font-bold text-ink hover:underline"
+            className="font-display text-xl font-bold text-ink hover:underline sm:text-2xl"
           >
             {nextProject.localized[locale]?.title || nextProject.localized.en.title} →
           </Link>
         </div>
         <Link
           href={`/${locale}/work`}
-          className="px-4 py-2 rounded border border-line text-xs font-mono font-semibold hover:border-ink"
+          className="flex min-h-11 items-center rounded border border-line px-4 py-2 text-xs font-mono font-semibold hover:border-ink"
         >
           View All Projects
         </Link>

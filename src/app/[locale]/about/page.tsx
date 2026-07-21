@@ -15,20 +15,20 @@ export default async function AboutPage({ params }: AboutPageProps) {
   const profile = getProfile(locale);
 
   return (
-    <div className="space-y-16 py-6">
+    <div className="space-y-12 py-3 sm:space-y-16 sm:py-6">
       {/* Title */}
       <div className="space-y-4 border-b border-line/60 pb-8">
         <span className="mono-label text-xs text-muted">About & Background</span>
         <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink tracking-tight">
           {messages.about.title}
         </h1>
-        <p className="text-xl text-muted max-w-3xl leading-relaxed font-light">
+        <p className="max-w-3xl text-lg font-light leading-relaxed text-muted sm:text-xl">
           {messages.about.subtitle}
         </p>
       </div>
 
       {/* Positioning & Philosophy */}
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+      <section className="grid grid-cols-1 items-start gap-6 md:grid-cols-12 md:gap-8">
         <div className="md:col-span-4 space-y-2">
           <span className="mono-label text-xs text-muted">01 // PHILOSOPHY</span>
           <h2 className="font-display text-2xl font-bold text-ink">
@@ -36,7 +36,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </h2>
         </div>
 
-        <div className="md:col-span-8 p-8 rounded-2xl bg-paper border border-line/60 space-y-6">
+        <div className="space-y-6 rounded-2xl border border-line/60 bg-paper p-5 sm:p-8 md:col-span-8">
           <p className="text-lg text-ink font-serif leading-relaxed italic">
             "{profile.positioningText}"
           </p>
@@ -66,9 +66,9 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-6 rounded-xl border border-line/60 bg-paper space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="mono-label text-xs font-bold text-ink">DATA ANALYST (DA) & DATA SCIENTIST (DS)</span>
-              <LineChart className="w-5 h-5 text-muted" />
+            <div className="flex items-start justify-between gap-3">
+              <span className="mono-label min-w-0 text-xs font-bold text-ink">DATA ANALYST (DA) & DATA SCIENTIST (DS)</span>
+              <LineChart className="h-5 w-5 shrink-0 text-muted" />
             </div>
             <p className="text-sm text-muted">
               {locale === 'en'
@@ -78,9 +78,9 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </div>
 
           <div className="p-6 rounded-xl border border-line/60 bg-paper space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="mono-label text-xs font-bold text-ink">BUSINESS ANALYST (BA) & SYSTEM ANALYST (SA)</span>
-              <Layers className="w-5 h-5 text-muted" />
+            <div className="flex items-start justify-between gap-3">
+              <span className="mono-label min-w-0 text-xs font-bold text-ink">BUSINESS ANALYST (BA) & SYSTEM ANALYST (SA)</span>
+              <Layers className="h-5 w-5 shrink-0 text-muted" />
             </div>
             <p className="text-sm text-muted">
               {locale === 'en'
@@ -90,9 +90,9 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </div>
 
           <div className="p-6 rounded-xl border border-line/60 bg-paper space-y-3 md:col-span-2">
-            <div className="flex items-center justify-between">
+            <div className="flex items-start justify-between gap-3">
               <span className="mono-label text-xs font-bold text-ink">PRODUCT MANAGER (PRODUCT)</span>
-              <Database className="w-5 h-5 text-muted" />
+              <Database className="h-5 w-5 shrink-0 text-muted" />
             </div>
             <p className="text-sm text-muted">
               {locale === 'en'
@@ -104,7 +104,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
       </section>
 
       {/* System Methodology */}
-      <section className="p-8 rounded-2xl bg-graphite text-canvas space-y-6">
+      <section className="space-y-6 rounded-2xl bg-graphite p-5 text-canvas sm:p-8">
         <span className="mono-label text-xs text-signal">03 // SYSTEM METHODOLOGY</span>
         <h2 className="font-display text-3xl font-bold">
           {messages.about.methodologyHeading}
@@ -134,8 +134,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
       </section>
 
       {/* Call to Action */}
-      <section className="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-2xl border border-line/60 bg-paper">
-        <div>
+      <section className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-line/60 bg-paper p-5 sm:flex-row sm:items-center sm:p-8">
+        <div className="min-w-0">
           <h3 className="font-display text-2xl font-bold text-ink">
             {messages.about.contactHeading}
           </h3>
@@ -147,7 +147,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </div>
         <Link
           href={`/${locale}/contact`}
-          className="px-6 py-3 rounded-lg bg-ink text-canvas font-semibold text-sm hover:bg-graphite transition-all whitespace-nowrap"
+          className="flex min-h-12 w-full items-center justify-center whitespace-nowrap rounded-lg bg-ink px-6 py-3 text-sm font-semibold text-canvas transition-all hover:bg-graphite sm:w-auto"
         >
           {messages.hero.ctaContact} →
         </Link>

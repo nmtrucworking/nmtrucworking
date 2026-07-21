@@ -11,10 +11,10 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
   const messages = loadMessages(locale);
 
   return (
-    <div className="space-y-8 py-6 max-w-3xl">
+    <div className="max-w-3xl space-y-8 py-3 sm:py-6">
       <div className="space-y-2 border-b border-line/60 pb-6">
         <span className="mono-label text-xs text-muted">Legal & Systems</span>
-        <h1 className="font-display text-4xl font-bold text-ink">
+        <h1 className="font-display text-3xl font-bold text-ink sm:text-4xl">
           {messages.footer.privacy}
         </h1>
       </div>

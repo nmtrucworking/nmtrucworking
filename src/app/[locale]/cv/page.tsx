@@ -13,12 +13,12 @@ export default async function CVPage({ params }: CVPageProps) {
   const profile = loadProfile();
 
   return (
-    <div className="space-y-12 py-6 max-w-4xl mx-auto">
+    <div className="mx-auto max-w-4xl space-y-10 py-3 sm:space-y-12 sm:py-6">
       {/* Title & Download Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-line/60 pb-8">
         <div className="space-y-2">
           <span className="mono-label text-xs text-muted">Curriculum Vitae</span>
-          <h1 className="font-display text-4xl font-bold text-ink tracking-tight">
+          <h1 className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
             {messages.cv.title}
           </h1>
           <p className="text-sm text-muted">
@@ -26,12 +26,12 @@ export default async function CVPage({ params }: CVPageProps) {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="grid w-full grid-cols-1 gap-3 min-[420px]:flex min-[420px]:w-auto min-[420px]:flex-wrap min-[420px]:items-center">
           <a
             href={profile.cv.files.en}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2.5 rounded-lg bg-ink text-canvas text-xs font-mono font-bold hover:bg-graphite transition-all flex items-center gap-2"
+            className="flex min-h-11 items-center justify-center gap-2 rounded-lg bg-ink px-4 py-2.5 text-xs font-mono font-bold text-canvas transition-all hover:bg-graphite"
           >
             <Download className="w-4 h-4 text-signal" />
             <span>{messages.cv.downloadEN}</span>
@@ -40,7 +40,7 @@ export default async function CVPage({ params }: CVPageProps) {
             href={profile.cv.files.vi}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2.5 rounded-lg border border-line bg-paper text-ink text-xs font-mono font-bold hover:bg-canvas transition-all flex items-center gap-2"
+            className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-line bg-paper px-4 py-2.5 text-xs font-mono font-bold text-ink transition-all hover:bg-canvas"
           >
             <Download className="w-4 h-4 text-muted" />
             <span>{messages.cv.downloadVI}</span>
@@ -49,7 +49,7 @@ export default async function CVPage({ params }: CVPageProps) {
       </div>
 
       {/* Online CV Card View */}
-      <div className="p-8 sm:p-12 rounded-2xl border border-line/60 bg-paper space-y-12 shadow-sm font-sans">
+      <div className="space-y-10 rounded-2xl border border-line/60 bg-paper p-5 font-sans shadow-sm sm:space-y-12 sm:p-12">
         {/* Header Block */}
         <div className="space-y-4 border-b border-line/40 pb-8">
           <h2 className="font-display text-3xl font-bold text-ink">{profile.displayName}</h2>
@@ -93,7 +93,7 @@ export default async function CVPage({ params }: CVPageProps) {
 
           <div className="space-y-8 font-sans">
             <div className="space-y-2 border-l-2 border-line/80 pl-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
                 <h4 className="font-display text-lg font-bold text-ink">
                   Operations Hub — Lead System Analyst
                 </h4>
@@ -107,7 +107,7 @@ export default async function CVPage({ params }: CVPageProps) {
             </div>
 
             <div className="space-y-2 border-l-2 border-line/80 pl-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
                 <h4 className="font-display text-lg font-bold text-ink">
                   Customer Churn Intelligence — Data Scientist
                 </h4>
@@ -121,7 +121,7 @@ export default async function CVPage({ params }: CVPageProps) {
             </div>
 
             <div className="space-y-2 border-l-2 border-line/80 pl-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
                 <h4 className="font-display text-lg font-bold text-ink">
                   Supply Chain Analytics — Data Analyst
                 </h4>

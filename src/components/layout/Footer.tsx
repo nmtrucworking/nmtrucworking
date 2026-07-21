@@ -15,8 +15,8 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
   const site = loadSiteConfig();
 
   return (
-    <footer className="w-full border-t border-line/60 bg-paper py-16 text-ink">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12">
+    <footer className="w-full border-t border-line/60 bg-paper py-12 text-ink sm:py-16">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:grid-cols-2 sm:px-6 md:grid-cols-12 md:gap-12 lg:px-8">
         {/* Availability & Identity */}
         <div className="md:col-span-6 flex flex-col justify-between space-y-6">
           <div className="space-y-4">
@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
         </div>
 
         {/* Quick Links & Socials */}
-        <div className="md:col-span-3 space-y-4">
+        <div className="sm:col-span-1 md:col-span-3 space-y-4">
           <h4 className="mono-label text-xs font-semibold text-muted">Navigation</h4>
           <ul className="space-y-2 text-sm">
             {site.navigation.map((item) => (
@@ -50,12 +50,12 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
           </ul>
         </div>
 
-        <div className="md:col-span-3 space-y-4">
+        <div className="min-w-0 sm:col-span-1 md:col-span-3 space-y-4">
           <h4 className="mono-label text-xs font-semibold text-muted">Direct Contact</h4>
           <div className="space-y-3 text-sm">
             <a
               href={`mailto:${profile.contact.email}`}
-              className="flex items-center gap-2 font-mono text-ink hover:underline"
+              className="flex min-h-11 min-w-0 items-center gap-2 break-all font-mono text-ink hover:underline"
             >
               <Mail className="w-4 h-4 text-muted" />
               {profile.contact.email}
@@ -84,7 +84,7 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-line/40 flex flex-col sm:flex-row items-center justify-between text-xs text-muted gap-4">
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-line/40 px-4 pt-6 text-xs text-muted sm:mt-12 sm:flex-row sm:items-center sm:px-6 sm:pt-8 lg:px-8">
         <div>
           © {new Date().getFullYear()} JIN. {messages.footer.rights}
         </div>

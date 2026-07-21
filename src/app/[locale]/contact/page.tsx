@@ -29,22 +29,22 @@ export default function ContactPage({ params }: ContactPageProps) {
   };
 
   return (
-    <div className="space-y-16 py-6">
+    <div className="space-y-12 py-3 sm:space-y-16 sm:py-6">
       {/* Title */}
       <div className="space-y-4 border-b border-line/60 pb-8">
         <span className="mono-label text-xs text-muted">Direct Channel</span>
         <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink tracking-tight">
           {messages.contact.title}
         </h1>
-        <p className="text-xl text-muted max-w-3xl leading-relaxed font-light">
+        <p className="max-w-3xl text-lg font-light leading-relaxed text-muted sm:text-xl">
           {messages.contact.subtitle}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12">
         {/* Direct Channels Column */}
         <div className="lg:col-span-5 space-y-8">
-          <div className="p-8 rounded-2xl border border-line/60 bg-paper space-y-6">
+          <div className="min-w-0 space-y-6 rounded-2xl border border-line/60 bg-paper p-5 sm:p-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-graphite text-canvas text-xs font-mono">
               <span className="w-2 h-2 rounded-full bg-signal animate-pulse-slow" />
               <span>{profile.availability.label[locale]}</span>
@@ -55,7 +55,7 @@ export default function ContactPage({ params }: ContactPageProps) {
                 <span className="mono-label text-xs text-muted">{messages.contact.emailLabel}</span>
                 <a
                   href={`mailto:${profile.contact.email}`}
-                  className="text-lg font-mono font-bold text-ink hover:underline block"
+                  className="block break-all text-base font-mono font-bold text-ink hover:underline sm:text-lg"
                 >
                   {profile.contact.email}
                 </a>
@@ -70,7 +70,7 @@ export default function ContactPage({ params }: ContactPageProps) {
 
               <div className="space-y-3 pt-4 border-t border-line/40">
                 <span className="mono-label text-xs text-muted block">Online Profiles</span>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
                   <a
                     href={profile.contact.github}
                     target="_blank"
@@ -97,7 +97,7 @@ export default function ContactPage({ params }: ContactPageProps) {
 
         {/* Contact Form Column */}
         <div className="lg:col-span-7">
-          <div className="p-8 rounded-2xl border border-line/60 bg-paper space-y-6">
+          <div className="space-y-6 rounded-2xl border border-line/60 bg-paper p-5 sm:p-8">
             <h2 className="font-display text-2xl font-bold text-ink">
               {messages.contact.formHeading}
             </h2>
