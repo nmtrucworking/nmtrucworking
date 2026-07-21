@@ -86,6 +86,86 @@
   background: linear-gradient(90deg, transparent, var(--color-signal), transparent);
 }
 
+/* Keep the sticky navigation fully opaque above both light pages and the hero. */
+.site-header {
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 5%);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    backdrop-filter 180ms ease;
+}
+
+.site-header--scrolling {
+  border-color: rgb(215 215 219 / 82%);
+  background-color: rgb(247 247 242 / 88%);
+  color: var(--color-ink);
+  box-shadow: 0 8px 24px rgb(13 13 15 / 16%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Shared route and viewport motion: restrained, soft and accessibility-aware. */
+.luxury-page {
+  min-width: 0;
+}
+
+.luxury-page--entering {
+  animation: luxury-page-in 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes luxury-page-in {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate3d(0, 14px, 0);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.luxury-reveal {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 820ms cubic-bezier(0.22, 1, 0.36, 1) var(--luxury-reveal-delay, 0ms),
+    filter 900ms cubic-bezier(0.22, 1, 0.36, 1) var(--luxury-reveal-delay, 0ms),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1) var(--luxury-reveal-delay, 0ms);
+  will-change: opacity, filter, transform;
+}
+
+.luxury-reveal.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .luxury-page--entering {
+    animation: none;
+  }
+
+  .luxury-reveal,
+  .luxury-reveal.is-visible {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}
+
 /* Home hero: editorial portrait composition */
 .home-hero {
   position: relative;
@@ -215,9 +295,9 @@
 
 .home-hero-portrait {
   position: absolute;
-  z-index: 1;
-  right: -1.5rem;
-  bottom: 0;
+  z-index: 5;
+  right: -2rem;
+  bottom: 0rem;
   width: auto;
   height: clamp(38.75rem, 75vh, 53.125rem);
   max-width: 112%;
@@ -348,11 +428,18 @@
 }
 
 /* TRÚC. brand direction: charcoal stage, warm-gold signal and diagonal motif */
+.home-page {
+  margin-top: -1.25rem;
+}
+
 .home-hero {
-  min-height: min(52rem, calc(100svh - 6.5rem));
+  min-height: clamp(34rem, calc(100svh - 6rem), 42rem);
+  isolation: isolate;
+  width: auto;
+  margin-inline: calc(50% - 50vw);
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 7%);
-  border-radius: 1.5rem;
+  overflow: clip;
+  border-block: 1px solid rgb(255 255 255 / 7%);
   background:
     radial-gradient(circle at 76% 46%, rgb(212 167 90 / 8%), transparent 34%),
     linear-gradient(135deg, #111114 0%, #08080a 100%);
@@ -362,20 +449,30 @@
 }
 
 .home-hero-stage {
-  grid-template-columns: minmax(0, 1.05fr) minmax(30rem, 1fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   gap: 0;
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
 
 .home-hero-copy {
-  gap: clamp(1.15rem, 2.2vh, 1.65rem);
-  padding: clamp(3.5rem, 7vw, 6rem) 1rem clamp(3.5rem, 6vw, 5rem) clamp(2rem, 5vw, 4.5rem);
+  min-width: 0;
+  gap: clamp(0.75rem, 1.25vh, 1.05rem);
+  padding: clamp(1.5rem, 3.5vh, 2.5rem) clamp(1rem, 2.5vw, 2rem) clamp(1.5rem, 3.5vh, 2.5rem) 0;
 }
 
 .home-hero-title {
-  max-width: 9.5ch;
-  font-size: clamp(3.5rem, 5.5vw, 5.7rem);
+  width: max-content;
+  max-width: 100%;
+  font-size: clamp(2.9rem, 4.7vw, 4.5rem);
   line-height: 0.92;
   letter-spacing: -0.055em;
+}
+
+.home-hero-title > span {
+  white-space: nowrap;
 }
 
 .home-hero-description {
@@ -400,7 +497,10 @@
 }
 
 .home-hero-visual {
-  min-height: 46rem;
+  min-width: 0;
+  min-height: clamp(34rem, calc(100svh - 6rem), 42rem);
+  overflow: hidden;
+  overflow: clip;
   isolation: isolate;
 }
 
@@ -425,7 +525,7 @@
 
 .home-hero-location {
   top: 2rem;
-  right: 2rem;
+  right: 0;
 }
 
 .home-portrait-effects {
@@ -464,8 +564,10 @@
 }
 
 .home-hero-portrait {
-  right: 22%;
-  height: min(43rem, 83vh);
+  top: auto;
+  right: 34%;
+  bottom: 0;
+  height: min(38rem, calc(100svh - 7rem));
   max-width: 80%;
   filter: saturate(0.84) contrast(1.04);
 }
@@ -473,11 +575,11 @@
 .home-hero-traits {
   position: absolute;
   z-index: 4;
-  top: 8.5rem;
-  right: 1.25rem;
+  top: 5.5rem;
+  right: 0;
   display: grid;
   width: 11.5rem;
-  gap: 1.45rem;
+  gap: 1.1rem;
 }
 
 .home-hero-traits > div {
@@ -514,17 +616,25 @@
 
 @media (max-width: 1100px) {
   .home-hero-stage {
-    grid-template-columns: minmax(0, 1fr) minmax(25rem, 0.86fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.86fr);
   }
 
-  .home-hero-title { font-size: clamp(3.35rem, 5.8vw, 4.8rem); }
-  .home-hero-copy { padding-left: 2.75rem; }
-  .home-hero-traits { width: 9.5rem; right: 0.75rem; }
-  .home-hero-portrait { right: 18%; max-width: 90%; }
+  .home-hero-title { font-size: clamp(2.7rem, 5vw, 3.8rem); }
+  .home-hero-traits { width: 9.5rem; right: 0; }
+  .home-hero-portrait { right: 21%; max-width: 90%; }
+}
+
+@media (min-width: 640px) {
+  .home-page { margin-top: -2rem; }
+  .home-hero-stage { padding-inline: 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .home-hero-stage { padding-inline: 2rem; }
 }
 
 @media (max-width: 767px) {
-  .home-hero { border-radius: 1.1rem; }
+  .home-hero { min-height: auto; }
 
   .home-hero-stage {
     display: flex;
@@ -532,31 +642,31 @@
   }
 
   .home-hero-copy {
-    padding: 2.5rem 1.4rem 1.75rem;
+    padding: 1.35rem 0 1.1rem;
   }
 
   .home-hero-title {
-    max-width: 10ch;
-    font-size: clamp(2.85rem, 13vw, 4.3rem);
+    font-size: clamp(2.25rem, 10vw, 3rem);
     line-height: 0.94;
   }
 
-  .home-hero-visual { min-height: 43rem; }
-  .home-hero-location { top: 0.75rem; right: 1rem; }
+  .home-hero-visual { min-height: 31rem; }
+  .home-hero-location { top: 0.75rem; right: 0; }
   .home-hero-slash { left: 51%; }
 
   .home-hero-portrait {
-    right: 50%;
-    bottom: 6.5rem;
-    height: min(34rem, 115vw);
+    top: auto;
+    right: 54%;
+    bottom: 0;
+    height: min(29rem, 105vw);
     max-width: 95%;
   }
 
   .home-hero-traits {
     top: auto;
-    right: 1rem;
+    right: 0;
     bottom: 1.2rem;
-    left: 1rem;
+    left: 0;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     width: auto;
     gap: 1rem;
@@ -566,10 +676,8 @@
 }
 
 @media (max-width: 420px) {
-  .home-hero-copy { padding-inline: 1.1rem; }
   .home-hero-disciplines { gap: 0.55rem; font-size: 0.62rem; }
-  .home-hero-visual { min-height: 39rem; }
-  .home-hero-portrait { bottom: 7rem; height: min(29rem, 125vw); }
-  .home-hero-traits { right: 0.85rem; left: 0.85rem; }
+  .home-hero-visual { min-height: 29rem; }
+  .home-hero-portrait { top: auto; right: 54%; bottom: 0; height: min(26rem, 112vw); }
   .home-hero-traits > div { grid-template-columns: 1.2rem minmax(0, 1fr); gap: 0.5rem; }
 }

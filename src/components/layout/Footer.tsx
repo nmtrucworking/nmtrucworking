@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { Locale, loadMessages, loadProfile, loadSiteConfig } from '@/content/load';
@@ -8,6 +6,8 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 interface FooterProps {
   locale: Locale;
 }
+
+const currentYear = new Date().getUTCFullYear();
 
 export const Footer: React.FC<FooterProps> = ({ locale }) => {
   const messages = loadMessages(locale);
@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
 
       <div className="mx-auto mt-10 flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-white/10 px-4 pt-6 text-xs text-canvas/45 sm:mt-12 sm:flex-row sm:items-center sm:px-6 sm:pt-8 lg:px-8">
         <div>
-          © {new Date().getFullYear()} NGUYỄN MINH TRÚC. {messages.footer.rights}
+          © {currentYear} NGUYỄN MINH TRÚC. {messages.footer.rights}
         </div>
         <div className="flex items-center gap-6">
           <Link href={`/${locale}/privacy`} className="transition-colors hover:text-canvas">

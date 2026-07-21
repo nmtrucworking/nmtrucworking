@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Locale } from '@/content/load';
 import { loadMessages } from '@/content/load';

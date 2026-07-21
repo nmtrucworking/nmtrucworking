@@ -25,7 +25,7 @@ export default async function HomePage({ params }: HomePageProps) {
   };
 
   return (
-    <div className="space-y-14 py-3 sm:space-y-20 sm:py-6">
+    <div className="home-page space-y-14 sm:space-y-20">
       {/* Hero Viewport */}
       <section className="home-hero">
         <div className="home-hero-stage">
