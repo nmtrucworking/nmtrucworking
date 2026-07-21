@@ -4,6 +4,8 @@ import { Locale } from '@/content/load';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'vi' }];
 }
