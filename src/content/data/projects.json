@@ -2,8 +2,8 @@
   "$schema": "../schemas/projects.schema.json",
   "projects": [
     {
-      "id": "operations-hub",
-      "slug": "operations-hub",
+      "id": "senova",
+      "slug": "senova",
       "status": "published",
       "stage": "prototype",
       "visibility": "public",
@@ -11,31 +11,188 @@
       "order": 1,
       "yearStart": 2026,
       "yearEnd": null,
-      "domains": ["enterprise-saas", "operations"],
+      "domains": [
+        "cultural-product",
+        "food-beverage",
+        "digital-experience"
+      ],
       "roles": {
-        "primary": "SA",
-        "secondary": ["BA", "PRODUCT"]
+        "primary": "PRODUCT",
+        "secondary": [
+          "BA",
+          "SA"
+        ]
       },
-      "capabilities": ["multi-tenancy", "requirements", "system-architecture"],
-      "technologies": ["microservices", "rest-api", "relational-data-model", "nextjs"],
+      "capabilities": [
+        "product-strategy",
+        "business-modeling",
+        "user-experience",
+        "cultural-storytelling",
+        "project-leadership"
+      ],
+      "technologies": [
+        "react",
+        "typescript",
+        "vite",
+        "tailwindcss",
+        "fastapi",
+        "python",
+        "framer-motion",
+        "qr-code"
+      ],
       "team": {
         "type": "team",
         "size": 3
       },
       "localized": {
         "en": {
-          "title": "Operations Hub — Multi-Tenant SaaS Architecture",
-          "summary": "A tenant-first SaaS architecture for multi-organization operations, designed around domain services, role-based membership, and strict data isolation.",
-          "contribution": "Defined the use-case baseline, tenant isolation model, RBAC policies, business rules, and microservice boundary definitions.",
-          "seoTitle": "Operations Hub Case Study — Trúc",
-          "seoDescription": "System analysis and tenant-first SaaS architecture case study covering roles, memberships, business rules, and domain services."
+          "title": "Senova — Vietnamese Lotus Tea Experience",
+          "summary": "A cultural lotus-tea project combining physical products, a guided brewing ritual, and a QR-linked digital story to bring Vietnamese lotus culture into a contemporary experience.",
+          "contribution": "Led product definition, cultural experience design, business and financial planning, website UX direction, project documentation, and coordination of the three-member team.",
+          "seoTitle": "Senova Vietnamese Lotus Tea Experience — Trúc",
+          "seoDescription": "A product and digital-experience case study for Senova, covering lotus-tea product design, cultural storytelling, QR experience, business planning, and prototype development."
         },
         "vi": {
-          "title": "Operations Hub — Kiến trúc SaaS Đa Tổ chức",
-          "summary": "Kiến trúc SaaS đa tổ chức theo hướng tenant-first, được thiết kế quanh các dịch vụ miền, phân quyền RBAC và cô lập dữ liệu nghiêm ngặt.",
-          "contribution": "Xác định use-case baseline, mô hình cô lập tenant, chính sách RBAC, quy tắc nghiệp vụ và ranh giới vi dịch vụ.",
-          "seoTitle": "Nghiên cứu tình huống Operations Hub — Trúc",
-          "seoDescription": "Nghiên cứu phân tích hệ thống và kiến trúc SaaS tenant-first về vai trò, membership, business rule và dịch vụ miền."
+          "title": "Senova — Trải nghiệm Trà Sen Văn hóa Việt",
+          "summary": "Dự án trà sen văn hóa kết hợp sản phẩm vật lý, nghi thức pha trà được hướng dẫn và câu chuyện số qua QR nhằm đưa văn hóa sen Việt vào trải nghiệm đương đại.",
+          "contribution": "Dẫn dắt định hình sản phẩm, thiết kế trải nghiệm văn hóa, xây dựng kế hoạch kinh doanh và tài chính, định hướng UX website, hoàn thiện tài liệu dự án và điều phối nhóm ba thành viên.",
+          "seoTitle": "Senova — Trải nghiệm Trà Sen Văn hóa Việt — Trúc",
+          "seoDescription": "Nghiên cứu tình huống về Senova, tập trung vào thiết kế sản phẩm trà sen, kể chuyện văn hóa, trải nghiệm QR, kế hoạch kinh doanh và phát triển nguyên mẫu."
+        }
+      },
+      "assets": [],
+      "links": [
+        {
+          "type": "live",
+          "url": "https://senova.nguyenminhtruc.site",
+          "visibility": "public",
+          "label": {
+            "en": "View Senova Website",
+            "vi": "Xem Website Senova"
+          }
+        },
+        {
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/calmora",
+          "visibility": "public",
+          "label": {
+            "en": "View Project Repository",
+            "vi": "Xem Kho mã nguồn Dự án"
+          }
+        }
+      ],
+      "caseStudy": [
+        {
+          "id": "context",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "From Packaged Tea to a Cultural Experience",
+              "body": "Senova addresses the risk that the cultural meaning of lotus tea is lost when the product is reduced to a conventional package. The project treats the physical product, brewing ritual, packaging, and digital story as one experience system."
+            },
+            "vi": {
+              "heading": "Từ Sản phẩm Đóng gói đến Trải nghiệm Văn hóa",
+              "body": "Senova giải quyết nguy cơ giá trị văn hóa của trà sen bị mờ nhạt khi sản phẩm chỉ còn là một gói trà thông thường. Dự án xem sản phẩm vật lý, nghi thức pha, bao bì và câu chuyện số là một hệ trải nghiệm thống nhất."
+            }
+          }
+        },
+        {
+          "id": "product-system",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "Three Product Lines with Petal Pack as the Core",
+              "body": "The product system consists of Petal Pack, Classic, and Gift Set. Petal Pack is the core experiential line: a tea bag is enclosed by real lotus petals shaped into a dried bud, which the user gently opens, smells, and brews as a whole."
+            },
+            "vi": {
+              "heading": "Ba Dòng Sản phẩm, Petal Pack là Trọng tâm",
+              "body": "Hệ sản phẩm gồm Petal Pack, Classic và Gift Set. Petal Pack là dòng trải nghiệm cốt lõi: túi trà được bao bởi cánh sen thật tạo hình búp khô để người dùng tách nhẹ, thưởng hương và pha nguyên búp."
+            }
+          }
+        },
+        {
+          "id": "digital-experience",
+          "type": "process",
+          "localized": {
+            "en": {
+              "heading": "QR-Linked Story and Guided Ritual",
+              "body": "The website prototype supports product discovery, cultural storytelling, and a QR journey for the brewing experience. The repository contains an active frontend and backend scaffold; it should still be presented as a prototype rather than a completed commerce platform."
+            },
+            "vi": {
+              "heading": "Câu chuyện qua QR và Nghi thức Được hướng dẫn",
+              "body": "Nguyên mẫu website hỗ trợ khám phá sản phẩm, kể chuyện văn hóa và hành trình QR cho trải nghiệm pha trà. Kho mã nguồn đã có nền tảng frontend và backend đang phát triển; chưa nên mô tả đây là nền tảng thương mại hoàn thiện."
+            }
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Product Lines",
+          "value": "3"
+        },
+        {
+          "label": "Team Size",
+          "value": "3 Members"
+        }
+      ]
+    },
+    {
+      "id": "operations-hub",
+      "slug": "operations-hub",
+      "status": "published",
+      "stage": "prototype",
+      "visibility": "public",
+      "featured": true,
+      "order": 2,
+      "yearStart": 2026,
+      "yearEnd": null,
+      "domains": [
+        "enterprise-saas",
+        "operations",
+        "student-organizations"
+      ],
+      "roles": {
+        "primary": "SA",
+        "secondary": [
+          "BA",
+          "PRODUCT"
+        ]
+      },
+      "capabilities": [
+        "multi-tenancy",
+        "requirements",
+        "system-architecture",
+        "rbac",
+        "data-modeling"
+      ],
+      "technologies": [
+        "nestjs",
+        "nextjs",
+        "typescript",
+        "postgresql",
+        "prisma",
+        "pnpm",
+        "docker",
+        "rest-api"
+      ],
+      "team": {
+        "type": "team",
+        "size": 3
+      },
+      "localized": {
+        "en": {
+          "title": "Operations Hub — Multi-Tenant Operations Platform",
+          "summary": "A prototype multi-tenant operations platform for student organizations, centered on tenant-scoped memberships, role-based permissions, and isolated organizational data.",
+          "contribution": "Led system analysis for the 21-use-case baseline, tenant-context RBAC, membership and data-isolation rules; contributed to the NestJS/Next.js monorepo, Prisma data model, and API/web prototype.",
+          "seoTitle": "Operations Hub Multi-Tenant SaaS Case Study — Trúc",
+          "seoDescription": "A system-analysis and architecture case study for a multi-tenant student-organization operations platform using NestJS, Next.js, PostgreSQL, Prisma, RBAC, and tenant-isolated data."
+        },
+        "vi": {
+          "title": "Operations Hub — Nền tảng Vận hành Đa Tổ chức",
+          "summary": "Nguyên mẫu nền tảng vận hành đa tenant dành cho các tổ chức sinh viên, tập trung vào membership theo tenant, phân quyền theo vai trò và cô lập dữ liệu tổ chức.",
+          "contribution": "Dẫn dắt phân tích hệ thống cho baseline 21 nhóm use case, RBAC theo ngữ cảnh tenant, quy tắc membership và cô lập dữ liệu; tham gia xây dựng monorepo NestJS/Next.js, mô hình Prisma và nguyên mẫu API/web.",
+          "seoTitle": "Operations Hub — Nghiên cứu SaaS Đa Tenant — Trúc",
+          "seoDescription": "Nghiên cứu phân tích và kiến trúc nền tảng vận hành đa tenant cho tổ chức sinh viên với NestJS, Next.js, PostgreSQL, Prisma, RBAC và dữ liệu cô lập theo tenant."
         }
       },
       "assets": [
@@ -48,8 +205,8 @@
           "purpose": "hero",
           "status": "prototype",
           "alt": {
-            "en": "Operations Hub tenant and service architecture overview diagram",
-            "vi": "Sơ đồ tổng quan kiến trúc tenant và dịch vụ của Operations Hub"
+            "en": "Operations Hub tenant, membership, role, and service architecture overview",
+            "vi": "Sơ đồ tổng quan tenant, membership, vai trò và kiến trúc dịch vụ của Operations Hub"
           }
         }
       ],
@@ -59,8 +216,8 @@
           "url": "https://github.com/nmtrucworking/operations-hub",
           "visibility": "public",
           "label": {
-            "en": "View Architecture Repository",
-            "vi": "Xem Mã nguồn Kiến trúc"
+            "en": "View Prototype Repository",
+            "vi": "Xem Kho mã nguồn Nguyên mẫu"
           }
         }
       ],
@@ -70,161 +227,49 @@
           "type": "lead",
           "localized": {
             "en": {
-              "heading": "Context & Challenge",
-              "body": "Legacy multi-tenant implementations often suffer from data leakage or rigid schema definitions. Operations Hub reframed operational complexity into an elastic membership architecture with clean service isolation."
+              "heading": "From One Club to a Multi-Organization Platform",
+              "body": "Operations Hub evolved from an MTEC-specific management system into a reusable platform for multiple student organizations. MTEC is used as a reference configuration, not as a set of hard-coded platform rules."
             },
             "vi": {
-              "heading": "Bối cảnh & Thách thức",
-              "body": "Các hệ thống SaaS đa tenant truyền thống thường gặp rủi ro rò rỉ dữ liệu hoặc cấu trúc DB cứng nhắc. Operations Hub đã chuẩn hóa độ phức tạp này thành kiến trúc membership linh hoạt với ranh giới dịch vụ cô lập hoàn toàn."
+              "heading": "Từ Một Câu lạc bộ đến Nền tảng Đa Tổ chức",
+              "body": "Operations Hub phát triển từ hệ thống quản lý riêng cho MTEC thành nền tảng có thể dùng cho nhiều tổ chức sinh viên. MTEC chỉ là cấu hình tham chiếu để kiểm chứng nghiệp vụ, không phải tập quy tắc bị hard-code vào nền tảng."
             }
           }
         },
         {
-          "id": "decision-tenant",
+          "id": "authorization",
           "type": "decision",
           "localized": {
             "en": {
-              "heading": "Tenant-First Data & Role Boundary",
-              "body": "Users are decoupled from single tenants. A single user identity can hold distinct memberships and permissions across multiple organizations without data cross-contamination."
+              "heading": "Tenant-Context Membership and RBAC",
+              "body": "A user may belong to multiple organizations through separate memberships. Roles and permissions are resolved within a tenant context, while business data, files, notifications, exports, and audit records must remain isolated by tenant."
             },
             "vi": {
-              "heading": "Ranh giới Dữ liệu & Phân quyền Tenant-First",
-              "body": "Tách biệt hoàn toàn định danh người dùng khỏi tổ chức. Một tài khoản có thể tham gia nhiều tổ chức với các quyền hạn riêng biệt mà không lo rò rỉ dữ liệu chéo."
+              "heading": "Membership và RBAC theo Ngữ cảnh Tenant",
+              "body": "Một người dùng có thể thuộc nhiều tổ chức thông qua các membership riêng. Vai trò và quyền được phân giải trong ngữ cảnh tenant; dữ liệu nghiệp vụ, tệp, thông báo, bản xuất và nhật ký kiểm toán phải được cô lập theo tenant."
             }
           }
         },
         {
-          "id": "architecture",
+          "id": "implementation",
           "type": "architecture",
           "localized": {
             "en": {
-              "heading": "System Architecture Pipeline",
-              "body": "Domain Gateway → Tenant Auth Middleware → Isolated Database Schema per Tenant / Row-Level Security Policy → Event Bus Audit Logger."
+              "heading": "Current Prototype Architecture",
+              "body": "The current repository is a pnpm monorepo with a NestJS API, Next.js web application, shared packages, PostgreSQL, Prisma, Docker Compose, migrations, and seeded demo data. It is a base prototype, not evidence that all 21 use-case groups are fully implemented."
             },
             "vi": {
-              "heading": "Luồng Kiến trúc Hệ thống",
-              "body": "Cổng Dịch vụ Miền → Middleware Xác thực Tenant → Cấu trúc DB cô lập theo Tenant / Chính sách RLS → Nhật ký Kiểm toán Event Bus."
-            }
-          }
-        },
-        {
-          "id": "reflection",
-          "type": "reflection",
-          "localized": {
-            "en": {
-              "heading": "Architectural Evaluation",
-              "body": "The tenant isolation model passed schema verification tests with zero cross-tenant query vulnerabilities, ready for horizontal microservice scaling."
-            },
-            "vi": {
-              "heading": "Đánh giá Kiến trúc",
-              "body": "Mô hình cô lập tenant đã vượt qua các kiểm thử truy vấn chéo với tỉ lệ rò rỉ 0%, sẵn sàng cho việc mở rộng microservice theo chiều ngang."
+              "heading": "Kiến trúc Nguyên mẫu Hiện tại",
+              "body": "Kho mã nguồn hiện tại là pnpm monorepo gồm NestJS API, ứng dụng web Next.js, gói dùng chung, PostgreSQL, Prisma, Docker Compose, migration và dữ liệu demo. Đây là nguyên mẫu nền tảng, không phải bằng chứng rằng toàn bộ 21 nhóm use case đã được hiện thực."
             }
           }
         }
       ],
       "metrics": [
-        {"label": "Tenant Data Leakage Risk", "value": "0%"},
-        {"label": "Domain Services", "value": "6 Services"},
-        {"label": "Role Resolution Latency", "value": "<12ms"}
-      ]
-    },
-    {
-      "id": "e-commerce-growth-platform",
-      "slug": "e-commerce-growth-platform",
-      "status": "published",
-      "stage": "production",
-      "visibility": "public",
-      "featured": true,
-      "order": 4,
-      "yearStart": 2024,
-      "yearEnd": 2025,
-      "domains": ["e-commerce", "product"],
-      "roles": {
-        "primary": "PRODUCT",
-        "secondary": ["BA"]
-      },
-      "capabilities": ["product-framing", "requirements", "user-research"],
-      "technologies": ["mixpanel", "figma", "jira", "nextjs", "segment"],
-      "team": {
-        "type": "team",
-        "size": 6
-      },
-      "localized": {
-        "en": {
-          "title": "E-Commerce Growth Platform & Conversion Engine",
-          "summary": "Product redesign and checkout optimization driven by funnel analysis, user behavior tracking, and A/B hypothesis testing.",
-          "contribution": "Led product discovery, mapped multi-step funnel telemetry, prioritized backlog items using RICE, and specs for dynamic checkout UX.",
-          "seoTitle": "E-Commerce Growth Product Case Study — Trúc",
-          "seoDescription": "Product management case study detailing funnel optimization, user research, and checkout conversion gains."
-        },
-        "vi": {
-          "title": "E-Commerce Growth Platform — Nền tảng Tối ưu Tỷ lệ Chuyển đổi",
-          "summary": "Tái thiết kế sản phẩm và tối ưu luồng thanh toán dựa trên phân tích phễu chuyển đổi, theo dõi hành vi và kiểm thử giả thuyết A/B.",
-          "contribution": "Dẫn dắt Product Discovery, thiết kế chỉ số telemetry phễu thanh toán, ưu tiên backlog theo mô hình RICE và viết spec UX thanh toán.",
-          "seoTitle": "Nghiên cứu Tình huống Sản phẩm E-Commerce — Trúc",
-          "seoDescription": "Nghiên cứu Quản lý Sản phẩm chi tiết về tối ưu phễu chuyển đổi thanh toán và trải nghiệm người dùng."
-        }
-      },
-      "assets": [
         {
-          "id": "ecommerce-hero",
-          "src": "/media/projects/ecommerce/hero.svg",
-          "type": "diagram",
-          "width": 1600,
-          "height": 1000,
-          "purpose": "hero",
-          "status": "final",
-          "alt": {
-            "en": "E-commerce checkout funnel optimization telemetry map",
-            "vi": "Sơ đồ tối ưu phễu chuyển đổi thanh toán e-commerce"
-          }
+          "label": "Use Case Groups",
+          "value": "21"
         }
-      ],
-      "links": [
-        {
-          "type": "document",
-          "url": "https://github.com/nmtrucworking",
-          "visibility": "public",
-          "label": {
-            "en": "View Product Spec & Wireframes",
-            "vi": "Xem Specification & Wireframes"
-          }
-        }
-      ],
-      "caseStudy": [
-        {
-          "id": "context",
-          "type": "lead",
-          "localized": {
-            "en": {
-              "heading": "Funnel Friction Analysis",
-              "body": "Funnel analytics revealed a 42% drop-off at payment gateway selection due to unexpected shipping cost calculation steps."
-            },
-            "vi": {
-              "heading": "Phân tích Rào cản Phễu Chuyển đổi",
-              "body": "Phân tích phễu cho thấy 42% người dùng bỏ dở tại bước chọn cổng thanh toán do công đoạn tính phí vận chuyển chưa minh bạch."
-            }
-          }
-        },
-        {
-          "id": "solution",
-          "type": "decision",
-          "localized": {
-            "en": {
-              "heading": "1-Click Shipping Estimation & Unified Checkout",
-              "body": "Reframed shipping estimation into an upfront cart component and introduced 1-click payment options, accelerating completion time by 45s."
-            },
-            "vi": {
-              "heading": "Ước tính Phí Vận chuyển 1-Click & Thanh toán Thống nhất",
-              "body": "Tích hợp tính phí vận chuyển trực tiếp tại giỏ hàng và bổ sung tùy chọn thanh toán nhanh 1-click, rút ngắn 45 giây thời gian hoàn tất đơn."
-            }
-          }
-        }
-      ],
-      "metrics": [
-        {"label": "Checkout Conversion Lift", "value": "+24%"},
-        {"label": "Cart Abandonment Drop", "value": "-18%"},
-        {"label": "Average Order Value", "value": "+12%"}
       ]
     },
     {
@@ -234,22 +279,38 @@
       "stage": "prototype",
       "visibility": "public",
       "featured": false,
-      "order": 5,
-      "yearStart": 2026,
+      "order": 3,
+      "yearStart": 2025,
       "yearEnd": null,
-      "domains": ["project-management", "ai-ml"],
+      "domains": [
+        "project-management",
+        "ai-ml"
+      ],
       "roles": {
         "primary": "SA",
-        "secondary": ["PRODUCT"]
+        "secondary": [
+          "PRODUCT",
+          "BA"
+        ]
       },
-      "capabilities": ["system-architecture", "full-stack-development", "data-modeling"],
+      "capabilities": [
+        "product-framing",
+        "requirements",
+        "system-architecture",
+        "data-modeling",
+        "api-design"
+      ],
       "technologies": [
-        "python",
         "react",
+        "typescript",
         "vite",
-        "electron",
+        "tailwindcss",
+        "fastapi",
+        "python",
         "postgresql",
-        "supabase"
+        "electron",
+        "docker",
+        "rest-api"
       ],
       "team": {
         "type": "solo",
@@ -257,58 +318,90 @@
       },
       "localized": {
         "en": {
-          "title": "PronaFlow",
-          "summary": "An AI-enhanced project management platform that streamlines workflows and progress tracking.",
-          "contribution": "Built the Python backend and React/Vite frontend, connected the database, documented the folder structure, and established a monorepo with Git submodules.",
-          "seoTitle": "PronaFlow Project Management Platform — Trúc",
-          "seoDescription": "A full-stack AI-enhanced project management platform built with Python, React, Electron, PostgreSQL, and Supabase."
+          "title": "PronaFlow — Intelligent Project Management Platform",
+          "summary": "A project-management prototype for workspaces, projects, task workflows, scheduling, collaboration, reporting, and future AI-assisted analysis.",
+          "contribution": "Independently defined the product scope, requirements, system architecture, database model, REST API direction, project documentation, and the frontend, backend, and desktop implementation baseline.",
+          "seoTitle": "PronaFlow Project Management Prototype — Trúc",
+          "seoDescription": "A system architecture and product case study for a React, FastAPI, PostgreSQL, and Electron project-management prototype with planned AI-assisted capabilities."
         },
         "vi": {
-          "title": "PronaFlow",
-          "summary": "Nền tảng quản lý dự án tích hợp trí tuệ nhân tạo, hỗ trợ tối ưu hóa quy trình làm việc và theo dõi tiến độ.",
-          "contribution": "Xây dựng backend Python và frontend React/Vite, kết nối cơ sở dữ liệu, lập tài liệu cấu trúc thư mục và triển khai monorepo với Git submodules.",
-          "seoTitle": "Nền tảng Quản lý Dự án PronaFlow — Trúc",
-          "seoDescription": "Nền tảng quản lý dự án tích hợp AI được xây dựng với Python, React, Electron, PostgreSQL và Supabase."
+          "title": "PronaFlow — Nền tảng Quản lý Dự án Thông minh",
+          "summary": "Nguyên mẫu quản lý dự án cho workspace, dự án, luồng công việc, lịch, cộng tác, báo cáo và các năng lực phân tích hỗ trợ bởi AI trong định hướng phát triển.",
+          "contribution": "Độc lập xác định phạm vi sản phẩm, yêu cầu, kiến trúc hệ thống, mô hình cơ sở dữ liệu, định hướng REST API, tài liệu dự án và baseline triển khai frontend, backend, desktop.",
+          "seoTitle": "PronaFlow — Nguyên mẫu Quản lý Dự án — Trúc",
+          "seoDescription": "Nghiên cứu kiến trúc và sản phẩm cho nguyên mẫu quản lý dự án sử dụng React, FastAPI, PostgreSQL và Electron, với các năng lực AI đang trong định hướng phát triển."
         }
       },
       "assets": [],
       "links": [
         {
-          "type": "document",
-          "url": "https://github.com/nmtrucworking/pronaflow",
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/PronaFlow",
           "visibility": "public",
           "label": {
-            "en": "View Product Spec & Wireframes",
-            "vi": "Xem Specification & Wireframes"
+            "en": "View Project Monorepo",
+            "vi": "Xem Monorepo Dự án"
+          }
+        },
+        {
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/pronaflow-frontend",
+          "visibility": "public",
+          "label": {
+            "en": "View Frontend Repository",
+            "vi": "Xem Kho mã nguồn Frontend"
+          }
+        },
+        {
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/pronaflow-backend",
+          "visibility": "public",
+          "label": {
+            "en": "View Backend Repository",
+            "vi": "Xem Kho mã nguồn Backend"
           }
         }
       ],
       "caseStudy": [
         {
-          "id": "architecture",
-          "type": "architecture",
+          "id": "scope",
+          "type": "lead",
           "localized": {
             "en": {
-              "heading": "Cross-Platform System Architecture",
-              "body": "Designed a Python backend and React/Vite frontend with Electron desktop packaging and PostgreSQL/Supabase persistence."
+              "heading": "Project and Task Management Scope",
+              "body": "The current product scope covers authentication, workspaces, projects, Kanban-style task workflows, checklists, labels, attachments, due dates, comments, calendar, notifications, dashboards, and administration."
             },
             "vi": {
-              "heading": "Kiến trúc Hệ thống Đa nền tảng",
-              "body": "Xây dựng kiến trúc backend bằng Python và frontend bằng React/Vite, đóng gói ứng dụng desktop với Electron và lưu trữ trên PostgreSQL/Supabase."
+              "heading": "Phạm vi Quản lý Dự án và Công việc",
+              "body": "Phạm vi sản phẩm hiện tại gồm xác thực, workspace, dự án, luồng công việc dạng Kanban, checklist, nhãn, tệp đính kèm, hạn hoàn thành, bình luận, lịch, thông báo, dashboard và quản trị."
             }
           }
         },
         {
-          "id": "repository-structure",
-          "type": "process",
+          "id": "architecture",
+          "type": "architecture",
           "localized": {
             "en": {
-              "heading": "Repository and Data Foundation",
-              "body": "Connected the data layer, documented the folder structure, and organized multiple components through a monorepo and Git submodules."
+              "heading": "Current Architecture Baseline",
+              "body": "The current baseline uses a React and TypeScript frontend, FastAPI and Python backend, PostgreSQL persistence, REST APIs, and an Electron desktop direction. Earlier .NET and alternative backend versions are historical iterations rather than the current portfolio baseline."
             },
             "vi": {
-              "heading": "Nền tảng Kho mã nguồn và Dữ liệu",
-              "body": "Thiết lập liên kết cơ sở dữ liệu, xây dựng tài liệu cấu trúc thư mục và tổ chức các thành phần bằng monorepo cùng Git submodules."
+              "heading": "Baseline Kiến trúc Hiện tại",
+              "body": "Baseline hiện tại sử dụng frontend React và TypeScript, backend FastAPI và Python, lưu trữ PostgreSQL, REST API và định hướng desktop bằng Electron. Các phiên bản .NET hoặc backend khác là những lần thử nghiệm trước, không phải baseline portfolio hiện tại."
+            }
+          }
+        },
+        {
+          "id": "evidence-boundary",
+          "type": "reflection",
+          "localized": {
+            "en": {
+              "heading": "Prototype Status and Evidence Boundary",
+              "body": "The repository includes extensive architecture and feature documentation, but labels such as production-ready, enterprise-ready, real-time collaboration, and completed AI modules should be avoided unless verified by deployed behavior and test evidence."
+            },
+            "vi": {
+              "heading": "Trạng thái Nguyên mẫu và Ranh giới Bằng chứng",
+              "body": "Kho mã nguồn có hệ thống tài liệu kiến trúc và tính năng tương đối rộng, nhưng không nên dùng các nhãn như production-ready, enterprise-ready, cộng tác thời gian thực hoặc module AI đã hoàn thiện nếu chưa có hành vi triển khai và bằng chứng kiểm thử tương ứng."
             }
           }
         }
@@ -316,85 +409,220 @@
       "metrics": []
     },
     {
-      "id": "mtec-operations-hub",
-      "slug": "mtec-operations-hub",
+      "id": "recobridge",
+      "slug": "recobridge",
       "status": "published",
-      "stage": "production",
+      "stage": "academic",
       "visibility": "public",
       "featured": false,
-      "order": 6,
-      "yearStart": 2025,
+      "order": 4,
+      "yearStart": 2026,
       "yearEnd": null,
-      "domains": ["operations", "management-system"],
+      "domains": [
+        "recommender-systems",
+        "ai-ml",
+        "system-integration"
+      ],
       "roles": {
-        "primary": "PRODUCT",
-        "secondary": ["SA"]
+        "primary": "DS",
+        "secondary": [
+          "SA",
+          "BA"
+        ]
       },
-      "capabilities": ["product-leadership", "deployment", "authentication"],
+      "capabilities": [
+        "dataset-analysis",
+        "recommender-system-design",
+        "ml-pipeline-design",
+        "rest-api-integration",
+        "technical-documentation"
+      ],
       "technologies": [
-        "vercel",
-        "render",
-        "react",
-        "nodejs"
+        "python",
+        "pandas",
+        "jupyter",
+        "parquet",
+        "scikit-learn",
+        "fastapi",
+        "docker",
+        "rest-api"
       ],
       "team": {
-        "type": "team",
-        "size": 2
+        "type": "solo",
+        "size": 1
       },
       "localized": {
         "en": {
-          "title": "MTEC Operations Hub",
-          "summary": "An online management system for MTEC's people operations and internal workflows.",
-          "contribution": "Led the product, deployed the backend and frontend, configured the production environment, and resolved authentication and live data-fetching issues.",
-          "seoTitle": "MTEC Operations Hub — Trúc",
-          "seoDescription": "A production management system for MTEC personnel and internal operations, deployed on Render and Vercel."
+          "title": "RecoBridge — Product Recommendation System Integration",
+          "summary": "A solo academic project designing an end-to-end product recommendation flow that connects behavioral data, machine-learning models, a REST API, and an e-commerce demonstration interface.",
+          "contribution": "Independently selected and inspected the Synerise RecSys Challenge 2025 dataset, defined the business and technical scope, designed the data/ML/API architecture, and established the implementation, testing, and documentation baseline.",
+          "seoTitle": "RecoBridge Recommendation System Integration — Trúc",
+          "seoDescription": "A solo academic recommender-system case study using the Synerise RecSys Challenge 2025 dataset, with data exploration and a planned ML-to-REST API integration flow."
         },
         "vi": {
-          "title": "MTEC Operations Hub",
-          "summary": "Hệ thống quản lý trực tuyến dành cho Câu lạc bộ Truyền thông và Công nghệ, phục vụ quản lý nhân sự và quy trình vận hành nội bộ.",
-          "contribution": "Dẫn dắt sản phẩm, triển khai backend và frontend, cấu hình môi trường production, đồng thời xử lý luồng xác thực và truy xuất dữ liệu trực tiếp.",
-          "seoTitle": "Hệ thống Vận hành MTEC — Trúc",
-          "seoDescription": "Hệ thống quản lý nhân sự và vận hành nội bộ MTEC được triển khai trên Render và Vercel."
+          "title": "RecoBridge — Hệ thống Gợi ý Sản phẩm Tích hợp REST API",
+          "summary": "Dự án học thuật solo thiết kế luồng gợi ý sản phẩm đầu-cuối, kết nối dữ liệu hành vi, mô hình học máy, REST API và giao diện thương mại điện tử phục vụ minh họa tích hợp.",
+          "contribution": "Độc lập lựa chọn và khảo sát bộ dữ liệu Synerise RecSys Challenge 2025, xác định phạm vi nghiệp vụ và kỹ thuật, thiết kế kiến trúc dữ liệu/ML/API, đồng thời xây dựng baseline triển khai, kiểm thử và tài liệu.",
+          "seoTitle": "RecoBridge — Hệ thống Gợi ý Tích hợp REST API — Trúc",
+          "seoDescription": "Nghiên cứu học thuật solo về hệ gợi ý sử dụng Synerise RecSys Challenge 2025, hiện ở giai đoạn khảo sát dữ liệu và thiết kế luồng tích hợp mô hình ML qua REST API."
         }
       },
       "assets": [],
       "links": [
         {
-          "type": "document",
-          "url": "https://github.com/mtec-operations-hub",
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/recobridge",
           "visibility": "public",
           "label": {
-            "en": "View Product Spec & Wireframes",
-            "vi": "Xem Specification & Wireframes"
+            "en": "View Project Repository",
+            "vi": "Xem Kho mã nguồn Dự án"
           }
         }
       ],
       "caseStudy": [
         {
-          "id": "deployment",
-          "type": "process",
+          "id": "problem",
+          "type": "lead",
           "localized": {
             "en": {
-              "heading": "Production Deployment",
-              "body": "Deployed the Node.js backend on Render and the React frontend on Vercel, including production environment configuration."
+              "heading": "From Static Product Lists to Personalized Recommendations",
+              "body": "RecoBridge frames recommendation as an integration problem rather than only a model-training exercise. The target flow covers behavioral events, candidate generation, ranking, top-N delivery, exposure tracking, and feedback collection."
             },
             "vi": {
-              "heading": "Triển khai Production",
-              "body": "Triển khai backend Node.js trên Render và frontend React trên Vercel, bao gồm cấu hình biến môi trường production."
+              "heading": "Từ Danh sách Tĩnh đến Gợi ý Cá nhân hóa",
+              "body": "RecoBridge xem hệ gợi ý là bài toán tích hợp thay vì chỉ huấn luyện mô hình. Luồng mục tiêu bao gồm sự kiện hành vi, sinh ứng viên, xếp hạng, trả top-N, ghi nhận lượt hiển thị và thu thập phản hồi."
             }
           }
         },
         {
-          "id": "authentication",
-          "type": "decision",
+          "id": "data-baseline",
+          "type": "process",
           "localized": {
             "en": {
-              "heading": "Authentication and Live Data Reliability",
-              "body": "Implemented real user authentication flows and resolved production issues affecting live data retrieval."
+              "heading": "Synerise Dataset and Initial Data Exploration",
+              "body": "The Synerise RecSys Challenge 2025 dataset is the selected primary dataset. The repository currently contains the dataset through Git LFS and an initial notebook used to inspect event tables; full feature engineering and model evaluation remain implementation work."
             },
             "vi": {
-              "heading": "Độ tin cậy của Xác thực và Dữ liệu Trực tiếp",
-              "body": "Xử lý luồng xác thực người dùng thực tế và khắc phục các lỗi production ảnh hưởng đến việc truy xuất dữ liệu trực tiếp."
+              "heading": "Bộ dữ liệu Synerise và Khảo sát Ban đầu",
+              "body": "Synerise RecSys Challenge 2025 là bộ dữ liệu chính đã chọn. Kho mã nguồn hiện đã lưu dữ liệu bằng Git LFS và có notebook khảo sát các bảng sự kiện; feature engineering và đánh giá mô hình đầy đủ vẫn là phần đang triển khai."
+            }
+          }
+        },
+        {
+          "id": "evidence-boundary",
+          "type": "reflection",
+          "localized": {
+            "en": {
+              "heading": "Design Baseline, Not a Verified End-to-End Release",
+              "body": "K-Means, XGBoost ranking, FastAPI integration, fallback behavior, Docker Compose, and end-to-end tests are defined as MVP targets. They should not be presented as completed until model artifacts, API responses, tests, and demo evidence exist."
+            },
+            "vi": {
+              "heading": "Baseline Thiết kế, Chưa phải Bản Phát hành Đầu-cuối Đã Kiểm chứng",
+              "body": "K-Means, xếp hạng XGBoost, tích hợp FastAPI, cơ chế fallback, Docker Compose và kiểm thử đầu-cuối là các mục tiêu MVP. Không nên mô tả chúng là đã hoàn thành khi chưa có model artifact, phản hồi API, báo cáo kiểm thử và bằng chứng demo."
+            }
+          }
+        }
+      ],
+      "metrics": []
+    },
+    {
+      "id": "smartguard-classroom",
+      "slug": "smartguard-classroom",
+      "status": "published",
+      "stage": "academic",
+      "visibility": "public",
+      "featured": false,
+      "order": 5,
+      "yearStart": 2026,
+      "yearEnd": 2026,
+      "domains": [
+        "embedded-systems",
+        "iot",
+        "smart-classroom"
+      ],
+      "roles": {
+        "primary": "SA",
+        "secondary": [
+          "BA"
+        ]
+      },
+      "capabilities": [
+        "embedded-system-design",
+        "requirements",
+        "sensor-integration",
+        "finite-state-machine",
+        "test-planning"
+      ],
+      "technologies": [
+        "arduino-uno",
+        "c-plus-plus",
+        "tinkercad-circuits",
+        "embedded-systems",
+        "sensors",
+        "finite-state-machine"
+      ],
+      "team": {
+        "type": "solo",
+        "size": 1
+      },
+      "localized": {
+        "en": {
+          "title": "SmartGuard Classroom — Safety and Energy Monitoring System",
+          "summary": "A solo academic embedded-systems project that monitors classroom temperature, light, air-quality indicators, and occupancy while controlling warnings, ventilation, lighting, and physical actuators in a Tinkercad simulation.",
+          "contribution": "Independently defined the requirements, circuit architecture, Arduino pin map, safety-state priorities, non-blocking firmware design, test cases, demo flow, and technical documentation.",
+          "seoTitle": "SmartGuard Classroom Arduino Safety System — Trúc",
+          "seoDescription": "A solo Arduino Uno and Tinkercad academic project for classroom environmental safety and energy monitoring using sensors, actuators, a finite-state machine, and non-blocking firmware."
+        },
+        "vi": {
+          "title": "SmartGuard Classroom — Giám sát An toàn và Năng lượng Phòng học",
+          "summary": "Dự án hệ thống nhúng học thuật solo giám sát nhiệt độ, ánh sáng, chỉ báo chất lượng không khí và hiện diện trong phòng học; đồng thời điều khiển cảnh báo, thông gió, chiếu sáng và cơ cấu chấp hành trên mô phỏng Tinkercad.",
+          "contribution": "Độc lập xác định yêu cầu, kiến trúc mạch, sơ đồ chân Arduino, thứ tự ưu tiên trạng thái an toàn, thiết kế firmware không chặn, ca kiểm thử, luồng demo và tài liệu kỹ thuật.",
+          "seoTitle": "SmartGuard Classroom — Hệ thống An toàn Arduino — Trúc",
+          "seoDescription": "Dự án học thuật solo dùng Arduino Uno và Tinkercad để giám sát an toàn môi trường và năng lượng phòng học bằng cảm biến, cơ cấu chấp hành, máy trạng thái và firmware không chặn."
+        }
+      },
+      "assets": [],
+      "links": [],
+      "caseStudy": [
+        {
+          "id": "scope",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "Integrated Classroom Safety Monitoring",
+              "body": "The prototype combines TMP36 temperature sensing, an LDR, PIR occupancy detection, a gas sensor, LCD output, status LEDs, a buzzer, a servo, a DC motor, and room-light control around an Arduino Uno R3."
+            },
+            "vi": {
+              "heading": "Giám sát An toàn Phòng học Tích hợp",
+              "body": "Nguyên mẫu kết hợp cảm biến nhiệt độ TMP36, LDR, PIR phát hiện hiện diện, cảm biến khí, LCD, LED trạng thái, buzzer, servo, động cơ DC và điều khiển đèn phòng quanh Arduino Uno R3."
+            }
+          }
+        },
+        {
+          "id": "firmware",
+          "type": "architecture",
+          "localized": {
+            "en": {
+              "heading": "Priority State Machine and Non-Blocking Firmware",
+              "body": "The firmware baseline uses a priority state machine for sensor fault, emergency, air warning, comfort, and standby conditions. Scheduling uses millis(), with hysteresis, confirmation windows, debounce logic, fixed LCD lines, and event logging."
+            },
+            "vi": {
+              "heading": "Máy Trạng thái Ưu tiên và Firmware Không Chặn",
+              "body": "Baseline firmware dùng máy trạng thái ưu tiên cho lỗi cảm biến, khẩn cấp, cảnh báo không khí, tiện nghi và chờ. Lịch tác vụ dùng millis(), kết hợp hysteresis, thời gian xác nhận, debounce, dòng LCD cố định và ghi log sự kiện."
+            }
+          }
+        },
+        {
+          "id": "status",
+          "type": "reflection",
+          "localized": {
+            "en": {
+              "heading": "Integration Test Candidate, Not a Stable Release",
+              "body": "Most functional blocks and the firmware architecture are present, but the project remains in integration testing. Circuit corrections, emergency-priority edge cases, LCD visibility, and verified acceptance or soak-test evidence are still required."
+            },
+            "vi": {
+              "heading": "Ứng viên Kiểm thử Tích hợp, Chưa phải Bản Ổn định",
+              "body": "Phần lớn khối chức năng và kiến trúc firmware đã có, nhưng dự án vẫn đang kiểm thử tích hợp. Mạch điện, trường hợp biên về ưu tiên khẩn cấp, khả năng hiển thị LCD và bằng chứng kiểm thử chấp nhận hoặc soak test vẫn cần được hoàn thiện."
             }
           }
         }
@@ -408,15 +636,25 @@
       "stage": "academic",
       "visibility": "public",
       "featured": false,
-      "order": 7,
+      "order": 6,
       "yearStart": 2025,
       "yearEnd": 2025,
-      "domains": ["ai-ml", "agritech"],
+      "domains": [
+        "ai-ml",
+        "agritech"
+      ],
       "roles": {
         "primary": "PRODUCT",
-        "secondary": ["DS"]
+        "secondary": [
+          "DS"
+        ]
       },
-      "capabilities": ["project-coordination", "computer-vision", "commercialization-strategy"],
+      "capabilities": [
+        "project-coordination",
+        "computer-vision",
+        "technical-research",
+        "commercialization-strategy"
+      ],
       "technologies": [
         "python",
         "computer-vision",
@@ -429,55 +667,71 @@
       "localized": {
         "en": {
           "title": "Lotus Seed Sorting System",
-          "summary": "A computer-vision model that grades lotus seeds into three quality levels, developed for a student hackathon.",
-          "contribution": "Coordinated a cross-functional team, consolidated the technical research, and developed the system's commercialization strategy.",
-          "seoTitle": "Lotus Seed Sorting Computer Vision System — Trúc",
-          "seoDescription": "A student hackathon project using computer vision and machine learning to grade lotus seeds into three quality levels."
+          "summary": "An academic hackathon project exploring computer vision and machine learning to classify lotus seeds into three target quality grades.",
+          "contribution": "Coordinated the three-member team, consolidated technical research, structured the project presentation, and developed an initial commercialization direction.",
+          "seoTitle": "Lotus Seed Sorting Computer Vision Project — Trúc",
+          "seoDescription": "An academic computer-vision project for three-grade lotus seed classification, focused on team coordination, technical synthesis, and early commercialization planning."
         },
         "vi": {
           "title": "Hệ thống Phân loại Hạt sen",
-          "summary": "Mô hình thị giác máy tính phân loại hạt sen thành ba cấp độ, được phát triển trong khuôn khổ cuộc thi hackathon sinh viên.",
-          "contribution": "Điều phối nhóm đa chuyên môn, tổng hợp tài liệu kỹ thuật và xây dựng chiến lược thương mại hóa cho hệ thống.",
-          "seoTitle": "Hệ thống Thị giác Máy tính Phân loại Hạt sen — Trúc",
-          "seoDescription": "Dự án hackathon sinh viên ứng dụng thị giác máy tính và học máy để phân loại hạt sen thành ba cấp độ."
+          "summary": "Dự án hackathon học thuật khảo sát khả năng ứng dụng thị giác máy tính và học máy để phân loại hạt sen theo ba cấp chất lượng mục tiêu.",
+          "contribution": "Điều phối nhóm ba thành viên, tổng hợp tài liệu kỹ thuật, cấu trúc nội dung trình bày và xây dựng định hướng thương mại hóa ban đầu.",
+          "seoTitle": "Dự án Thị giác Máy tính Phân loại Hạt sen — Trúc",
+          "seoDescription": "Dự án học thuật phân loại hạt sen theo ba cấp bằng thị giác máy tính, tập trung vào điều phối nhóm, tổng hợp kỹ thuật và định hướng thương mại hóa ban đầu."
         }
       },
       "assets": [],
       "links": [],
       "caseStudy": [
         {
-          "id": "coordination",
-          "type": "process",
+          "id": "scope",
+          "type": "lead",
           "localized": {
             "en": {
-              "heading": "Cross-Functional Project Coordination",
-              "body": "Coordinated a multidisciplinary student team to develop a computer-vision approach for three-level lotus seed grading."
+              "heading": "Academic Classification Prototype",
+              "body": "The project investigated a three-grade lotus seed classification problem in a student hackathon context. It should be presented as an academic exploration or prototype rather than a deployed industrial grading system."
             },
             "vi": {
-              "heading": "Điều phối Dự án Đa chuyên môn",
-              "body": "Điều phối nhóm sinh viên đa chuyên môn để phát triển giải pháp thị giác máy tính phân loại hạt sen thành ba cấp độ."
+              "heading": "Nguyên mẫu Phân loại trong Bối cảnh Học thuật",
+              "body": "Dự án khảo sát bài toán phân loại hạt sen thành ba cấp trong khuôn khổ hackathon sinh viên. Nội dung nên được trình bày như nghiên cứu hoặc nguyên mẫu học thuật, không phải hệ thống phân loại công nghiệp đã triển khai."
             }
           }
         },
         {
-          "id": "commercialization",
+          "id": "contribution",
+          "type": "process",
+          "localized": {
+            "en": {
+              "heading": "Coordination, Research, and Commercial Framing",
+              "body": "The primary contribution was project coordination, consolidation of the technical landscape, and translation of the prototype idea into an initial commercialization narrative."
+            },
+            "vi": {
+              "heading": "Điều phối, Tổng hợp Kỹ thuật và Định hướng Thương mại",
+              "body": "Đóng góp chính là điều phối dự án, tổng hợp bối cảnh kỹ thuật và chuyển ý tưởng nguyên mẫu thành định hướng thương mại hóa ban đầu."
+            }
+          }
+        },
+        {
+          "id": "evidence",
           "type": "reflection",
           "localized": {
             "en": {
-              "heading": "Technical Review and Commercialization",
-              "body": "Consolidated the technical landscape and translated the prototype into an initial commercialization strategy."
+              "heading": "No Public Performance Claim",
+              "body": "No public repository, evaluation report, or validated model metrics are currently attached to this portfolio entry, so accuracy, speed, or deployment claims are intentionally omitted."
             },
             "vi": {
-              "heading": "Tổng quan Kỹ thuật và Thương mại hóa",
-              "body": "Tổng hợp tài liệu tổng quan kỹ thuật và chuyển hóa nguyên mẫu thành chiến lược thương mại hóa ban đầu."
+              "heading": "Không Công bố Claim Hiệu năng Chưa được Kiểm chứng",
+              "body": "Mục portfolio hiện chưa gắn kho mã nguồn công khai, báo cáo đánh giá hoặc metric mô hình đã kiểm chứng; vì vậy chủ động không nêu độ chính xác, tốc độ hoặc khả năng triển khai."
             }
           }
         }
       ],
       "metrics": [
-        {"label": "Quality Grades", "value": "3 Levels"}
+        {
+          "label": "Target Quality Grades",
+          "value": "3"
+        }
       ]
     }
-
   ]
 }

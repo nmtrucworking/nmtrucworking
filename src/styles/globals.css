@@ -396,6 +396,7 @@
     right: 50%;
     height: min(35rem, 135vw);
     max-width: 105%;
+    z-index: 3;
     transform: translate(55%, 22px);
     object-position: center bottom;
   }
