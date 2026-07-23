@@ -1,8 +1,10 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Locale, loadMessages, loadProjects } from '@/content/load';
 import { getProjectBySlug } from '@/content/selectors';
+import { buildLocalizedMetadata } from '@/lib/seo';
 import { ArrowLeft, ExternalLink, Github, Layers, ShieldCheck, Terminal } from 'lucide-react';
 
 interface ProjectDetailPageProps {
@@ -20,6 +22,23 @@ export function generateStaticParams() {
   }
 
   return params;
+}
+
+export async function generateMetadata({ params }: ProjectDetailPageProps): Promise<Metadata> {
+  const { locale: localeParam, slug } = await params;
+  const locale = localeParam as Locale;
+  const project = getProjectBySlug(slug, locale);
+
+  if (!project) {
+    return { title: locale === 'vi' ? 'Không tìm thấy dự án' : 'Project not found', robots: { index: false } };
+  }
+
+  return buildLocalizedMetadata({
+    locale,
+    path: `/work/${slug}`,
+    title: project.localizedContent.seoTitle,
+    description: project.localizedContent.seoDescription,
+  });
 }
 
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {

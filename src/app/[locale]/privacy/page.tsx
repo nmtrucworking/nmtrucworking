@@ -1,8 +1,25 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Locale, loadMessages } from '@/content/load';
+import { buildLocalizedMetadata } from '@/lib/seo';
 
 interface PrivacyPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PrivacyPageProps): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
+
+  return buildLocalizedMetadata({
+    locale,
+    path: '/privacy',
+    title: locale === 'vi' ? 'Chính sách bảo mật | Nguyễn Minh Trúc' : 'Privacy Notice | Nguyễn Minh Trúc',
+    description:
+      locale === 'vi'
+        ? 'Chính sách bảo mật của website portfolio Nguyễn Minh Trúc.'
+        : 'Privacy notice for the Nguyễn Minh Trúc portfolio website.',
+  });
 }
 
 export default async function PrivacyPage({ params }: PrivacyPageProps) {

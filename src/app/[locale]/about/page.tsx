@@ -1,11 +1,28 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Locale, loadMessages } from '@/content/load';
 import { getProfile } from '@/content/selectors';
+import { buildLocalizedMetadata } from '@/lib/seo';
 import { ArrowUpRight, CheckCircle2, Cpu, Database, Layers, LineChart } from 'lucide-react';
 
 interface AboutPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
+
+  return buildLocalizedMetadata({
+    locale,
+    path: '/about',
+    title: locale === 'vi' ? 'Giới thiệu Nguyễn Minh Trúc' : 'About Nguyễn Minh Trúc',
+    description:
+      locale === 'vi'
+        ? 'Tìm hiểu định hướng, năng lực và phương pháp làm việc của Nguyễn Minh Trúc trong lĩnh vực dữ liệu, hệ thống và sản phẩm.'
+        : 'Learn about Nguyễn Minh Trúc’s approach and capabilities across data, systems, and product work.',
+  });
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {

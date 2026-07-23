@@ -1,12 +1,29 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Locale, loadMessages } from '@/content/load';
 import { getProjects } from '@/content/selectors';
+import { buildLocalizedMetadata } from '@/lib/seo';
 import { Search, Filter, ArrowRight } from 'lucide-react';
 
 interface WorkPageProps {
   params: Promise<{ locale: string }>;
   searchParams?: Promise<{ role?: string; domain?: string; query?: string }>;
+}
+
+export async function generateMetadata({ params }: WorkPageProps): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
+
+  return buildLocalizedMetadata({
+    locale,
+    path: '/work',
+    title: locale === 'vi' ? 'Dự án của Nguyễn Minh Trúc' : 'Selected Work by Nguyễn Minh Trúc',
+    description:
+      locale === 'vi'
+        ? 'Các dự án và nghiên cứu tình huống của Nguyễn Minh Trúc về dữ liệu, kiến trúc hệ thống, phân tích nghiệp vụ và chiến lược sản phẩm.'
+        : 'Projects and case studies by Nguyễn Minh Trúc across data, system architecture, business analysis, and product strategy.',
+  });
 }
 
 export default async function WorkPage({ params, searchParams }: WorkPageProps) {

@@ -1,12 +1,31 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Locale, loadMessages } from '@/content/load';
+import { Locale, loadMessages, loadProfile, loadSiteConfig } from '@/content/load';
 import { getProfile, getFeaturedProjects } from '@/content/selectors';
+import { buildLocalizedMetadata } from '@/lib/seo';
 import { ProtectedPortrait } from '@/components/brand/ProtectedPortrait';
 import { ArrowRight, CheckCircle2, Cpu, Database, Layers, LineChart } from 'lucide-react';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
+
+  return buildLocalizedMetadata({
+    locale,
+    title:
+      locale === 'vi'
+        ? 'Nguyễn Minh Trúc | Dữ liệu, Hệ thống & Sản phẩm'
+        : 'Nguyễn Minh Trúc | Data, Systems & Product',
+    description:
+      locale === 'vi'
+        ? 'Portfolio của Nguyễn Minh Trúc về phân tích dữ liệu, khoa học dữ liệu, phân tích nghiệp vụ, kiến trúc hệ thống và quản lý sản phẩm.'
+        : 'Nguyễn Minh Trúc’s portfolio across data analysis, data science, business analysis, system architecture, and product management.',
+  });
 }
 
 export default async function HomePage({ params }: HomePageProps) {
@@ -15,6 +34,58 @@ export default async function HomePage({ params }: HomePageProps) {
   const messages = loadMessages(locale);
   const profile = getProfile(locale);
   const featuredProjects = getFeaturedProjects(locale);
+  const rawProfile = loadProfile();
+  const site = loadSiteConfig();
+  const sameAs = site.socials
+    .filter((social) => ['github', 'linkedin', 'twitter', 'facebook'].includes(social.type))
+    .map((social) => social.url);
+  const profilePageUrl = `${site.baseUrl}/${locale}`;
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ProfilePage',
+        '@id': `${profilePageUrl}/#profile`,
+        url: profilePageUrl,
+        name:
+          locale === 'vi'
+            ? 'Hồ sơ Nguyễn Minh Trúc'
+            : 'Nguyễn Minh Trúc — Professional Profile',
+        inLanguage: locale,
+        mainEntity: { '@id': `${site.baseUrl}/#person` },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${site.baseUrl}/#person`,
+        name: rawProfile.displayName,
+        alternateName: ['Trúc', 'Jin'],
+        url: profilePageUrl,
+        image: `${site.baseUrl}/og.png`,
+        description: rawProfile.positioning[locale],
+        homeLocation: {
+          '@type': 'Place',
+          name: rawProfile.location[locale],
+        },
+        sameAs,
+        knowsAbout: [
+          'Data Analysis',
+          'Data Science',
+          'Business Analysis',
+          'System Architecture',
+          'Product Management',
+        ],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${site.baseUrl}/#website`,
+        url: site.baseUrl,
+        name: site.siteName,
+        alternateName: 'TRÚC.',
+        inLanguage: ['en', 'vi'],
+        publisher: { '@id': `${site.baseUrl}/#person` },
+      },
+    ],
+  };
 
   const roleIcons = {
     DA: LineChart,
@@ -26,17 +97,28 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <div className="home-page space-y-14 sm:space-y-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
+        }}
+      />
       {/* Hero Viewport */}
       <section className="home-hero">
         <div className="home-hero-stage">
           <div className="home-hero-copy">
-            <img
-              src="/brand/01-truc-wordmark-dark.svg"
-              width="152"
-              height="40"
-              alt="TRÚC."
-              className="h-auto w-[9.5rem]"
-            />
+            <div className="space-y-1.5">
+              <img
+                src="/brand/01-truc-wordmark-dark.svg"
+                width="152"
+                height="40"
+                alt="Nguyễn Minh Trúc — TRÚC."
+                className="h-auto w-[9.5rem]"
+              />
+              <p className="mono-label text-[11px] tracking-[0.2em] text-canvas/55">
+                NGUYỄN MINH TRÚC
+              </p>
+            </div>
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-canvas/75">
               <span className="h-2 w-2 rounded-full bg-signal animate-pulse-slow" />
               <span>{profile.availabilityLabel}</span>

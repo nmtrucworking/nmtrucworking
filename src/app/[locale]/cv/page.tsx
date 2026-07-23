@@ -1,9 +1,26 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Locale, loadMessages, loadProfile } from '@/content/load';
+import { buildLocalizedMetadata } from '@/lib/seo';
 import { Download, FileText, Calendar, MapPin, Mail, ExternalLink } from 'lucide-react';
 
 interface CVPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: CVPageProps): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
+
+  return buildLocalizedMetadata({
+    locale,
+    path: '/cv',
+    title: locale === 'vi' ? 'CV Nguyễn Minh Trúc' : 'Nguyễn Minh Trúc — CV / Resume',
+    description:
+      locale === 'vi'
+        ? 'Hồ sơ năng lực của Nguyễn Minh Trúc: kinh nghiệm, kỹ năng và các vai trò trong dữ liệu, hệ thống và sản phẩm.'
+        : 'Nguyễn Minh Trúc’s resume, experience, skills, and roles across data, systems, and product.',
+  });
 }
 
 export default async function CVPage({ params }: CVPageProps) {

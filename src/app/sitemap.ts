@@ -15,9 +15,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const route of routes) {
       sitemapItems.push({
         url: `${baseUrl}/${locale}${route}`,
-        lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: route === '' ? 1.0 : 0.8,
+        alternates: {
+          languages: {
+            en: `${baseUrl}/en${route}`,
+            vi: `${baseUrl}/vi${route}`,
+          },
+        },
       });
     }
 
@@ -25,9 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (project.status === 'published') {
         sitemapItems.push({
           url: `${baseUrl}/${locale}/work/${project.slug}`,
-          lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.9,
+          alternates: {
+            languages: {
+              en: `${baseUrl}/en/work/${project.slug}`,
+              vi: `${baseUrl}/vi/work/${project.slug}`,
+            },
+          },
         });
       }
     }

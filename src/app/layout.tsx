@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
-import { headers } from 'next/headers';
+import { loadSiteConfig } from '@/content/load';
 import '@/styles/globals.css';
 
 const fontSpaceGrotesk = Space_Grotesk({
@@ -9,30 +9,30 @@ const fontSpaceGrotesk = Space_Grotesk({
   display: 'swap',
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get('x-forwarded-host') ?? requestHeaders.get('host') ?? 'jin-systems.dev';
-  const protocol = requestHeaders.get('x-forwarded-proto') ?? (host.includes('localhost') ? 'http' : 'https');
-  const metadataBase = new URL(`${protocol}://${host}`);
+export function generateMetadata(): Metadata {
+  const site = loadSiteConfig();
+  const metadataBase = new URL(site.baseUrl);
   const description = 'Nguyễn Minh Trúc — biến dữ liệu phức tạp thành giải pháp thực tế và sản phẩm tạo ra tác động.';
   const imageUrl = new URL('/og.png', metadataBase).toString();
 
   return {
     metadataBase,
-    title: 'TRÚC. — Data / Systems / Product',
+    title: 'Nguyễn Minh Trúc — Data / Systems / Product',
     description,
     icons: {
       icon: '/brand/05-favicon.svg',
     },
     openGraph: {
       type: 'website',
-      title: 'TRÚC. — Data / Systems / Product',
+      title: 'Nguyễn Minh Trúc — Data / Systems / Product',
       description,
-      images: [{ url: imageUrl, width: 1200, height: 630, alt: 'TRÚC. — Data / Systems / Product' }],
+      siteName: site.siteName,
+      url: site.baseUrl,
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: 'Nguyễn Minh Trúc — Data / Systems / Product' }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'TRÚC. — Data / Systems / Product',
+      title: 'Nguyễn Minh Trúc — Data / Systems / Product',
       description,
       images: [imageUrl],
     },
