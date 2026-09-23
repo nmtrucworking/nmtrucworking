@@ -34,5 +34,9 @@ dist/
 .wrangler/
 .dev.vars
 
+# pnpm (single project uses npm)
+pnpm-lock.yaml
+pnpm-workspace.yaml
 
 .DS_Store
+
