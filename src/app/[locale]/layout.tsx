@@ -27,7 +27,7 @@ export default async function LocaleLayout({
   return (
     <div lang={typedLocale} className="min-h-screen flex flex-col justify-between selection:bg-signal selection:text-ink">
       <Header locale={typedLocale} />
-      <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-5 sm:px-6 sm:py-8 lg:px-8">
+      <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-5 sm:px-6 sm:py-8 lg:px-8 data-main">
         <LuxuryPageTransition>{children}</LuxuryPageTransition>
       </main>
       <Footer locale={typedLocale} />

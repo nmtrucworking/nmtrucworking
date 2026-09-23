@@ -38,34 +38,54 @@ export default function ContactPage({ params }: ContactPageProps) {
 
     if (!name || !email || !subject || !message) return;
 
-    const mailSubject = `[Portfolio] ${subject}`;
+    const mailSubject = `[TRUC / INQUIRY] ${subject}`;
     const mailBody =
       locale === 'vi'
         ? [
-            'Chào Trúc,',
+            '[ TRUC. / DATA - SYSTEMS - PRODUCT ]',
+            '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+            'THƯ TRAO ĐỔI CHUYÊN MÔN',
             '',
-            `Tôi là ${name}.`,
-            `Email liên hệ: ${email}`,
+            'Kính gửi Trúc,',
             '',
-            `Tôi liên hệ về: ${subject}`,
+            `Tôi là ${name}, liên hệ qua địa chỉ ${email}.`,
             '',
+            '[ 01 ] BỐI CẢNH TRAO ĐỔI',
+            `Chủ đề: ${subject}`,
+            '',
+            '[ 02 ] NỘI DUNG VÀ PHẠM VI',
             message,
+            '',
+            '[ 03 ] ĐỀ XUẤT TRAO ĐỔI',
+            'Tôi mong muốn được trao đổi thêm về bối cảnh, mục tiêu và hình thức hợp tác phù hợp.',
             '',
             'Trân trọng,',
             name,
+            '',
+            '— Gửi từ portfolio của Nguyễn Minh Trúc',
           ].join('\n')
         : [
-            'Hello Trúc,',
+            '[ TRUC. / DATA - SYSTEMS - PRODUCT ]',
+            '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+            'PROFESSIONAL INQUIRY',
             '',
-            `My name is ${name}.`,
-            `Contact email: ${email}`,
+            'Dear Trúc,',
             '',
-            `I am reaching out regarding: ${subject}`,
+            `My name is ${name}; I may be reached at ${email}.`,
             '',
+            '[ 01 ] CONTEXT OF INQUIRY',
+            `Subject: ${subject}`,
+            '',
+            '[ 02 ] SCOPE AND DESCRIPTION',
             message,
+            '',
+            '[ 03 ] PROPOSED DISCUSSION',
+            'I would welcome an opportunity to discuss the context, objectives, and an appropriate form of collaboration in greater detail.',
             '',
             'Best regards,',
             name,
+            '',
+            '— Sent from Nguyễn Minh Trúc’s portfolio',
           ].join('\n');
 
     const mailtoUrl = `mailto:${profile.contact.email}?subject=${encodeURIComponent(

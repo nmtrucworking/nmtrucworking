@@ -5,6 +5,9 @@ import { Locale, loadMessages, loadProfile, loadSiteConfig } from '@/content/loa
 import { getProfile, getFeaturedProjects } from '@/content/selectors';
 import { buildLocalizedMetadata } from '@/lib/seo';
 import { ProtectedPortrait } from '@/components/brand/ProtectedPortrait';
+import { SignalTicker } from '@/components/brand/SignalTicker';
+import { SignalFlow } from '@/components/brand/SignalFlow';
+import { ProjectMedia } from '@/components/projects/ProjectMedia';
 import { ArrowRight, CheckCircle2, Cpu, Database, Layers, LineChart } from 'lucide-react';
 
 interface HomePageProps {
@@ -96,35 +99,39 @@ export default async function HomePage({ params }: HomePageProps) {
   };
 
   return (
-    <div className="home-page space-y-14 sm:space-y-20">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
         }}
       />
-      {/* Hero Viewport */}
-      <section className="home-hero">
-        <div className="home-hero-stage">
-          <div className="home-hero-copy">
-            <div className="space-y-1.5">
-              <img
-                src="/brand/01-truc-wordmark-dark.svg"
-                width="152"
-                height="40"
-                alt="Nguyễn Minh Trúc — TRÚC."
-                className="h-auto w-[9.5rem]"
-              />
-              <p className="mono-label text-[11px] tracking-[0.2em] text-canvas/55">
-                NGUYỄN MINH TRÚC
-              </p>
-            </div>
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-canvas/75">
-              <span className="h-2 w-2 rounded-full bg-signal animate-pulse-slow" />
-              <span>{profile.availabilityLabel}</span>
-            </div>
+      <div className="home-page">
+        {/* Hero Viewport */}
+        <section className="home-hero">
+          <div className="home-hero-stage">
+            <div className="home-hero-copy">
+              <div className="space-y-1.5">
+                <img
+                  src="/brand/01-truc-wordmark-dark.svg"
+                  width="152"
+                  height="40"
+                  alt="Nguyễn Minh Trúc — TRÚC."
+                  className="h-auto w-[9.5rem]"
+                />
+                <p className="mono-label text-[11px] tracking-[0.2em] text-canvas/55">
+                  NGUYỄN MINH TRÚC
+                </p>
+              </div>
+              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-canvas/75">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-signal" />
+                </span>
+                <span>{profile.availabilityLabel}</span>
+              </div>
 
-            <h1 className="home-hero-title font-display font-medium text-canvas">
+              <h1 className="home-hero-title font-display font-medium text-canvas">
               {locale === 'en' ? (
                 <>
                   <span className="block">I turn complex</span>
@@ -205,54 +212,60 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* Role Lenses Section */}
-      <section className="space-y-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-line/60 pb-4">
-          <div>
-            <span className="mono-label text-xs text-muted">Core Specializations</span>
-            <h2 className="font-display text-3xl font-bold text-ink">
-              {locale === 'en' ? 'Target Role Lenses' : 'Các Góc nhìn Vai trò Chuyên môn'}
-            </h2>
+      {/* Transitional Infinite Signal Loop Ticker */}
+      <SignalTicker locale={locale} />
+
+      {/* Main Content Container */}
+      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 space-y-16 sm:space-y-24">
+        {/* Role Lenses Section */}
+        <section className="space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-line/60 pb-4">
+            <div>
+              <span className="mono-label text-xs text-muted">Core Specializations</span>
+              <h2 className="font-display text-3xl font-bold text-ink">
+                {locale === 'en' ? 'Target Role Lenses' : 'Các Góc nhìn Vai trò Chuyên môn'}
+              </h2>
+            </div>
+            <p className="text-sm text-muted max-w-md">
+              {locale === 'en'
+                ? 'Select a role lens to inspect targeted capabilities, deliverables, and case study evidence.'
+                : 'Chọn một vai trò chuyên môn để xem chi tiết năng lực và minh chứng tình huống tương ứng.'}
+            </p>
           </div>
-          <p className="text-sm text-muted max-w-md">
-            {locale === 'en'
-              ? 'Select a role lens to inspect targeted capabilities, deliverables, and case study evidence.'
-              : 'Chọn một vai trò chuyên môn để xem chi tiết năng lực và minh chứng tình huống tương ứng.'}
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {profile.targetRoles.map((roleKey) => {
-            const Icon = roleIcons[roleKey as keyof typeof roleIcons] || Layers;
-            const roleTitle = messages.roles[roleKey as keyof typeof messages.roles];
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {profile.targetRoles.map((roleKey) => {
+              const Icon = roleIcons[roleKey as keyof typeof roleIcons] || Layers;
+              const roleTitle = messages.roles[roleKey as keyof typeof messages.roles];
 
-            return (
-              <Link
-                key={roleKey}
-                href={`/${locale}/work?role=${roleKey}`}
-                className="p-6 rounded-xl border border-line/60 bg-paper hover:border-ink hover:bg-canvas transition-all group space-y-4 flex flex-col justify-between"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-lg bg-canvas flex items-center justify-center text-ink group-hover:bg-graphite group-hover:text-signal transition-colors">
-                    <Icon className="w-5 h-5" />
+              return (
+                <Link
+                  key={roleKey}
+                  href={`/${locale}/work?role=${roleKey}`}
+                  className="group relative flex flex-col justify-between space-y-4 overflow-hidden rounded-xl border border-line/60 bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:border-signal/70 hover:shadow-lg hover:shadow-signal/5"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-canvas text-ink transition-all duration-300 group-hover:scale-110 group-hover:bg-graphite group-hover:text-signal">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className="mono-label text-xs font-bold text-muted transition-colors group-hover:text-ink">
+                      {roleKey}
+                    </span>
                   </div>
-                  <span className="mono-label text-xs font-bold text-muted group-hover:text-ink">
-                    {roleKey}
-                  </span>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="font-display font-semibold text-base text-ink group-hover:text-ink">
-                    {roleTitle}
-                  </h3>
-                  <span className="text-xs text-muted block group-hover:underline">
-                    {locale === 'en' ? 'View projects →' : 'Xem dự án →'}
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
+                  <div className="space-y-1">
+                    <h3 className="font-display text-base font-semibold text-ink">
+                      {roleTitle}
+                    </h3>
+                    <span className="flex items-center gap-1 text-xs text-muted transition-colors group-hover:text-ink">
+                      <span>{locale === 'en' ? 'View projects' : 'Xem dự án'}</span>
+                      <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
 
       {/* Featured Flagship Case Studies Section */}
       <section className="space-y-8">
@@ -275,7 +288,7 @@ export default async function HomePage({ params }: HomePageProps) {
           {featuredProjects.map((project, idx) => (
             <article
               key={project.id}
-              className="relative grid grid-cols-1 gap-6 overflow-hidden rounded-2xl border border-line/60 bg-paper p-5 transition-all hover:border-ink sm:p-8 lg:grid-cols-12 lg:gap-8"
+              className="group relative grid grid-cols-1 gap-6 overflow-hidden rounded-2xl border border-line/60 bg-paper p-5 transition-all duration-500 hover:border-signal/60 hover:shadow-xl hover:shadow-ink/5 sm:p-8 lg:grid-cols-12 lg:gap-8"
             >
               {/* Left Column: Details & Copy */}
               <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
@@ -327,38 +340,44 @@ export default async function HomePage({ params }: HomePageProps) {
                 <div className="pt-2">
                   <Link
                     href={`/${locale}/work/${project.slug}`}
-                    className="inline-flex items-center gap-2 font-mono text-xs font-semibold text-ink hover:text-muted transition-colors"
+                    className="inline-flex items-center gap-2 font-mono text-xs font-semibold text-ink hover:text-signal transition-colors group/link"
                   >
                     <span>{messages.work.viewProject}</span>
-                    <span>→</span>
+                    <span className="inline-block transition-transform duration-200 group-hover/link:translate-x-1">→</span>
                   </Link>
                 </div>
               </div>
 
-              {/* Right Column: Visual Diagram / Mock Artifact */}
-              <div className="flex min-w-0 flex-col justify-center space-y-4 rounded-xl border border-line/40 bg-canvas p-4 font-mono text-xs sm:p-6 lg:col-span-5">
-                <div className="flex min-w-0 items-center justify-between gap-3 border-b border-line/40 pb-2 text-muted">
-                  <span className="min-w-0 break-all">SYSTEM_DIAGRAM // {project.slug}</span>
-                  <span className="w-2 h-2 rounded-full bg-signal" />
-                </div>
-
-                <div className="space-y-2 text-ink">
-                  <div className="p-3 rounded bg-paper border border-line/60">
-                    <div className="font-bold text-xs">STAGE: {project.stage.toUpperCase()}</div>
-                    <div className="text-[11px] text-muted">{project.localizedContent.contribution}</div>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    {project.technologies.map((tech) => (
-                      <span key={tech} className="px-2 py-1 rounded bg-graphite/5 text-[10px] text-muted">
-                        #{tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              <div className="lg:col-span-5">
+                <ProjectMedia
+                  asset={project.heroAsset}
+                  projectTitle={project.localizedContent.title}
+                  projectSlug={project.slug}
+                  role={project.roles.primary}
+                  locale={locale}
+                />
               </div>
             </article>
           ))}
         </div>
+      </section>
+
+      {/* Signal Flow Sequence */}
+      <section className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-line/60 pb-4">
+          <div>
+            <span className="mono-label text-xs text-muted">Methodology & Execution</span>
+            <h2 className="font-display text-3xl font-bold text-ink">
+              {locale === 'en' ? 'Signal Flow & Problem-Solving System' : 'Quy trình Tiếp cận & Luồng Xử lý Dữ liệu'}
+            </h2>
+          </div>
+          <p className="text-sm text-muted max-w-md">
+            {locale === 'en'
+              ? 'A disciplined five-stage sequence converting complex data problems into verifiable production impact.'
+              : 'Trình tự 5 bước chuyển hóa bài toán nghiệp vụ phức tạp thành giải pháp thực tế có thể đo lường.'}
+          </p>
+        </div>
+        <SignalFlow locale={locale} />
       </section>
 
       {/* Capability Constellation Section */}
@@ -407,6 +426,8 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
         </div>
       </section>
+      </div>
     </div>
+    </>
   );
 }

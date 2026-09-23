@@ -5,6 +5,7 @@ import { Locale, loadMessages } from '@/content/load';
 import { getProjects } from '@/content/selectors';
 import { buildLocalizedMetadata } from '@/lib/seo';
 import { Search, Filter, ArrowRight } from 'lucide-react';
+import { ProjectMedia } from '@/components/projects/ProjectMedia';
 
 interface WorkPageProps {
   params: Promise<{ locale: string }>;
@@ -184,6 +185,14 @@ export default async function WorkPage({ params, searchParams }: WorkPageProps) 
               key={project.id}
               className="group flex min-w-0 flex-col justify-between space-y-6 rounded-2xl border border-line/60 bg-paper p-5 transition-all hover:border-ink sm:p-8"
             >
+              <ProjectMedia
+                asset={project.heroAsset}
+                projectTitle={project.localizedContent.title}
+                projectSlug={project.slug}
+                role={project.roles.primary}
+                locale={locale}
+                compact
+              />
               <div className="space-y-4">
                 <div className="flex flex-wrap items-start justify-between gap-3 text-xs font-mono text-muted">
                   <div className="flex min-w-0 flex-wrap items-center gap-2">
