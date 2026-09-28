@@ -1,0 +1,31 @@
+table,field,type,unit,nullable,key,data_origin,validation,role
+scenarios,scenario_id,string,,no,PK,configured,unique,experiment
+replications,replication_id,string,,no,PK,derived,unique,experiment
+replications,random_seed,int,,no,,derived,>=0,reproducibility
+incidents,incident_id,string,,no,PK,synthetic,unique,demand
+incidents,request_time,datetime,,no,,synthetic,within run horizon,decision input
+incidents,priority,string,,no,,synthetic,P1|P2|P3|P4,objective/constraint
+incidents,sla_min,float,min,no,,derived,>0,constraint
+incidents,x_km,float,km,no,,synthetic,finite,route input
+incidents,y_km,float,km,no,,synthetic,finite,route input
+incidents,required_specialty,string,,no,,synthetic,declared domain,constraint
+ambulances,vehicle_id,string,,no,PK,configured,unique,entity
+ambulances,battery_kwh,float,kWh,no,,configured,>0,energy model
+fleet_initial,soc_pct,float,%,no,,synthetic,0<=x<=100,state
+fleet_initial,status,string,,no,,synthetic,AVAILABLE|CHARGING|ON_MISSION,state
+hospitals,hospital_id,string,,no,PK,configured,unique,entity
+hospitals,specialties,string,,no,,configured,pipe-delimited,capability
+hospital_state,modeled_receiving_capacity,int,slots,no,,synthetic,>=0,constraint
+chargers,charger_id,string,,no,PK,configured,unique,entity
+chargers,power_kw,float,kW,no,,configured,>0,charging
+candidate_index,candidate_id,string,,no,PK,derived,unique,index
+candidate_index,incident_id,string,,no,FK,derived,exists incidents,index
+candidate_index,vehicle_id,string,,no,FK,derived,exists ambulances,index
+candidate_index,hospital_id,string,,no,FK,derived,exists hospitals,index
+dispatch_decisions,policy_id,string,,no,,configured,B0|B3|B4|B6,evaluation
+dispatch_decisions,decision_time,datetime,,no,,derived,>= request_time,audit
+dispatch_decisions,selected_vehicle_id,string,,yes,FK,derived,exists vehicle,output
+dispatch_decisions,selected_hospital_id,string,,yes,FK,derived,exists hospital,output
+mission_metrics,response_time_min,float,min,yes,,derived,>=0,KPI
+mission_metrics,post_trip_soc_pct,float,%,yes,,derived,physical audit,KPI
+run_metrics,feasibility_rate,float,ratio,no,,derived,0<=x<=1,KPI
