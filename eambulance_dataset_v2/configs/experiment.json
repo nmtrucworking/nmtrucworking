@@ -1,0 +1,74 @@
+{
+  "dataset_version": "2.0.0",
+  "generator_version": "0.2.0",
+  "base_seed": 20260929,
+  "incidents_per_replication": 500,
+  "replications_per_scenario": 30,
+  "fleet_size": 10,
+  "hospital_count": 6,
+  "charger_count": 3,
+  "scenarios": [
+    {
+      "scenario_id": "S01_NORMAL",
+      "demand_multiplier": 1,
+      "traffic_multiplier": 1,
+      "hospital_capacity_multiplier": 1,
+      "initial_soc_shift_pct": 0,
+      "charger_availability": 1
+    },
+    {
+      "scenario_id": "S02_PEAK",
+      "demand_multiplier": 1.5,
+      "traffic_multiplier": 1.12,
+      "hospital_capacity_multiplier": 0.9,
+      "initial_soc_shift_pct": 0,
+      "charger_availability": 1
+    },
+    {
+      "scenario_id": "S03_TRAFFIC_SHOCK",
+      "demand_multiplier": 1.1,
+      "traffic_multiplier": 1.35,
+      "hospital_capacity_multiplier": 1,
+      "initial_soc_shift_pct": 0,
+      "charger_availability": 1
+    },
+    {
+      "scenario_id": "S04_HOSPITAL_SHOCK",
+      "demand_multiplier": 1.1,
+      "traffic_multiplier": 1.05,
+      "hospital_capacity_multiplier": 0.55,
+      "initial_soc_shift_pct": 0,
+      "charger_availability": 1
+    },
+    {
+      "scenario_id": "S05_LOW_SOC",
+      "demand_multiplier": 1,
+      "traffic_multiplier": 1,
+      "hospital_capacity_multiplier": 1,
+      "initial_soc_shift_pct": -25,
+      "charger_availability": 1
+    },
+    {
+      "scenario_id": "S06_CHARGER_SCARCITY",
+      "demand_multiplier": 1.1,
+      "traffic_multiplier": 1.05,
+      "hospital_capacity_multiplier": 0.9,
+      "initial_soc_shift_pct": -10,
+      "charger_availability": 0.5
+    }
+  ],
+  "assumptions": {
+    "battery_kwh": 33,
+    "equipment_battery_kwh": 8,
+    "base_energy_kwh_per_km": 0.2538,
+    "min_soc_reserve_pct": 20,
+    "energy_uncertainty_buffer": 0.15,
+    "ac_charging_kw": 7
+  },
+  "policies": [
+    "B0",
+    "B3",
+    "B4",
+    "B6"
+  ]
+}
