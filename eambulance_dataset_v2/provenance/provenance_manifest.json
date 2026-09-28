@@ -1,0 +1,17 @@
+{
+  "dataset_name": "E-Ambulance Dataset Builder V2",
+  "version": "2.0.0",
+  "created_for": "simulation-based research",
+  "provenance_policy": "Every field must be classified as observed, configured, synthetic, calibrated, or derived.",
+  "privacy": "No real patient identifiers are generated.",
+  "limitations": [
+    "Synthetic data are not HCMC/115 operational evidence.",
+    "Modeled receiving capacity is not actual hospital capacity unless externally calibrated.",
+    "Urgency/feasibility are not clinical outcomes."
+  ],
+  "reproducibility": {
+    "seed_required": true,
+    "generator_version_required": true,
+    "common_random_numbers": true
+  }
+}
