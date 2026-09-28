@@ -1,0 +1,9 @@
+parameter,value,unit,status,source_note,sensitivity_required
+battery_kwh,33,kWh,manufacturer_spec,project vehicle specification,no
+equipment_battery_kwh,8,kWh,manufacturer_spec,project vehicle specification,no
+base_energy_kwh_per_km,0.2538,kWh/km,derived,33 kWh / 130 km,yes
+min_soc_reserve_pct,20,%,assumption_to_be_calibrated,simulation assumption,yes
+energy_uncertainty_buffer,0.15,ratio,assumption_to_be_calibrated,simulation assumption,yes
+ac_charging_kw,7,kW,manufacturer_spec,project vehicle specification,no
+traffic_multiplier_peak,1.12,ratio,assumption_to_be_calibrated,scenario design,yes
+hospital_capacity_multiplier_shock,0.55,ratio,assumption_to_be_calibrated,scenario design,yes
