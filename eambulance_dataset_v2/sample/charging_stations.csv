@@ -1,0 +1,4 @@
+charger_id,x_km,y_km,power_kw,connector_count
+C01,4.0,5.0,7.0,2
+C02,10.0,6.0,7.0,2
+C03,7.0,13.0,7.0,2
