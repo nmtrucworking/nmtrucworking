@@ -927,6 +927,165 @@
       "value": "PostgreSQL SSOT"
     }
   ]
-}
+},
+    {
+      "id": "vocelune",
+      "slug": "vocelune",
+      "status": "published",
+      "stage": "prototype",
+      "visibility": "public",
+      "featured": true,
+      "order": 7,
+      "yearStart": 2026,
+      "yearEnd": null,
+      "domains": [
+        "edtech",
+        "language-learning",
+        "learning-systems"
+      ],
+      "roles": {
+        "primary": "SA",
+        "secondary": [
+          "PRODUCT",
+          "BA"
+        ]
+      },
+      "capabilities": [
+        "learning-workflows",
+        "adaptive-scheduling",
+        "full-stack-development",
+        "data-modeling",
+        "api-design",
+        "background-processing"
+      ],
+      "technologies": [
+        "nextjs",
+        "react",
+        "typescript",
+        "tailwindcss",
+        "nestjs",
+        "postgresql",
+        "prisma",
+        "redis",
+        "bullmq",
+        "ts-fsrs",
+        "docker",
+        "github-actions"
+      ],
+      "team": {
+        "type": "solo",
+        "size": 1
+      },
+      "localized": {
+        "en": {
+          "title": "Vocelune — Adaptive English Vocabulary Learning",
+          "summary": "An English vocabulary-learning web application combining active recall, FSRS-6 spaced repetition, personalized decks, flexible assessments, and learning-progress insights. Functional software under active development.",
+          "contribution": "Designed the learning workflows and system architecture; developed vocabulary, flashcard review, assessment and import features across a Next.js frontend and NestJS backend, with PostgreSQL persistence and asynchronous jobs.",
+          "seoTitle": "Vocelune — FSRS-6 Vocabulary Learning Platform Case Study",
+          "seoDescription": "Explore Vocelune's active-recall learning flows, FSRS-6 scheduling, tests, vocabulary imports, and full-stack architecture with Next.js, NestJS, Prisma and PostgreSQL."
+        },
+        "vi": {
+          "title": "Vocelune — Nền tảng Học Từ vựng Tiếng Anh Thích ứng",
+          "summary": "Ứng dụng web học từ vựng tiếng Anh kết hợp Active Recall, lặp lại ngắt quãng FSRS-6, bộ từ vựng cá nhân, bài kiểm tra linh hoạt và thống kê tiến độ. Phần mềm đã có chức năng vận hành và vẫn đang phát triển.",
+          "contribution": "Thiết kế luồng học và kiến trúc hệ thống; phát triển các chức năng quản lý từ vựng, ôn tập flashcard, kiểm tra và nhập dữ liệu trên frontend Next.js, backend NestJS, PostgreSQL và hệ thống xử lý tác vụ nền.",
+          "seoTitle": "Vocelune — Nền tảng Học Từ vựng với FSRS-6",
+          "seoDescription": "Nghiên cứu tình huống Vocelune: Active Recall, thuật toán FSRS-6, bài kiểm tra, nhập từ vựng và kiến trúc Next.js, NestJS, Prisma, PostgreSQL."
+        }
+      },
+      "assets": [
+        {
+          "id": "vocelune-brand-vector",
+          "src": "/projects/vocelune-logo.svg",
+          "type": "image",
+          "width": 3840,
+          "height": 2160,
+          "purpose": "hero",
+          "status": "final",
+          "alt": {
+            "en": "Vocelune official vector logo; brand artwork, not an application screenshot",
+            "vi": "Logo vector chính thức của Vocelune; hình nhận diện thương hiệu, không phải ảnh chụp giao diện"
+          }
+        }
+      ],
+      "links": [
+        {
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/Vocelune",
+          "visibility": "public",
+          "label": {
+            "en": "View Vocelune Source Code",
+            "vi": "Xem Mã nguồn Vocelune"
+          }
+        },
+        {
+          "type": "document",
+          "url": "https://github.com/nmtrucworking/Vocelune/blob/main/docs/STUDY_ALGORITHM.md",
+          "visibility": "public",
+          "label": {
+            "en": "Read FSRS-6 Study Algorithm",
+            "vi": "Xem Tài liệu Thuật toán FSRS-6"
+          }
+        }
+      ],
+      "caseStudy": [
+        {
+          "id": "learning-problem",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "From Vocabulary Lists to Retrieval Practice",
+              "body": "Vocelune combines vocabulary organization, answer-before-reveal flashcards, self-grading, and follow-up assessments in one learning workflow. The product aims to support consistent practice; no measured improvement in learning outcomes is claimed."
+            },
+            "vi": {
+              "heading": "Từ Danh sách Từ vựng đến Luyện tập Gợi nhớ",
+              "body": "Vocelune kết hợp quản lý từ vựng, flashcard yêu cầu tự nhớ trước khi mở đáp án, tự đánh giá và kiểm tra kiến thức trong một quy trình học. Dự án hướng đến việc hỗ trợ luyện tập đều đặn, chưa có số liệu chứng minh cải thiện kết quả học tập."
+            }
+          }
+        },
+        {
+          "id": "review-scheduling",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "FSRS-6 Scheduling and Consistent Review State",
+              "body": "Reviews are scheduled on the backend using ts-fsrs 5.4.2 (FSRS-6), with Again, Hard, Good and Easy ratings, due queues, daily new-card limits, review history, undo, and sibling-card burying. Transactional review writes and idempotency controls reduce inconsistent state on retries."
+            },
+            "vi": {
+              "heading": "Lập lịch FSRS-6 và Trạng thái Ôn tập Nhất quán",
+              "body": "Backend dùng ts-fsrs 5.4.2 (FSRS-6) để lập lịch ôn tập với bốn mức Again, Hard, Good và Easy, hàng đợi đến hạn, giới hạn thẻ mới, lịch sử, hoàn tác và tạm ẩn thẻ cùng từ. Ghi nhận ôn tập theo giao dịch và cơ chế idempotency giúp hạn chế sai lệch dữ liệu khi yêu cầu được gửi lại."
+            }
+          }
+        },
+        {
+          "id": "learning-workflows",
+          "type": "process",
+          "localized": {
+            "en": {
+              "heading": "Vocabulary, Tests, and Import Workflows",
+              "body": "The application supports word senses, custom and shared decks, tags and search; multiple-choice, typed, listening and mixed tests; plus CSV/XLSX import validation, resumable import jobs, export and progress reporting. Dictionary enrichment uses source-aware adapters rather than assuming unrestricted provider data."
+            },
+            "vi": {
+              "heading": "Quản lý Từ vựng, Kiểm tra và Nhập Dữ liệu",
+              "body": "Ứng dụng hỗ trợ các nghĩa của từ, bộ từ vựng cá nhân và chia sẻ, nhãn và tìm kiếm; bài kiểm tra trắc nghiệm, nhập đáp án, nghe và kết hợp; cùng quy trình kiểm tra CSV/XLSX, nhập có thể tiếp tục, xuất dữ liệu và báo cáo tiến độ. Dữ liệu từ điển được xử lý theo nguồn cung cấp và điều kiện sử dụng."
+            }
+          }
+        },
+        {
+          "id": "architecture-evidence",
+          "type": "architecture",
+          "localized": {
+            "en": {
+              "heading": "Modular Monolith with Background Processing",
+              "body": "The TypeScript monorepo uses Next.js 15 / React 19, NestJS 11, Prisma 6 / PostgreSQL, and Redis / BullMQ for deferred tasks. The repository documents tests and GitHub Actions CI. Deployment-readiness issues remain, and a verified public production demo is not yet documented."
+            },
+            "vi": {
+              "heading": "Kiến trúc Modular Monolith và Xử lý Tác vụ Nền",
+              "body": "Monorepo TypeScript sử dụng Next.js 15 / React 19, NestJS 11, Prisma 6 / PostgreSQL và Redis / BullMQ để xử lý tác vụ bất đồng bộ. Repository có tài liệu kiểm thử và GitHub Actions CI. Một số vấn đề sẵn sàng triển khai vẫn cần xử lý; chưa có minh chứng được xác thực về bản production công khai."
+            }
+          }
+        }
+      ],
+      "metrics": []
+    }
   ]
 }
