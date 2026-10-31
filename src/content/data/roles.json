@@ -1,0 +1,302 @@
+{
+  "$schema": "../schemas/roles.schema.json",
+  "privacySettings": {
+    "showPoliticalMembershipByDefault": true,
+    "allowVisitorPoliticalToggle": true
+  },
+  "roles": [
+    {
+      "id": "njec-technology-committee",
+      "title": {
+        "en": "Technology Committee Member",
+        "vi": "Thành viên Ban Công nghệ"
+      },
+      "organization": {
+        "en": "NJEC — Young Entrepreneurs Club",
+        "vi": "Câu lạc bộ Nhà Khởi nghiệp Trẻ — NJEC"
+      },
+      "organizationShort": "NJEC",
+      "organizationLogo": null,
+      "category": "leadership-organizations",
+      "roleType": "specialist",
+      "startDate": "2025",
+      "startDateNote": null,
+      "endDate": null,
+      "isCurrent": true,
+      "shortDescription": {
+        "en": "Contributing to NJEC's Technology Committee, applying digital systems to club operations, member management, and student entrepreneurship programs.",
+        "vi": "Hoạt động tại Ban Công nghệ của CLB Nhà Khởi nghiệp Trẻ (NJEC), ứng dụng hệ thống số vào vận hành câu lạc bộ, quản lý thành viên và chương trình khởi nghiệp."
+      },
+      "detailedDescription": {
+        "en": "As a specialist member of the Technology Committee at NJEC (Young Entrepreneurs Club), I help build and operate internal digital tools for member management, activity tracking, and training programs. My work connects Information Systems practice with day-to-day student organization workflows.",
+        "vi": "Với tư cách Thành viên Ban Công nghệ tại CLB Nhà Khởi nghiệp Trẻ (NJEC), tôi tham gia xây dựng và vận hành công cụ số phục vụ quản lý thành viên, theo dõi hoạt động và hỗ trợ các chương trình tập huấn, khởi nghiệp của câu lạc bộ."
+      },
+      "responsibilities": [
+        {
+          "en": "Co-develop and structure the NJEC Member Portal for managing club members, participation history, and operational workflows.",
+          "vi": "Tham gia xây dựng và chuẩn hóa Cổng thông tin thành viên NJEC phục vụ quản lý hồ sơ thành viên, lịch sử tham gia và luồng vận hành."
+        },
+        {
+          "en": "Support internal digital infrastructure and translate manual club coordination tasks into structured processes.",
+          "vi": "Hỗ trợ hạ tầng công nghệ nội bộ, chuyển hóa các quy trình phối hợp thủ công thành luồng vận hành có cấu trúc."
+        },
+        {
+          "en": "Provide technical and operational support for club training sessions and entrepreneurship community initiatives.",
+          "vi": "Hỗ trợ kỹ thuật và công tác tổ chức cho các đợt tập huấn câu lạc bộ và hoạt động cộng đồng khởi nghiệp."
+        }
+      ],
+      "contributions": [
+        {
+          "id": "njec-contrib-member-portal",
+          "title": {
+            "en": "NJEC Member Portal",
+            "vi": "Cổng thông tin thành viên NJEC"
+          },
+          "subtitle": {
+            "en": "Digitalizing club member operations",
+            "vi": "Số hóa hoạt động quản lý thành viên"
+          },
+          "description": {
+            "en": "Contributed to an internal system supporting member management, activities, achievements, and participation history for NJEC.",
+            "vi": "Tham gia xây dựng hệ thống nội bộ hỗ trợ quản lý thành viên, hoạt động, thành tích và lịch sử tham gia của NJEC."
+          },
+          "evidence": ["Member management", "Activity history", "Operational workflow"]
+        },
+        {
+          "id": "njec-contrib-tech-ops",
+          "title": {
+            "en": "Technology Operations & Training Support",
+            "vi": "Vận hành Công nghệ & Hỗ trợ Tập huấn"
+          },
+          "subtitle": {
+            "en": "Supporting club infrastructure and July 2026 training",
+            "vi": "Hỗ trợ hạ tầng số và chương trình tập huấn tháng 07/2026"
+          },
+          "description": {
+            "en": "Supported internal technology needs and club training programs in early July 2026.",
+            "vi": "Hỗ trợ nhu cầu công nghệ nội bộ và các chương trình tập huấn của NJEC vào đầu tháng 07/2026."
+          },
+          "evidence": ["July 2026 Training Support", "Process Structuring"]
+        }
+      ],
+      "relatedProjects": ["senova"],
+      "relatedActivityIds": [
+        "journey-njec-training-2026-07",
+        "journey-joined-njec-2025"
+      ],
+      "relatedAwardIds": ["recognition-njec-tech-contribution"],
+      "coverImage": "media-njec-member-portal",
+      "galleryImages": [
+        "media-njec-member-portal",
+        "media-njec-activity-training-2026"
+      ],
+      "evidenceLinks": [],
+      "visibility": "public",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "niic-platform-technical-lead",
+      "title": {
+        "en": "Lead Developer & Technical Lead",
+        "vi": "Lead Developer & Technical Lead"
+      },
+      "organization": {
+        "en": "NTTU Innovation & Incubation Center (NIIC) — Platform Engineering Team",
+        "vi": "Trung tâm Sáng tạo và Ươm tạo Khởi nghiệp NTTU (NIIC) — Đội ngũ Phát triển Nền tảng"
+      },
+      "organizationShort": "NIIC / NTTU",
+      "organizationLogo": null,
+      "category": "professional-technical",
+      "roleType": "leadership",
+      "startDate": "2026",
+      "startDateNote": null,
+      "endDate": null,
+      "isCurrent": true,
+      "shortDescription": {
+        "en": "Technical Lead responsible for system direction, domain/identity modeling, and engineering coordination for the digital platform of NTTU Innovation & Incubation Center.",
+        "vi": "Phụ trách định hướng kỹ thuật, mô hình hóa định danh/nghiệp vụ và điều phối phát triển hệ thống số cho Trung tâm Sáng tạo và Ươm tạo Khởi nghiệp NTTU."
+      },
+      "detailedDescription": {
+        "en": "Leading technical coordination and architecture for the NIIC digital ecosystem in a 2-member engineering team. Rather than duplicating the technical case study here, this role record focuses on organizational responsibility: translating institutional competition and incubation workflows into sustainable software boundaries.",
+        "vi": "Đảm nhiệm vai trò dẫn dắt kỹ thuật và điều phối phát triển trong nhóm 2 thành viên cho hệ sinh thái số của NIIC. Thay vì lặp lại nội dung kỹ thuật của dự án, mục vai trò này ghi nhận trách nhiệm tổ chức: chuyển hóa quy trình vận hành cuộc thi, hội đồng chấm thi và ươm tạo khởi nghiệp của trung tâm thành hệ thống vận hành thực tế."
+      },
+      "responsibilities": [
+        {
+          "en": "Translate institutional requirements from NIIC into domain boundaries, role assignments, and release phases.",
+          "vi": "Chuyển hóa nhu cầu nghiệp vụ của Trung tâm NIIC thành ranh giới domain, phân công vai trò và lộ trình triển khai."
+        },
+        {
+          "en": "Coordinate technical standards, code ownership, and production operations across the 2-member development team.",
+          "vi": "Điều phối tiêu chuẩn kỹ thuật, phân chia hạng mục phát triển và vận hành hạ tầng trong nhóm 2 thành viên."
+        }
+      ],
+      "contributions": [
+        {
+          "id": "niic-org-coordination",
+          "title": {
+            "en": "Institutional Digital Transformation",
+            "vi": "Số hóa Quy trình Vận hành Cuộc thi & Ươm tạo"
+          },
+          "subtitle": {
+            "en": "Bridging center operations and software execution",
+            "vi": "Kết nối nghiệp vụ trung tâm với thực thi phần mềm"
+          },
+          "description": {
+            "en": "Established the operational platform at nttu.startup.niic.vn; full architectural details are documented in the dedicated NIIC Platform Case Study.",
+            "vi": "Đưa không gian đổi mới sáng tạo đi vào hoạt động tại nttu.startup.niic.vn; chi tiết kiến trúc kỹ thuật được trình bày riêng tại Case Study NIIC Platform."
+          },
+          "evidence": ["Technical Coordination", "Production Operations"]
+        }
+      ],
+      "relatedProjects": ["niic-platform"],
+      "relatedActivityIds": ["journey-niic-platform-lead-2026"],
+      "relatedAwardIds": ["recognition-niic-production-launch-2026"],
+      "coverImage": "media-niic-hero",
+      "galleryImages": ["media-niic-hero"],
+      "evidenceLinks": [
+        {
+          "label": {
+            "en": "Live NIIC Innovation Space",
+            "vi": "Không gian Đổi mới Sáng tạo NIIC"
+          },
+          "url": "https://nttu.startup.niic.vn",
+          "type": "live",
+          "visibility": "public"
+        }
+      ],
+      "visibility": "public",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cpv-member",
+      "title": {
+        "en": "Member of the Communist Party of Vietnam",
+        "vi": "Đảng viên Đảng Cộng sản Việt Nam"
+      },
+      "organization": {
+        "en": "Communist Party of Vietnam",
+        "vi": "Đảng Cộng sản Việt Nam"
+      },
+      "organizationShort": "ĐCSVN / CPV",
+      "organizationLogo": null,
+      "category": "political-civic",
+      "roleType": "membership",
+      "startDate": null,
+      "startDateNote": {
+        "en": "Confirmed membership — exact admission date & party cell details managed under owner privacy settings",
+        "vi": "Đã xác nhận tư cách Đảng viên — ngày kết nạp chính xác và thông tin chi bộ được quản lý theo chế độ riêng tư của chủ sở hữu"
+      },
+      "endDate": null,
+      "isCurrent": true,
+      "shortDescription": {
+        "en": "Confirmed political and civic membership in the Communist Party of Vietnam. Presented strictly as a civic/political membership, distinct from executive or technical leadership positions.",
+        "vi": "Tư cách Đảng viên Đảng Cộng sản Việt Nam đã được xác nhận. Được trình bày đúng tính chất là tư cách thành viên chính trị - xã hội, tách biệt rõ với các chức danh điều hành hoặc lãnh đạo chuyên môn."
+      },
+      "detailedDescription": {
+        "en": "Admitted as a member of the Communist Party of Vietnam, maintaining civic responsibility, ethical discipline, and constructive engagement in academic and community environments. Official decision numbers, party card identifiers, and internal party cell records are not published on the public web.",
+        "vi": "Được kết nạp vào Đảng Cộng sản Việt Nam, thực hiện trách nhiệm công dân, rèn luyện phẩm chất đạo đức và đóng góp tích cực trong môi trường học thuật cũng như hoạt động cộng đồng. Số thẻ Đảng, số quyết định kết nạp và hồ sơ sinh hoạt chi bộ nội bộ không công khai trên môi trường mạng."
+      },
+      "responsibilities": [
+        {
+          "en": "Uphold civic responsibility, academic integrity, and discipline in study, technical work, and community service.",
+          "vi": "Giữ gìn trách nhiệm công dân, sự chuẩn mực trong học tập, lao động chuyên môn và hoạt động đóng góp cộng đồng."
+        },
+        {
+          "en": "Participate in grassroots organizational activities and youth/student movements in accordance with regulations.",
+          "vi": "Tham gia sinh hoạt định kỳ và đồng hành cùng các phong trào học thuật, khởi nghiệp, tình nguyện của sinh viên theo quy định."
+        }
+      ],
+      "contributions": [
+        {
+          "id": "cpv-civic-commitment",
+          "title": {
+            "en": "Civic & Academic Integrity",
+            "vi": "Trách nhiệm Công dân & Chuẩn mực Học thuật"
+          },
+          "subtitle": {
+            "en": "Verified membership status with privacy-first disclosure",
+            "vi": "Xác nhận tư cách thành viên với cơ chế kiểm soát quyền riêng tư"
+          },
+          "description": {
+            "en": "Combines political and civic responsibility with practical contributions to student innovation ecosystems and academic research.",
+            "vi": "Gắn kết trách nhiệm của người Đảng viên trẻ với đóng góp thiết thực trong hệ sinh thái đổi mới sáng tạo sinh viên và học thuật."
+          },
+          "evidence": ["Confirmed Membership Status", "Privacy-Protected Record"]
+        }
+      ],
+      "relatedProjects": [],
+      "relatedActivityIds": ["journey-cpv-membership-milestone"],
+      "relatedAwardIds": ["recognition-cpv-civic-admission"],
+      "coverImage": "media-cpv-admission-archive",
+      "galleryImages": ["media-cpv-admission-archive"],
+      "evidenceLinks": [],
+      "visibility": "public",
+      "verificationStatus": "partial-pending-documents"
+    },
+    {
+      "id": "community-student-innovation-volunteer",
+      "title": {
+        "en": "Student Innovation & Community Collaborator",
+        "vi": "Thành viên & Cộng tác viên Hoạt động Cộng đồng Sinh viên"
+      },
+      "organization": {
+        "en": "Student Entrepreneurship & Academic Programs",
+        "vi": "Các Chương trình Khởi nghiệp, Học thuật & Cộng đồng Sinh viên"
+      },
+      "organizationShort": "COMMUNITY",
+      "organizationLogo": null,
+      "category": "community-volunteering",
+      "roleType": "membership",
+      "startDate": "2025",
+      "startDateNote": null,
+      "endDate": null,
+      "isCurrent": true,
+      "shortDescription": {
+        "en": "Participating in and supporting student training programs, academic hackathons, and community technology initiatives.",
+        "vi": "Tham gia hỗ trợ các đợt tập huấn kỹ năng, cuộc thi học thuật sinh viên và hoạt động kết nối công nghệ cộng đồng."
+      },
+      "detailedDescription": {
+        "en": "Actively participates as a supporter, team coordinator, and community member in student activities—including supporting NJEC training programs in July 2026 and coordinating a 3-member student hackathon team in 2025.",
+        "vi": "Tích cực tham gia với tư cách thành viên hỗ trợ kỹ thuật, điều phối nhóm và cộng tác viên trong các hoạt động sinh viên — bao gồm hỗ trợ đợt tập huấn NJEC tháng 07/2026 và điều phối nhóm 3 thành viên tham gia Hackathon sinh viên năm 2025."
+      },
+      "responsibilities": [
+        {
+          "en": "Assist in organizing and supporting training sessions and operational logistics for student clubs.",
+          "vi": "Hỗ trợ công tác tổ chức, hậu cần kỹ thuật và vận hành cho các buổi tập huấn của câu lạc bộ sinh viên."
+        },
+        {
+          "en": "Collaborate with peers across disciplines during student hackathons and innovation workshops.",
+          "vi": "Phối hợp liên ngành cùng sinh viên các mảng kỹ thuật và kinh doanh trong các kỳ hackathon và chương trình đổi mới sáng tạo."
+        }
+      ],
+      "contributions": [
+        {
+          "id": "community-hackathon-coordination",
+          "title": {
+            "en": "Training & Hackathon Coordination",
+            "vi": "Hỗ trợ Tập huấn & Điều phối Nhóm Thi Học thuật"
+          },
+          "subtitle": {
+            "en": "Community engagement & peer collaboration",
+            "vi": "Đồng hành cùng phong trào học thuật và khởi nghiệp sinh viên"
+          },
+          "description": {
+            "en": "Coordinated a 3-member student hackathon team in 2025 and supported NJEC training operations in July 2026.",
+            "vi": "Điều phối nhóm 3 thành viên tham gia Hackathon năm 2025 và hỗ trợ vận hành đợt tập huấn NJEC tháng 07/2026."
+          },
+          "evidence": ["July 2026 Training Support", "2025 Student Hackathon"]
+        }
+      ],
+      "relatedProjects": ["vocelune"],
+      "relatedActivityIds": [
+        "journey-njec-training-2026-07"
+      ],
+      "relatedAwardIds": ["participation-university-ai-hackathon-2024"],
+      "coverImage": "media-njec-activity-training-2026",
+      "galleryImages": ["media-njec-activity-training-2026"],
+      "evidenceLinks": [],
+      "visibility": "public",
+      "verificationStatus": "verified"
+    }
+  ]
+}

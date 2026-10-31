@@ -6,6 +6,7 @@
   "locales": ["en", "vi"],
   "navigation": [
     {"id": "work", "href": "/work"},
+    {"id": "journey", "href": "/journey"},
     {"id": "about", "href": "/about"},
     {"id": "contact", "href": "/contact"},
     {"id": "cv", "href": "/cv"}

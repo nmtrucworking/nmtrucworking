@@ -1,0 +1,215 @@
+{
+  "$schema": "../schemas/media.schema.json",
+  "assets": [
+    {
+      "id": "media-niic-hero",
+      "src": "/media/projects/niic-platform/hero.webp",
+      "alt": {
+        "en": "NIIC Platform public innovation and competition operations interface",
+        "vi": "Giao diện không gian đổi mới sáng tạo và vận hành cuộc thi của NIIC Platform"
+      },
+      "caption": {
+        "en": "NIIC Innovation Space (nttu.startup.niic.vn) — public competition discovery and ecosystem surface.",
+        "vi": "Không gian Đổi mới Sáng tạo NIIC (nttu.startup.niic.vn) — bề mặt công khai khám phá cuộc thi và hệ sinh thái."
+      },
+      "width": 1600,
+      "height": 1000,
+      "type": "team-project",
+      "credits": {
+        "en": "NIIC Platform Technical Team — Lead Developer: Nguyễn Minh Trúc",
+        "vi": "Đội ngũ Kỹ thuật NIIC Platform — Lead Developer: Nguyễn Minh Trúc"
+      },
+      "visibility": "public",
+      "status": "verified"
+    },
+    {
+      "id": "media-niic-architecture",
+      "src": "/media/projects/niic-platform/architecture.webp",
+      "alt": {
+        "en": "NIIC Platform multi-surface system architecture blueprint",
+        "vi": "Sơ đồ kiến trúc hệ thống đa bề mặt của NIIC Platform"
+      },
+      "caption": {
+        "en": "Multi-surface architecture separating public portals, participant workspaces, judging workflows, and core API authority.",
+        "vi": "Kiến trúc đa bề mặt tách biệt cổng công khai, không gian thí sinh, luồng chấm thi và API trung tâm."
+      },
+      "width": 1600,
+      "height": 1000,
+      "type": "diagram",
+      "credits": {
+        "en": "System Architecture by Nguyễn Minh Trúc",
+        "vi": "Kiến trúc hệ thống bởi Nguyễn Minh Trúc"
+      },
+      "visibility": "public",
+      "status": "verified"
+    },
+    {
+      "id": "media-senova-hero",
+      "src": "/media/projects/senova/hero.webp",
+      "alt": {
+        "en": "Senova Vietnamese lotus tea product and QR-guided cultural experience",
+        "vi": "Sản phẩm trà sen văn hóa Việt và trải nghiệm số qua QR của Senova"
+      },
+      "caption": {
+        "en": "Senova product system combining physical Petal Pack lotus tea with a QR-linked digital brewing ritual.",
+        "vi": "Hệ sản phẩm Senova kết hợp trà sen búp khô Petal Pack cùng nghi thức pha trà và câu chuyện số qua mã QR."
+      },
+      "width": 3164,
+      "height": 1952,
+      "type": "team-project",
+      "credits": {
+        "en": "Senova Project Team (3 members) — Product & Project Lead: Nguyễn Minh Trúc",
+        "vi": "Nhóm dự án Senova (3 thành viên) — Dẫn dắt Sản phẩm & Dự án: Nguyễn Minh Trúc"
+      },
+      "visibility": "public",
+      "status": "verified"
+    },
+    {
+      "id": "media-operations-hub-hero",
+      "src": "/media/projects/operations-hub/hero.webp",
+      "alt": {
+        "en": "Operations Hub multi-tenant student organization platform interface",
+        "vi": "Giao diện nền tảng vận hành đa tổ chức sinh viên Operations Hub"
+      },
+      "caption": {
+        "en": "Operations Hub prototype featuring tenant-scoped memberships, role-based access control, and isolated organizational workspaces.",
+        "vi": "Nguyên mẫu Operations Hub với cơ chế membership theo tenant, phân quyền RBAC và không gian dữ liệu tổ chức cô lập."
+      },
+      "width": 3076,
+      "height": 1864,
+      "type": "team-project",
+      "credits": {
+        "en": "Operations Hub Team — Lead System Analyst: Nguyễn Minh Trúc",
+        "vi": "Nhóm Operations Hub — Phân tích Hệ thống Chính: Nguyễn Minh Trúc"
+      },
+      "visibility": "public",
+      "status": "verified"
+    },
+    {
+      "id": "media-pronaflow-home",
+      "src": "/media/projects/pronaflow/home.webp",
+      "alt": {
+        "en": "PronaFlow project and task workflow management platform interface",
+        "vi": "Giao diện nền tảng quản lý dự án và luồng công việc PronaFlow"
+      },
+      "caption": {
+        "en": "PronaFlow workspace and Kanban workflow prototype built with React, TypeScript, FastAPI, and PostgreSQL.",
+        "vi": "Nguyên mẫu không gian làm việc và luồng Kanban của PronaFlow xây dựng với React, TypeScript, FastAPI và PostgreSQL."
+      },
+      "width": 3840,
+      "height": 2160,
+      "type": "team-project",
+      "credits": {
+        "en": "Solo Project by Nguyễn Minh Trúc",
+        "vi": "Dự án cá nhân của Nguyễn Minh Trúc"
+      },
+      "visibility": "public",
+      "status": "verified"
+    },
+    {
+      "id": "media-vocelune-home",
+      "src": "/media/projects/vocelune/home.webp",
+      "alt": {
+        "en": "Vocelune adaptive vocabulary learning platform brand identity",
+        "vi": "Nhận diện thương hiệu nền tảng học từ vựng thích ứng Vocelune"
+      },
+      "caption": {
+        "en": "Vocelune adaptive English vocabulary platform powered by FSRS-6 spaced repetition and active recall workflows.",
+        "vi": "Nền tảng học từ vựng tiếng Anh thích ứng Vocelune ứng dụng thuật toán lặp lại ngắt quãng FSRS-6 và Active Recall."
+      },
+      "width": 3840,
+      "height": 2160,
+      "type": "team-project",
+      "credits": {
+        "en": "Solo Project by Nguyễn Minh Trúc",
+        "vi": "Dự án cá nhân của Nguyễn Minh Trúc"
+      },
+      "visibility": "public",
+      "status": "verified"
+    },
+    {
+      "id": "media-njec-activity-training-2026",
+      "src": null,
+      "alt": {
+        "en": "NJEC July 2026 training program support documentary photo (awaiting owner upload)",
+        "vi": "Ảnh tư liệu hỗ trợ chương trình tập huấn NJEC tháng 07/2026 (đang chờ bổ sung ảnh thực tế)"
+      },
+      "caption": {
+        "en": "Documentary photo from NJEC training support activities in early July 2026. Reserved for verified event photography.",
+        "vi": "Ảnh tư liệu đợt hỗ trợ chương trình tập huấn của CLB Nhà Khởi nghiệp Trẻ (NJEC) đầu tháng 07/2026. Dành chỗ cho ảnh sự kiện thực tế."
+      },
+      "width": 1600,
+      "height": 1067,
+      "type": "event",
+      "credits": {
+        "en": "NJEC Media Archive (Pending owner upload)",
+        "vi": "Tư liệu CLB NJEC (Chờ chủ sở hữu cập nhật)"
+      },
+      "visibility": "public",
+      "status": "pending-upload"
+    },
+    {
+      "id": "media-njec-member-portal",
+      "src": null,
+      "alt": {
+        "en": "NJEC Member Portal system interface screenshot (awaiting owner upload)",
+        "vi": "Ảnh chụp giao diện Cổng thông tin thành viên NJEC (đang chờ bổ sung ảnh thực tế)"
+      },
+      "caption": {
+        "en": "Internal member management, activity tracking, and participation history interface developed with the NJEC Technology Committee.",
+        "vi": "Giao diện quản lý thành viên, theo dõi hoạt động và lịch sử tham gia được phát triển cùng Ban Công nghệ NJEC."
+      },
+      "width": 1600,
+      "height": 1000,
+      "type": "activity",
+      "credits": {
+        "en": "NJEC Technology Committee (Pending screenshot approval)",
+        "vi": "Ban Công nghệ NJEC (Chờ duyệt ảnh chụp giao diện)"
+      },
+      "visibility": "public",
+      "status": "pending-upload"
+    },
+    {
+      "id": "media-cpv-admission-archive",
+      "src": null,
+      "alt": {
+        "en": "Communist Party of Vietnam admission ceremony documentary photo (awaiting owner upload)",
+        "vi": "Ảnh tư liệu Lễ kết nạp Đảng viên Đảng Cộng sản Việt Nam (đang chờ chủ sở hữu bổ sung)"
+      },
+      "caption": {
+        "en": "Documentary photography from the Party admission ceremony. Sensitive personal identification numbers and internal records remain redacted by default.",
+        "vi": "Ảnh tư liệu Lễ kết nạp Đảng viên. Số thẻ, số quyết định và thông tin định danh nhạy cảm được bảo mật mặc định."
+      },
+      "width": 1600,
+      "height": 1067,
+      "type": "archive",
+      "credits": {
+        "en": "Personal Archive (Pending owner upload)",
+        "vi": "Tư liệu cá nhân (Chờ chủ sở hữu cập nhật)"
+      },
+      "visibility": "public",
+      "status": "pending-upload"
+    },
+    {
+      "id": "media-njec-contribution-cert",
+      "src": null,
+      "alt": {
+        "en": "NJEC Technology Committee contribution recognition document (awaiting scan upload)",
+        "vi": "Minh chứng ghi nhận đóng góp tại Ban Công nghệ CLB Nhà Khởi nghiệp Trẻ NJEC (chờ cập nhật bản scan)"
+      },
+      "caption": {
+        "en": "Reserved for official club certificate or confirmation letter regarding Technology Committee contributions.",
+        "vi": "Khung lưu trữ giấy chứng nhận hoặc xác nhận đóng góp hoạt động tại Ban Công nghệ CLB NJEC."
+      },
+      "width": 1600,
+      "height": 1131,
+      "type": "certificate",
+      "credits": {
+        "en": "NJEC Archive (Pending scan upload)",
+        "vi": "Hồ sơ minh chứng NJEC (Chờ cập nhật bản scan)"
+      },
+      "visibility": "public",
+      "status": "pending-upload"
+    }
+  ]
+}

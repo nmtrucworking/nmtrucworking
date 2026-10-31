@@ -60,7 +60,21 @@
           "seoDescription": "Nghiên cứu tình huống về Senova, tập trung vào thiết kế sản phẩm trà sen, kể chuyện văn hóa, trải nghiệm QR, kế hoạch kinh doanh và phát triển nguyên mẫu."
         }
       },
-      "assets": [],
+      "assets": [
+        {
+          "id": "senova-hero",
+          "src": "/media/projects/senova/hero.webp",
+          "type": "image",
+          "width": 3164,
+          "height": 1952,
+          "purpose": "hero",
+          "status": "final",
+          "alt": {
+            "en": "Senova Vietnamese lotus tea product and cultural experience",
+            "vi": "Sản phẩm trà sen và trải nghiệm văn hóa Việt của Senova"
+          }
+        }
+      ],
       "links": [
         {
           "type": "live",
@@ -195,7 +209,21 @@
           "seoDescription": "Nghiên cứu phân tích và kiến trúc nền tảng vận hành đa tenant cho tổ chức sinh viên với NestJS, Next.js, PostgreSQL, Prisma, RBAC và dữ liệu cô lập theo tenant."
         }
       },
-      "assets": [],
+      "assets": [
+        {
+          "id": "operations-hub-hero",
+          "src": "/media/projects/operations-hub/hero.webp",
+          "type": "image",
+          "width": 3076,
+          "height": 1864,
+          "purpose": "hero",
+          "status": "final",
+          "alt": {
+            "en": "Operations Hub multi-tenant operations platform interface",
+            "vi": "Giao diện nền tảng vận hành đa tenant Operations Hub"
+          }
+        }
+      ],
       "links": [
         {
           "type": "repository",
@@ -318,33 +346,29 @@
           "seoDescription": "Nghiên cứu kiến trúc và sản phẩm cho nguyên mẫu quản lý dự án sử dụng React, FastAPI, PostgreSQL và Electron, với các năng lực AI đang trong định hướng phát triển."
         }
       },
-      "assets": [],
+      "assets": [
+        {
+          "id": "pronaflow-home-page",
+          "type": "image",
+          "width": 3840,
+          "height": 2160,
+          "purpose": "hero",
+          "status": "final",
+          "src": "/media/projects/pronaflow/home.webp",
+          "alt": {
+            "en": "PronaFlow project management platform interface",
+            "vi": "Giao diện nền tảng quản lý dự án PronaFlow"
+          }
+        }
+      ],
       "links": [
         {
           "type": "repository",
           "url": "https://github.com/nmtrucworking/PronaFlow",
           "visibility": "public",
           "label": {
-            "en": "View Project Monorepo",
-            "vi": "Xem Monorepo Dự án"
-          }
-        },
-        {
-          "type": "repository",
-          "url": "https://github.com/nmtrucworking/pronaflow-frontend",
-          "visibility": "public",
-          "label": {
-            "en": "View Frontend Repository",
-            "vi": "Xem Kho mã nguồn Frontend"
-          }
-        },
-        {
-          "type": "repository",
-          "url": "https://github.com/nmtrucworking/pronaflow-backend",
-          "visibility": "public",
-          "label": {
-            "en": "View Backend Repository",
-            "vi": "Xem Kho mã nguồn Backend"
+            "en": "View Project",
+            "vi": "Xem Dự án"
           }
         }
       ],
@@ -720,213 +744,372 @@
       ]
     },
     {
-  "id": "niic-platform",
-  "slug": "niic-platform",
-  "status": "published",
-  "stage": "production",
-  "visibility": "public",
-  "featured": true,
-  "order": 1,
-  "yearStart": 2026,
-  "yearEnd": null,
-  "domains": [
-    "competition-management",
-    "innovation-ecosystem",
-    "enterprise-platform"
-  ],
-  "roles": {
-    "primary": "SA",
-    "secondary": [
-      "BA",
-      "PRODUCT"
-    ]
-  },
-  "capabilities": [
-    "system-architecture",
-    "technical-leadership",
-    "full-stack-development",
-    "requirements",
-    "identity-access-management",
-    "rbac",
-    "data-modeling",
-    "api-design",
-    "design-system",
-    "deployment"
-  ],
-  "technologies": [
-    "nextjs",
-    "react",
-    "typescript",
-    "nestjs",
-    "postgresql",
-    "prisma",
-    "turborepo",
-    "pnpm",
-    "openapi",
-    "bullmq",
-    "cloudflare-workers",
-    "cloudflare-r2",
-    "render"
-  ],
-  "team": {
-    "type": "team",
-    "size": 2
-  },
-  "localized": {
-    "en": {
-      "title": "NIIC Platform — Innovation & Competition Operations Platform",
-      "summary": "A multi-surface digital platform for the NTTU Innovation & Incubation Center, supporting public innovation programs, competition operations, participant workflows, judging, expert coordination, and internal administration.",
-      "contribution": "Lead Developer and Technical Lead responsible for system architecture, domain and identity modeling, multi-surface application structure, API and database direction, shared design-system integration, deployment architecture, and technical coordination.",
-      "seoTitle": "NIIC Platform — Innovation & Competition Platform — Trúc",
-      "seoDescription": "A system architecture and full-stack case study of NIIC Platform, a multi-surface competition and innovation operations platform built with Next.js, NestJS, PostgreSQL, Prisma, Cloudflare and Render."
-    },
-    "vi": {
-      "title": "NIIC Platform — Nền tảng Vận hành Đổi mới Sáng tạo & Cuộc thi",
-      "summary": "Nền tảng số đa bề mặt dành cho Trung tâm Sáng tạo và Ươm tạo Khởi nghiệp NTTU, hỗ trợ hoạt động công khai, vận hành cuộc thi, không gian thí sinh, chấm thi, điều phối chuyên gia và quản trị nội bộ.",
-      "contribution": "Đảm nhiệm vai trò Lead Developer và Technical Lead, phụ trách kiến trúc hệ thống, mô hình domain và định danh, cấu trúc ứng dụng đa bề mặt, định hướng API và cơ sở dữ liệu, tích hợp design system dùng chung, kiến trúc triển khai và điều phối kỹ thuật.",
-      "seoTitle": "NIIC Platform — Nền tảng Đổi mới Sáng tạo & Cuộc thi — Trúc",
-      "seoDescription": "Nghiên cứu tình huống về kiến trúc hệ thống và phát triển full-stack NIIC Platform với Next.js, NestJS, PostgreSQL, Prisma, Cloudflare và Render."
-    }
-  },
-  "assets": [
-    {
-      "id": "niic-platform-hero",
-      "src": "/media/projects/niic-platform/hero.webp",
-      "type": "image",
-      "width": 1600,
-      "height": 1000,
-      "purpose": "hero",
-      "status": "final",
-      "alt": {
-        "en": "NIIC Platform public innovation and competition experience",
-        "vi": "Giao diện không gian đổi mới sáng tạo và cuộc thi của NIIC Platform"
-      }
-    },
-    {
-      "id": "niic-platform-architecture",
-      "src": "/media/projects/niic-platform/architecture.webp",
-      "type": "diagram",
-      "width": 1600,
-      "height": 1000,
-      "purpose": "diagram",
-      "status": "final",
-      "alt": {
-        "en": "NIIC Platform multi-surface system architecture",
-        "vi": "Kiến trúc hệ thống đa bề mặt của NIIC Platform"
-      }
-    }
-  ],
-  "links": [
-    {
-      "type": "live",
-      "url": "https://nttu.startup.niic.vn",
+      "id": "niic-platform",
+      "slug": "niic-platform",
+      "status": "published",
+      "stage": "production",
       "visibility": "public",
-      "label": {
-        "en": "View NIIC Innovation Space",
-        "vi": "Xem Không gian Đổi mới Sáng tạo NIIC"
-      }
+      "featured": true,
+      "order": 1,
+      "yearStart": 2026,
+      "yearEnd": null,
+      "domains": [
+        "competition-management",
+        "innovation-ecosystem",
+        "enterprise-platform"
+      ],
+      "roles": {
+        "primary": "SA",
+        "secondary": [
+          "BA",
+          "PRODUCT"
+        ]
+      },
+      "capabilities": [
+        "system-architecture",
+        "technical-leadership",
+        "full-stack-development",
+        "requirements",
+        "identity-access-management",
+        "rbac",
+        "data-modeling",
+        "api-design",
+        "design-system",
+        "deployment"
+      ],
+      "technologies": [
+        "nextjs",
+        "react",
+        "typescript",
+        "nestjs",
+        "postgresql",
+        "prisma",
+        "turborepo",
+        "pnpm",
+        "openapi",
+        "bullmq",
+        "cloudflare-workers",
+        "cloudflare-r2",
+        "render"
+      ],
+      "team": {
+        "type": "team",
+        "size": 2
+      },
+      "localized": {
+        "en": {
+          "title": "NIIC Platform — Innovation & Competition Operations Platform",
+          "summary": "A multi-surface digital platform for the NTTU Innovation & Incubation Center, supporting public innovation programs, competition operations, participant workflows, judging, expert coordination, and internal administration.",
+          "contribution": "Lead Developer and Technical Lead responsible for system architecture, domain and identity modeling, multi-surface application structure, API and database direction, shared design-system integration, deployment architecture, and technical coordination.",
+          "seoTitle": "NIIC Platform — Innovation & Competition Platform — Trúc",
+          "seoDescription": "A system architecture and full-stack case study of NIIC Platform, a multi-surface competition and innovation operations platform built with Next.js, NestJS, PostgreSQL, Prisma, Cloudflare and Render."
+        },
+        "vi": {
+          "title": "NIIC Platform — Nền tảng Vận hành Đổi mới Sáng tạo & Cuộc thi",
+          "summary": "Nền tảng số đa bề mặt dành cho Trung tâm Sáng tạo và Ươm tạo Khởi nghiệp NTTU, hỗ trợ hoạt động công khai, vận hành cuộc thi, không gian thí sinh, chấm thi, điều phối chuyên gia và quản trị nội bộ.",
+          "contribution": "Đảm nhiệm vai trò Lead Developer và Technical Lead, phụ trách kiến trúc hệ thống, mô hình domain và định danh, cấu trúc ứng dụng đa bề mặt, định hướng API và cơ sở dữ liệu, tích hợp design system dùng chung, kiến trúc triển khai và điều phối kỹ thuật.",
+          "seoTitle": "NIIC Platform — Nền tảng Đổi mới Sáng tạo & Cuộc thi — Trúc",
+          "seoDescription": "Nghiên cứu tình huống về kiến trúc hệ thống và phát triển full-stack NIIC Platform với Next.js, NestJS, PostgreSQL, Prisma, Cloudflare và Render."
+        }
+      },
+      "assets": [
+        {
+          "id": "niic-platform-hero",
+          "src": "/media/projects/niic-platform/hero.webp",
+          "type": "image",
+          "width": 1600,
+          "height": 1000,
+          "purpose": "hero",
+          "status": "final",
+          "alt": {
+            "en": "NIIC Platform public innovation and competition experience",
+            "vi": "Giao diện không gian đổi mới sáng tạo và cuộc thi của NIIC Platform"
+          }
+        },
+        {
+          "id": "niic-platform-architecture",
+          "src": "/media/projects/niic-platform/architecture.webp",
+          "type": "diagram",
+          "width": 1600,
+          "height": 1000,
+          "purpose": "diagram",
+          "status": "final",
+          "alt": {
+            "en": "NIIC Platform multi-surface system architecture",
+            "vi": "Kiến trúc hệ thống đa bề mặt của NIIC Platform"
+          }
+        }
+      ],
+      "links": [
+        {
+          "type": "live",
+          "url": "https://nttu.startup.niic.vn",
+          "visibility": "public",
+          "label": {
+            "en": "View NIIC Innovation Space",
+            "vi": "Xem Không gian Đổi mới Sáng tạo NIIC"
+          }
+        }
+      ],
+      "caseStudy": [
+        {
+          "id": "context",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "From a Website to an Operational Platform",
+              "body": "NIIC Platform was developed beyond a conventional institutional website. The system separates public experiences, competition participation, expert and staff workflows, administration, API business logic, and background processing into purpose-specific surfaces while maintaining a shared domain model."
+            },
+            "vi": {
+              "heading": "Từ Website đến Nền tảng Vận hành",
+              "body": "NIIC Platform được phát triển vượt ra ngoài mô hình website giới thiệu thông thường. Hệ thống tách trải nghiệm công khai, tham gia cuộc thi, nghiệp vụ chuyên gia và nhân sự, quản trị, logic nghiệp vụ API và xử lý nền thành các bề mặt chuyên biệt nhưng vẫn dựa trên mô hình domain thống nhất."
+            }
+          }
+        },
+        {
+          "id": "architecture",
+          "type": "architecture",
+          "localized": {
+            "en": {
+              "heading": "Multi-Surface Architecture with a Shared Backend",
+              "body": "The platform uses a pnpm and Turborepo monorepo containing purpose-specific Next.js applications, a NestJS REST API, asynchronous workers, shared packages, PostgreSQL and Prisma. Transactional competition and operations data is designed around a central backend authority rather than frontend-owned sources of truth."
+            },
+            "vi": {
+              "heading": "Kiến trúc Đa Bề mặt với Backend Thống nhất",
+              "body": "Nền tảng sử dụng monorepo pnpm và Turborepo gồm các ứng dụng Next.js chuyên biệt, REST API NestJS, worker xử lý bất đồng bộ, các package dùng chung, PostgreSQL và Prisma. Dữ liệu giao dịch của cuộc thi và vận hành được thiết kế xoay quanh backend trung tâm thay vì để từng frontend trở thành nguồn dữ liệu độc lập."
+            }
+          }
+        },
+        {
+          "id": "identity-authorization",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "Identity Is Separate from Operational Assignment",
+              "body": "A major architecture decision was to avoid treating operational responsibilities such as judging as permanent user identities. Authentication establishes the user identity, while roles, permissions and competition-scoped assignments determine which workspace and actions are available."
+            },
+            "vi": {
+              "heading": "Tách Định danh khỏi Phân công Nghiệp vụ",
+              "body": "Một quyết định kiến trúc quan trọng là không xem các trách nhiệm nghiệp vụ như chấm thi như một danh tính người dùng cố định. Xác thực xác lập danh tính; vai trò, quyền và phân công theo phạm vi cuộc thi quyết định workspace và hành động mà người dùng được phép truy cập."
+            }
+          }
+        },
+        {
+          "id": "platform-scope",
+          "type": "process",
+          "localized": {
+            "en": {
+              "heading": "Competition and Ecosystem Operations",
+              "body": "The platform scope covers public competition discovery, participant workflows, competition administration, expert and judge coordination, scoring and feedback, voting, content publishing, and supporting operational workflows. Individual capabilities are released incrementally rather than presented as uniformly complete."
+            },
+            "vi": {
+              "heading": "Vận hành Cuộc thi và Hệ sinh thái",
+              "body": "Phạm vi nền tảng bao gồm khám phá cuộc thi công khai, quy trình thí sinh, quản trị cuộc thi, điều phối chuyên gia và giám khảo, chấm điểm và nhận xét, bình chọn, xuất bản nội dung và các quy trình vận hành hỗ trợ. Các năng lực được triển khai theo từng giai đoạn thay vì được mô tả như đã hoàn thiện đồng loạt."
+            }
+          }
+        },
+        {
+          "id": "deployment",
+          "type": "architecture",
+          "localized": {
+            "en": {
+              "heading": "Cloud Deployment and Media Architecture",
+              "body": "Next.js surfaces are deployed through Cloudflare Workers and OpenNext, while the API and background services use Render. PostgreSQL provides transactional persistence and Cloudflare R2 is used for object and media storage."
+            },
+            "vi": {
+              "heading": "Kiến trúc Triển khai và Lưu trữ Media",
+              "body": "Các bề mặt Next.js được triển khai qua Cloudflare Workers và OpenNext, trong khi API và dịch vụ xử lý nền sử dụng Render. PostgreSQL đảm nhiệm lưu trữ giao dịch và Cloudflare R2 được sử dụng cho object storage và media."
+            }
+          }
+        },
+        {
+          "id": "reflection",
+          "type": "reflection",
+          "localized": {
+            "en": {
+              "heading": "Scaling Domain Boundaries Before Infrastructure Complexity",
+              "body": "The project favors explicit domain boundaries and a modular backend over prematurely splitting the system into distributed microservices. This keeps operational complexity manageable while preserving clear ownership boundaries for future evolution."
+            },
+            "vi": {
+              "heading": "Mở rộng Ranh giới Domain trước Độ phức tạp Hạ tầng",
+              "body": "Dự án ưu tiên ranh giới domain rõ ràng và backend modular thay vì tách sớm thành các microservice phân tán. Cách tiếp cận này kiểm soát độ phức tạp vận hành nhưng vẫn duy trì ranh giới trách nhiệm đủ rõ cho việc mở rộng sau này."
+            }
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Core Applications",
+          "value": "8"
+        },
+        {
+          "label": "Architecture",
+          "value": "Multi-Surface"
+        },
+        {
+          "label": "Data Authority",
+          "value": "PostgreSQL SSOT"
+        }
+      ]
+    },
+    {
+      "id": "vocelune",
+      "slug": "vocelune",
+      "status": "published",
+      "stage": "prototype",
+      "visibility": "public",
+      "featured": true,
+      "order": 7,
+      "yearStart": 2026,
+      "yearEnd": null,
+      "domains": [
+        "edtech",
+        "language-learning",
+        "learning-systems"
+      ],
+      "roles": {
+        "primary": "SA",
+        "secondary": [
+          "PRODUCT",
+          "BA"
+        ]
+      },
+      "capabilities": [
+        "learning-workflows",
+        "adaptive-scheduling",
+        "full-stack-development",
+        "data-modeling",
+        "api-design",
+        "background-processing"
+      ],
+      "technologies": [
+        "nextjs",
+        "react",
+        "typescript",
+        "tailwindcss",
+        "nestjs",
+        "postgresql",
+        "prisma",
+        "redis",
+        "bullmq",
+        "ts-fsrs",
+        "docker",
+        "github-actions"
+      ],
+      "team": {
+        "type": "solo",
+        "size": 1
+      },
+      "localized": {
+        "en": {
+          "title": "Vocelune — Adaptive English Vocabulary Learning",
+          "summary": "An English vocabulary-learning web application combining active recall, FSRS-6 spaced repetition, personalized decks, flexible assessments, and learning-progress insights. Functional software under active development.",
+          "contribution": "Designed the learning workflows and system architecture; developed vocabulary, flashcard review, assessment and import features across a Next.js frontend and NestJS backend, with PostgreSQL persistence and asynchronous jobs.",
+          "seoTitle": "Vocelune — FSRS-6 Vocabulary Learning Platform Case Study",
+          "seoDescription": "Explore Vocelune's active-recall learning flows, FSRS-6 scheduling, tests, vocabulary imports, and full-stack architecture with Next.js, NestJS, Prisma and PostgreSQL."
+        },
+        "vi": {
+          "title": "Vocelune — Nền tảng Học Từ vựng Tiếng Anh Thích ứng",
+          "summary": "Ứng dụng web học từ vựng tiếng Anh kết hợp Active Recall, lặp lại ngắt quãng FSRS-6, bộ từ vựng cá nhân, bài kiểm tra linh hoạt và thống kê tiến độ. Phần mềm đã có chức năng vận hành và vẫn đang phát triển.",
+          "contribution": "Thiết kế luồng học và kiến trúc hệ thống; phát triển các chức năng quản lý từ vựng, ôn tập flashcard, kiểm tra và nhập dữ liệu trên frontend Next.js, backend NestJS, PostgreSQL và hệ thống xử lý tác vụ nền.",
+          "seoTitle": "Vocelune — Nền tảng Học Từ vựng với FSRS-6",
+          "seoDescription": "Nghiên cứu tình huống Vocelune: Active Recall, thuật toán FSRS-6, bài kiểm tra, nhập từ vựng và kiến trúc Next.js, NestJS, Prisma, PostgreSQL."
+        }
+      },
+      "assets": [
+        {
+          "id": "vocelune-home-page",
+          "src": "/media/projects/vocelune/home.webp",
+          "type": "image",
+          "width": 3840,
+          "height": 2160,
+          "purpose": "hero",
+          "status": "final",
+          "alt": {
+            "en": "Vocelune official vector logo; brand artwork, not an application screenshot",
+            "vi": "Logo vector chính thức của Vocelune; hình nhận diện thương hiệu, không phải ảnh chụp giao diện"
+          }
+        }
+      ],
+      "links": [
+        {
+          "type": "repository",
+          "url": "https://github.com/nmtrucworking/Vocelune",
+          "visibility": "public",
+          "label": {
+            "en": "View Vocelune Source Code",
+            "vi": "Xem Mã nguồn Vocelune"
+          }
+        },
+        {
+          "type": "document",
+          "url": "https://github.com/nmtrucworking/Vocelune/blob/main/docs/STUDY_ALGORITHM.md",
+          "visibility": "public",
+          "label": {
+            "en": "Read FSRS-6 Study Algorithm",
+            "vi": "Xem Tài liệu Thuật toán FSRS-6"
+          }
+        }
+      ],
+      "caseStudy": [
+        {
+          "id": "learning-problem",
+          "type": "lead",
+          "localized": {
+            "en": {
+              "heading": "From Vocabulary Lists to Retrieval Practice",
+              "body": "Vocelune combines vocabulary organization, answer-before-reveal flashcards, self-grading, and follow-up assessments in one learning workflow. The product aims to support consistent practice; no measured improvement in learning outcomes is claimed."
+            },
+            "vi": {
+              "heading": "Từ Danh sách Từ vựng đến Luyện tập Gợi nhớ",
+              "body": "Vocelune kết hợp quản lý từ vựng, flashcard yêu cầu tự nhớ trước khi mở đáp án, tự đánh giá và kiểm tra kiến thức trong một quy trình học. Dự án hướng đến việc hỗ trợ luyện tập đều đặn, chưa có số liệu chứng minh cải thiện kết quả học tập."
+            }
+          }
+        },
+        {
+          "id": "review-scheduling",
+          "type": "decision",
+          "localized": {
+            "en": {
+              "heading": "FSRS-6 Scheduling and Consistent Review State",
+              "body": "Reviews are scheduled on the backend using ts-fsrs 5.4.2 (FSRS-6), with Again, Hard, Good and Easy ratings, due queues, daily new-card limits, review history, undo, and sibling-card burying. Transactional review writes and idempotency controls reduce inconsistent state on retries."
+            },
+            "vi": {
+              "heading": "Lập lịch FSRS-6 và Trạng thái Ôn tập Nhất quán",
+              "body": "Backend dùng ts-fsrs 5.4.2 (FSRS-6) để lập lịch ôn tập với bốn mức Again, Hard, Good và Easy, hàng đợi đến hạn, giới hạn thẻ mới, lịch sử, hoàn tác và tạm ẩn thẻ cùng từ. Ghi nhận ôn tập theo giao dịch và cơ chế idempotency giúp hạn chế sai lệch dữ liệu khi yêu cầu được gửi lại."
+            }
+          }
+        },
+        {
+          "id": "learning-workflows",
+          "type": "process",
+          "localized": {
+            "en": {
+              "heading": "Vocabulary, Tests, and Import Workflows",
+              "body": "The application supports word senses, custom and shared decks, tags and search; multiple-choice, typed, listening and mixed tests; plus CSV/XLSX import validation, resumable import jobs, export and progress reporting. Dictionary enrichment uses source-aware adapters rather than assuming unrestricted provider data."
+            },
+            "vi": {
+              "heading": "Quản lý Từ vựng, Kiểm tra và Nhập Dữ liệu",
+              "body": "Ứng dụng hỗ trợ các nghĩa của từ, bộ từ vựng cá nhân và chia sẻ, nhãn và tìm kiếm; bài kiểm tra trắc nghiệm, nhập đáp án, nghe và kết hợp; cùng quy trình kiểm tra CSV/XLSX, nhập có thể tiếp tục, xuất dữ liệu và báo cáo tiến độ. Dữ liệu từ điển được xử lý theo nguồn cung cấp và điều kiện sử dụng."
+            }
+          }
+        },
+        {
+          "id": "architecture-evidence",
+          "type": "architecture",
+          "localized": {
+            "en": {
+              "heading": "Modular Monolith with Background Processing",
+              "body": "The TypeScript monorepo uses Next.js 15 / React 19, NestJS 11, Prisma 6 / PostgreSQL, and Redis / BullMQ for deferred tasks. The repository documents tests and GitHub Actions CI. Deployment-readiness issues remain, and a verified public production demo is not yet documented."
+            },
+            "vi": {
+              "heading": "Kiến trúc Modular Monolith và Xử lý Tác vụ Nền",
+              "body": "Monorepo TypeScript sử dụng Next.js 15 / React 19, NestJS 11, Prisma 6 / PostgreSQL và Redis / BullMQ để xử lý tác vụ bất đồng bộ. Repository có tài liệu kiểm thử và GitHub Actions CI. Một số vấn đề sẵn sàng triển khai vẫn cần xử lý; chưa có minh chứng được xác thực về bản production công khai."
+            }
+          }
+        }
+      ],
+      "metrics": []
     }
-  ],
-  "caseStudy": [
-    {
-      "id": "context",
-      "type": "lead",
-      "localized": {
-        "en": {
-          "heading": "From a Website to an Operational Platform",
-          "body": "NIIC Platform was developed beyond a conventional institutional website. The system separates public experiences, competition participation, expert and staff workflows, administration, API business logic, and background processing into purpose-specific surfaces while maintaining a shared domain model."
-        },
-        "vi": {
-          "heading": "Từ Website đến Nền tảng Vận hành",
-          "body": "NIIC Platform được phát triển vượt ra ngoài mô hình website giới thiệu thông thường. Hệ thống tách trải nghiệm công khai, tham gia cuộc thi, nghiệp vụ chuyên gia và nhân sự, quản trị, logic nghiệp vụ API và xử lý nền thành các bề mặt chuyên biệt nhưng vẫn dựa trên mô hình domain thống nhất."
-        }
-      }
-    },
-    {
-      "id": "architecture",
-      "type": "architecture",
-      "localized": {
-        "en": {
-          "heading": "Multi-Surface Architecture with a Shared Backend",
-          "body": "The platform uses a pnpm and Turborepo monorepo containing purpose-specific Next.js applications, a NestJS REST API, asynchronous workers, shared packages, PostgreSQL and Prisma. Transactional competition and operations data is designed around a central backend authority rather than frontend-owned sources of truth."
-        },
-        "vi": {
-          "heading": "Kiến trúc Đa Bề mặt với Backend Thống nhất",
-          "body": "Nền tảng sử dụng monorepo pnpm và Turborepo gồm các ứng dụng Next.js chuyên biệt, REST API NestJS, worker xử lý bất đồng bộ, các package dùng chung, PostgreSQL và Prisma. Dữ liệu giao dịch của cuộc thi và vận hành được thiết kế xoay quanh backend trung tâm thay vì để từng frontend trở thành nguồn dữ liệu độc lập."
-        }
-      }
-    },
-    {
-      "id": "identity-authorization",
-      "type": "decision",
-      "localized": {
-        "en": {
-          "heading": "Identity Is Separate from Operational Assignment",
-          "body": "A major architecture decision was to avoid treating operational responsibilities such as judging as permanent user identities. Authentication establishes the user identity, while roles, permissions and competition-scoped assignments determine which workspace and actions are available."
-        },
-        "vi": {
-          "heading": "Tách Định danh khỏi Phân công Nghiệp vụ",
-          "body": "Một quyết định kiến trúc quan trọng là không xem các trách nhiệm nghiệp vụ như chấm thi như một danh tính người dùng cố định. Xác thực xác lập danh tính; vai trò, quyền và phân công theo phạm vi cuộc thi quyết định workspace và hành động mà người dùng được phép truy cập."
-        }
-      }
-    },
-    {
-      "id": "platform-scope",
-      "type": "process",
-      "localized": {
-        "en": {
-          "heading": "Competition and Ecosystem Operations",
-          "body": "The platform scope covers public competition discovery, participant workflows, competition administration, expert and judge coordination, scoring and feedback, voting, content publishing, and supporting operational workflows. Individual capabilities are released incrementally rather than presented as uniformly complete."
-        },
-        "vi": {
-          "heading": "Vận hành Cuộc thi và Hệ sinh thái",
-          "body": "Phạm vi nền tảng bao gồm khám phá cuộc thi công khai, quy trình thí sinh, quản trị cuộc thi, điều phối chuyên gia và giám khảo, chấm điểm và nhận xét, bình chọn, xuất bản nội dung và các quy trình vận hành hỗ trợ. Các năng lực được triển khai theo từng giai đoạn thay vì được mô tả như đã hoàn thiện đồng loạt."
-        }
-      }
-    },
-    {
-      "id": "deployment",
-      "type": "architecture",
-      "localized": {
-        "en": {
-          "heading": "Cloud Deployment and Media Architecture",
-          "body": "Next.js surfaces are deployed through Cloudflare Workers and OpenNext, while the API and background services use Render. PostgreSQL provides transactional persistence and Cloudflare R2 is used for object and media storage."
-        },
-        "vi": {
-          "heading": "Kiến trúc Triển khai và Lưu trữ Media",
-          "body": "Các bề mặt Next.js được triển khai qua Cloudflare Workers và OpenNext, trong khi API và dịch vụ xử lý nền sử dụng Render. PostgreSQL đảm nhiệm lưu trữ giao dịch và Cloudflare R2 được sử dụng cho object storage và media."
-        }
-      }
-    },
-    {
-      "id": "reflection",
-      "type": "reflection",
-      "localized": {
-        "en": {
-          "heading": "Scaling Domain Boundaries Before Infrastructure Complexity",
-          "body": "The project favors explicit domain boundaries and a modular backend over prematurely splitting the system into distributed microservices. This keeps operational complexity manageable while preserving clear ownership boundaries for future evolution."
-        },
-        "vi": {
-          "heading": "Mở rộng Ranh giới Domain trước Độ phức tạp Hạ tầng",
-          "body": "Dự án ưu tiên ranh giới domain rõ ràng và backend modular thay vì tách sớm thành các microservice phân tán. Cách tiếp cận này kiểm soát độ phức tạp vận hành nhưng vẫn duy trì ranh giới trách nhiệm đủ rõ cho việc mở rộng sau này."
-        }
-      }
-    }
-  ],
-  "metrics": [
-    {
-      "label": "Core Applications",
-      "value": "8"
-    },
-    {
-      "label": "Architecture",
-      "value": "Multi-Surface"
-    },
-    {
-      "label": "Data Authority",
-      "value": "PostgreSQL SSOT"
-    }
-  ]
-}
   ]
 }

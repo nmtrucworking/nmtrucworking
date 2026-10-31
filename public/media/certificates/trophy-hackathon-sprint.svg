@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <defs>
+    <radialGradient id="glowCopper" cx="50%" cy="48%" r="50%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.32"/>
+      <stop offset="65%" stop-color="#D97706" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="35%" stop-color="#EA580C"/>
+      <stop offset="75%" stop-color="#9A3412"/>
+      <stop offset="100%" stop-color="#431407"/>
+    </linearGradient>
+    <linearGradient id="copperShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="50%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#7C2D12"/>
+    </linearGradient>
+    <linearGradient id="baseSlate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272A"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <filter id="shadowHack" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#0F1115" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <circle cx="160" cy="96" r="84" fill="url(#glowCopper)"/>
+
+  <g filter="url(#shadowHack)">
+    <!-- Hexagonal Shield Plaque Behind Cup -->
+    <polygon points="160,22 214,52 214,114 160,144 106,114 106,52" fill="#18181B" stroke="url(#copperGrad)" stroke-width="4"/>
+    <polygon points="160,30 206,56 206,110 160,136 114,110 114,56" fill="none" stroke="#FDBA74" stroke-width="1" stroke-opacity="0.4"/>
+
+    <!-- Sculpted Modern Angular Trophy Cup & Flame -->
+    <path d="M132 48 H188 L180 96 C177 112, 169 120, 160 120 C151 120, 143 112, 140 96 Z" fill="url(#copperGrad)"/>
+    <path d="M138 50 H154 L150 98 C148 108, 144 110, 142 102 Z" fill="#FFFBEB" opacity="0.38"/>
+
+    <!-- Inner Lightning / Sprint Crest -->
+    <path d="M164 58 L150 80 H161 L156 102 L172 78 H161 Z" fill="#FFFBEB"/>
+
+    <!-- Pedestal -->
+    <path d="M148 120 H172 L176 146 H144 Z" fill="url(#copperShine)"/>
+    <path d="M124 146 H196 L202 170 H118 Z" fill="url(#baseSlate)"/>
+    <rect x="138" y="153" width="44" height="9" rx="2" fill="url(#copperGrad)"/>
+  </g>
+</svg>

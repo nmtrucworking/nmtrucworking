@@ -1,0 +1,333 @@
+{
+  "$schema": "../schemas/journey.schema.json",
+  "items": [
+    {
+      "id": "journey-njec-training-2026-07",
+      "slug": "njec-training-support-2026",
+      "category": "events",
+      "year": 2026,
+      "dateDisplay": {
+        "en": "July 2026",
+        "vi": "Đầu tháng 07/2026"
+      },
+      "sortOrder": 1,
+      "title": {
+        "en": "NJEC Club Operations & Training Program Support",
+        "vi": "Hỗ trợ Chương trình Tập huấn & Vận hành CLB NJEC"
+      },
+      "organization": {
+        "en": "NJEC — Young Entrepreneurs Club",
+        "vi": "CLB Nhà Khởi nghiệp Trẻ — NJEC"
+      },
+      "role": {
+        "en": "Technology Committee Member",
+        "vi": "Thành viên Ban Công nghệ"
+      },
+      "roleType": "specialist",
+      "isCurrent": false,
+      "summary": {
+        "en": "Supported NJEC training activities and operational coordination in early July 2026 as part of the Technology Committee.",
+        "vi": "Tham gia hỗ trợ các chương trình tập huấn và công tác vận hành của CLB Nhà Khởi nghiệp Trẻ (NJEC) vào đầu tháng 07/2026."
+      },
+      "overview": {
+        "en": "In early July 2026, NJEC organized training activities to strengthen member capabilities and operational readiness. As a member of the Technology Committee, I supported the preparation, technical logistics, and structured workflow execution for the training sessions.",
+        "vi": "Đầu tháng 07/2026, CLB Nhà Khởi nghiệp Trẻ (NJEC) triển khai đợt tập huấn nhằm nâng cao năng lực thành viên và chuẩn hóa quy trình hoạt động. Với vai trò Thành viên Ban Công nghệ, tôi tham gia hỗ trợ công tác chuẩn bị, hậu cần kỹ thuật và điều phối luồng vận hành cho chương trình."
+      },
+      "personalRoleDetail": {
+        "en": "Acted as a Technology Committee specialist supporting training readiness, digital materials coordination, and club operational workflows.",
+        "vi": "Đảm nhận vai trò thành viên chuyên môn thuộc Ban Công nghệ, hỗ trợ kỹ thuật, tài liệu số và quy trình vận hành trong khuôn khổ đợt tập huấn."
+      },
+      "executedWork": [
+        {
+          "en": "Supported technical preparation and workflow coordination for early July 2026 club training sessions.",
+          "vi": "Hỗ trợ chuẩn bị kỹ thuật và phối hợp quy trình cho các buổi tập huấn đầu tháng 07/2026."
+        },
+        {
+          "en": "Aligned training participation tracking with the NJEC Member Portal operational structure.",
+          "vi": "Kết nối việc ghi nhận lịch sử tham gia hoạt động với cấu trúc dữ liệu của Cổng thông tin thành viên NJEC."
+        }
+      ],
+      "outcomesAndImpact": [
+        {
+          "en": "Contributed to smooth execution of NJEC's July 2026 training activities and reinforced structured digital record-keeping within the club.",
+          "vi": "Góp phần đảm bảo chương trình tập huấn tháng 07/2026 của NJEC diễn ra thông suốt và củng cố quy trình lưu trữ hoạt động có cấu trúc."
+        }
+      ],
+      "verifiedMetrics": [],
+      "coverImage": "media-njec-activity-training-2026",
+      "galleryImages": ["media-njec-activity-training-2026"],
+      "evidenceLinks": [],
+      "tags": ["NJEC", "Training", "Club Operations", "Technology Committee"],
+      "relatedRoleIds": ["njec-technology-committee", "community-student-innovation-volunteer"],
+      "relatedProjectIds": [],
+      "relatedAwardIds": ["recognition-njec-tech-contribution"],
+      "visibility": "public",
+      "hasDetailedView": true
+    },
+    {
+      "id": "journey-niic-platform-lead-2026",
+      "slug": "niic-platform-technical-leadership-2026",
+      "category": "leadership",
+      "year": 2026,
+      "dateDisplay": {
+        "en": "2026 — Present",
+        "vi": "2026 — Hiện tại"
+      },
+      "sortOrder": 2,
+      "title": {
+        "en": "Assumed Technical Lead Role for NIIC Digital Ecosystem",
+        "vi": "Đảm nhận Vai trò Technical Lead phát triển Hệ sinh thái Số tại NIIC"
+      },
+      "organization": {
+        "en": "NTTU Innovation & Incubation Center (NIIC)",
+        "vi": "Trung tâm Sáng tạo và Ươm tạo Khởi nghiệp NTTU (NIIC)"
+      },
+      "role": {
+        "en": "Lead Developer & Technical Lead",
+        "vi": "Lead Developer & Technical Lead"
+      },
+      "roleType": "leadership",
+      "isCurrent": true,
+      "summary": {
+        "en": "Stepped into a technical leadership milestone at NIIC, coordinating a 2-member engineering team to transition competition and incubation workflows onto a live digital platform.",
+        "vi": "Dấu mốc đảm nhận trách nhiệm dẫn dắt kỹ thuật tại Trung tâm NIIC, điều phối nhóm phát triển 2 thành viên chuyển hóa quy trình vận hành cuộc thi và ươm tạo khởi nghiệp lên nền tảng số thực tế."
+      },
+      "overview": {
+        "en": "This milestone marks my transition from solo/academic prototyping into leading an institutional production system for the NTTU Innovation & Incubation Center (NIIC). Full technical specifications are maintained in the NIIC Platform Case Study under Work, while this record highlights the leadership and operational coordination milestone.",
+        "vi": "Cột mốc này đánh dấu bước chuyển từ việc xây dựng các nguyên mẫu học thuật sang dẫn dắt một hệ thống vận hành thực tế cho Trung tâm Sáng tạo và Ươm tạo Khởi nghiệp NTTU (NIIC). Toàn bộ đặc tả kiến trúc kỹ thuật được đặt tại trang Dự án (Work), trong khi dấu mốc này ghi nhận quá trình điều phối và trách nhiệm triển khai tại đơn vị."
+      },
+      "personalRoleDetail": {
+        "en": "Lead Developer & Technical Lead coordinating requirements with center stakeholders and guiding full-stack release phases.",
+        "vi": "Lead Developer & Technical Lead trực tiếp làm việc với nghiệp vụ của trung tâm và điều phối lộ trình phát triển, triển khai vận hành."
+      },
+      "executedWork": [
+        {
+          "en": "Worked with center operations to separate public innovation discovery, participant portals, judging workflows, and internal administration.",
+          "vi": "Phối hợp chuẩn hóa quy trình nghiệp vụ của trung tâm thành các không gian riêng biệt cho công chúng, thí sinh, giám khảo và quản trị viên."
+        },
+        {
+          "en": "Led the launch of the public innovation space at nttu.startup.niic.vn.",
+          "vi": "Dẫn dắt quá trình đưa Không gian Đổi mới Sáng tạo đi vào vận hành thực tế tại nttu.startup.niic.vn."
+        }
+      ],
+      "outcomesAndImpact": [
+        {
+          "en": "Successfully deployed the live institutional platform at https://nttu.startup.niic.vn.",
+          "vi": "Vận hành chính thức Không gian Đổi mới Sáng tạo NIIC tại https://nttu.startup.niic.vn."
+        }
+      ],
+      "verifiedMetrics": [],
+      "coverImage": "media-niic-hero",
+      "galleryImages": ["media-niic-hero"],
+      "evidenceLinks": [
+        {
+          "label": {
+            "en": "Live NIIC Innovation Space",
+            "vi": "Truy cập Không gian Đổi mới Sáng tạo NIIC"
+          },
+          "url": "https://nttu.startup.niic.vn",
+          "type": "live",
+          "visibility": "public"
+        }
+      ],
+      "tags": ["NIIC", "Technical Leadership", "Innovation Ecosystem"],
+      "relatedRoleIds": ["niic-platform-technical-lead"],
+      "relatedProjectIds": ["niic-platform"],
+      "relatedAwardIds": ["recognition-niic-production-launch-2026"],
+      "visibility": "public",
+      "hasDetailedView": true
+    },
+    {
+      "id": "journey-joined-njec-2025",
+      "slug": "joined-njec-technology-committee-2025",
+      "category": "organizations",
+      "year": 2026,
+      "dateDisplay": {
+        "en": "2026 — Present",
+        "vi": "2026 — Hiện tại"
+      },
+      "sortOrder": 3,
+      "title": {
+        "en": "Joined NJEC Technology Committee & Co-Developed Member Portal",
+        "vi": "Gia nhập Ban Công nghệ NJEC"
+      },
+      "organization": {
+        "en": "NJEC — Young Entrepreneurs Club",
+        "vi": "CLB Nhà Khởi nghiệp Trẻ — NJEC"
+      },
+      "role": {
+        "en": "Technology Committee Member",
+        "vi": "Thành viên Ban Công nghệ"
+      },
+      "roleType": "specialist",
+      "isCurrent": true,
+      "summary": {
+        "en": "Joined the Technology Committee of NJEC in 2026.",
+        "vi": "Gia nhập Ban Công nghệ của CLB Nhà Khởi nghiệp Trẻ (NJEC) năm 2026."
+      },
+      "overview": {
+        "en": "Joining the Young Entrepreneurs Club (NJEC) in 2026 marked a key milestone in applying my Information Systems background to a real student organization. Within the Technology Committee, I focused on translating manual member and activity management routines into structured digital workflows.",
+        "vi": "Gia nhập Câu lạc bộ Nhà Khởi nghiệp Trẻ (NJEC) vào năm 2026 là dấu mốc quan trọng giúp tôi đưa kiến thức Hệ thống Thông tin vào vận hành một tổ chức sinh viên thực tế. Tại Ban Công nghệ, tôi tập trung chuyển hóa các quy trình quản lý thành viên và hoạt động thủ công thành luồng dữ liệu có cấu trúc."
+      },
+      "personalRoleDetail": {
+        "en": "Technology Committee Member contributing to system requirements, member management workflows, activity tracking, and internal documentation.",
+        "vi": "Thành viên Ban Công nghệ đóng góp vào việc xác định yêu cầu hệ thống, luồng quản lý thành viên, theo dõi hoạt động và tài liệu hóa quy trình."
+      },
+      "executedWork": [
+        {
+          "en": "Contributed to the NJEC Member Portal covering member profiles, activity participation history, and achievement tracking.",
+          "vi": "Tham gia phát triển Cổng thông tin thành viên NJEC bao gồm hồ sơ thành viên, lịch sử tham gia hoạt động và ghi nhận thành tích."
+        },
+        {
+          "en": "Supported digital operations for internal club programs and entrepreneurship events.",
+          "vi": "Hỗ trợ vận hành công nghệ cho các chương trình nội bộ và sự kiện kết nối khởi nghiệp của câu lạc bộ."
+        }
+      ],
+      "outcomesAndImpact": [
+        {
+          "en": "Helped establish structured digital workflows for member and activity management within NJEC.",
+          "vi": "Góp phần định hình luồng vận hành số có cấu trúc cho công tác quản lý thành viên và hoạt động tại NJEC."
+        }
+      ],
+      "verifiedMetrics": [],
+      "coverImage": "media-njec-member-portal",
+      "galleryImages": ["media-njec-member-portal"],
+      "evidenceLinks": [],
+      "tags": ["NJEC", "Technology Committee", "Member Portal", "Student Organization"],
+      "relatedRoleIds": ["njec-technology-committee"],
+      "relatedProjectIds": ["senova"],
+      "relatedAwardIds": ["recognition-njec-tech-contribution"],
+      "visibility": "public",
+      "hasDetailedView": true
+    },
+    
+    {
+      "id": "journey-cpv-membership-milestone",
+      "slug": "communist-party-of-vietnam-membership-milestone",
+      "category": "milestones",
+      "year": 2025,
+      "dateDisplay": {
+        "en": "Confirmed Milestone (Exact date managed privately)",
+        "vi": "Dấu mốc đã xác nhận (Ngày cụ thể bảo mật theo hồ sơ riêng)"
+      },
+      "sortOrder": 5,
+      "title": {
+        "en": "Admitted to the Communist Party of Vietnam",
+        "vi": "Kết nạp Đảng viên Đảng Cộng sản Việt Nam"
+      },
+      "organization": {
+        "en": "Communist Party of Vietnam",
+        "vi": "Đảng Cộng sản Việt Nam"
+      },
+      "role": {
+        "en": "Party Member (Political & Civic Membership)",
+        "vi": "Đảng viên (Tư cách Thành viên Chính trị - Xã hội)"
+      },
+      "roleType": "membership",
+      "isCurrent": true,
+      "summary": {
+        "en": "Important personal and civic milestone: admitted as a member of the Communist Party of Vietnam, affirming political integrity, civic responsibility, and commitment to community contribution.",
+        "vi": "Cột mốc phát triển cá nhân và trách nhiệm công dân quan trọng: được kết nạp vào Đảng Cộng sản Việt Nam, khẳng định phẩm chất đạo đức, ý thức kỷ luật và tinh thần cống hiến cho cộng đồng."
+      },
+      "overview": {
+        "en": "Being admitted to the Communist Party of Vietnam represents a significant personal milestone in civic maturity, ethical discipline, and dedication to collective progress. On this portfolio, this milestone is presented transparently as a verified civic/political membership while respecting personal document privacy.",
+        "vi": "Được đứng vào hàng ngũ của Đảng Cộng sản Việt Nam là dấu mốc quan trọng về sự trưởng thành trong nhận thức công dân, rèn luyện đạo đức và tinh thần trách nhiệm với tập thể. Trên portfolio này, cột mốc được trình bày trang trọng đúng tính chất tư cách thành viên, đồng thời tuân thủ nghiêm ngặt quy tắc bảo mật hồ sơ định danh cá nhân."
+      },
+      "personalRoleDetail": {
+        "en": "Party Member fulfilling civic duties, academic discipline, and youth organization engagement.",
+        "vi": "Đảng viên thực hiện trách nhiệm công dân, chuẩn mực học thuật và đồng hành cùng các phong trào thanh niên, sinh viên."
+      },
+      "executedWork": [
+        {
+          "en": "Maintained consistent standards in academic study, software engineering ethics, and student organization contributions.",
+          "vi": "Duy trì sự gương mẫu trong học tập chuyên môn, đạo đức nghề nghiệp và hoạt động đóng góp tại các tổ chức sinh viên."
+        }
+      ],
+      "outcomesAndImpact": [
+        {
+          "en": "Confirmed membership status; public display is governed by owner privacy controls so sensitive identification numbers remain protected.",
+          "vi": "Tư cách Đảng viên đã được xác nhận; hiển thị công khai được kiểm soát qua cấu hình quyền riêng tư nhằm bảo vệ thông tin định danh nhạy cảm."
+        }
+      ],
+      "verifiedMetrics": [],
+      "coverImage": "media-cpv-admission-archive",
+      "galleryImages": ["media-cpv-admission-archive"],
+      "evidenceLinks": [],
+      "tags": ["Civic Milestone", "Party Membership", "Personal Development"],
+      "relatedRoleIds": ["cpv-member"],
+      "relatedProjectIds": [],
+      "relatedAwardIds": [],
+      "visibility": "public",
+      "hasDetailedView": true
+    },
+    {
+      "id": "journey-information-systems-education",
+      "slug": "bachelor-of-science-information-systems-journey",
+      "category": "academic",
+      "year": 2025,
+      "dateDisplay": {
+        "en": "Academic Foundation — Ongoing",
+        "vi": "Đào tạo Đại học — Đang theo học"
+      },
+      "sortOrder": 6,
+      "title": {
+        "en": "B.S. in Information Systems — Academic Training",
+        "vi": "Học tập Chuyên ngành Cử nhân Hệ thống Thông tin"
+      },
+      "organization": {
+        "en": "University Program in Information Systems",
+        "vi": "Chương trình Đào tạo Đại học ngành Hệ thống Thông tin"
+      },
+      "role": {
+        "en": "Undergraduate Student",
+        "vi": "Sinh viên Chuyên ngành Hệ thống Thông tin"
+      },
+      "roleType": "specialist",
+      "isCurrent": true,
+      "summary": {
+        "en": "Pursuing a Bachelor of Science in Information Systems, building core foundations in business analysis, system architecture, relational databases, and data science.",
+        "vi": "Theo học chương trình Cử nhân Hệ thống Thông tin, rèn luyện nền tảng cốt lõi về phân tích nghiệp vụ, kiến trúc hệ thống, cơ sở dữ liệu và khoa học dữ liệu."
+      },
+      "overview": {
+        "en": "Formal undergraduate education in Information Systems providing the theoretical and analytical foundation for my work across business requirements, data modeling, and software systems. Detailed academic and personal project case studies are cataloged separately on the Work page to avoid content duplication.",
+        "vi": "Quá trình học tập chính quy ngành Hệ thống Thông tin cung cấp nền tảng lý thuyết và tư duy phân tích cho công việc của tôi. Các đồ án học thuật và dự án phần mềm độc lập được trình bày tách biệt tại trang Dự án (Work) để tránh trùng lặp nội dung."
+      },
+      "personalRoleDetail": {
+        "en": "Undergraduate student focusing on system analysis (SA), business analysis (BA), data analysis/science (DA/DS), and product thinking.",
+        "vi": "Sinh viên tập trung phát triển đồng bộ các nhóm năng lực Phân tích Hệ thống (SA), Phân tích Nghiệp vụ (BA), Dữ liệu (DA/DS) và Sản phẩm (Product)."
+      },
+      "executedWork": [
+        {
+          "en": "Completed foundational and specialized coursework in database systems, system analysis and design, machine learning, and embedded IoT.",
+          "vi": "Hoàn thành các học phần nền tảng và chuyên sâu về hệ quản trị cơ sở dữ liệu, phân tích thiết kế hệ thống, học máy và hệ thống nhúng IoT."
+        }
+      ],
+      "outcomesAndImpact": [
+        {
+          "en": "Applied coursework directly into independent and team case studies published in the Work index.",
+          "vi": "Chuyển hóa kiến thức học phần thành các dự án thực hành được tổng hợp riêng tại danh mục Dự án (Work)."
+        }
+      ],
+      "verifiedMetrics": [],
+      "coverImage": null,
+      "galleryImages": [],
+      "evidenceLinks": [
+        {
+          "label": {
+            "en": "View Curriculum Vitae (CV)",
+            "vi": "Xem Hồ sơ Năng lực (CV)"
+          },
+          "url": "/cv",
+          "type": "document",
+          "visibility": "public"
+        }
+      ],
+      "tags": ["Information Systems", "B.S. Degree", "Academic Journey"],
+      "relatedRoleIds": [],
+      "relatedProjectIds": ["recobridge", "smartguard-classroom"],
+      "relatedAwardIds": [],
+      "visibility": "public",
+      "hasDetailedView": true
+    }
+  ]
+}

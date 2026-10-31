@@ -49,6 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
 
   const navItems = [
     { id: 'work', href: `/${locale}/work`, label: messages.nav.work },
+    { id: 'journey', href: `/${locale}/journey`, label: messages.nav.journey },
     { id: 'about', href: `/${locale}/about`, label: messages.nav.about },
     { id: 'contact', href: `/${locale}/contact`, label: messages.nav.contact },
     { id: 'cv', href: `/${locale}/cv`, label: messages.nav.cv },

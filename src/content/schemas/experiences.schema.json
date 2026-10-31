@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/experiences.schema.json",
+  "title": "Portfolio Experiences",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["experiences"],
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "vi"],
+      "properties": {
+        "en": {"type": "string", "minLength": 1},
+        "vi": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "properties": {
+    "$schema": {"type": "string"},
+    "experiences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "organization", "organizationShort", "role", "period", "tags", "summary", "dimensions", "activities", "contributions", "relatedProjects"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "organization": {"$ref": "#/$defs/localizedString"},
+          "organizationShort": {"type": "string", "minLength": 1},
+          "role": {"$ref": "#/$defs/localizedString"},
+          "period": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["start", "end"],
+            "properties": {
+              "start": {"type": "string", "pattern": "^[0-9]{4}$"},
+              "end": {"type": ["string", "null"], "pattern": "^[0-9]{4}$"}
+            }
+          },
+          "tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "summary": {"$ref": "#/$defs/localizedString"},
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["label", "value"],
+              "properties": {
+                "label": {"type": "string", "minLength": 1},
+                "value": {"$ref": "#/$defs/localizedString"}
+              }
+            }
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "year", "month", "title", "description"],
+              "properties": {
+                "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+                "year": {"type": "integer", "minimum": 2000, "maximum": 2100},
+                "month": {"type": ["string", "null"], "pattern": "^[A-Z]{3}$"},
+                "title": {"$ref": "#/$defs/localizedString"},
+                "description": {"$ref": "#/$defs/localizedString"}
+              }
+            }
+          },
+          "contributions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "title", "subtitle", "description", "evidence"],
+              "properties": {
+                "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+                "title": {"$ref": "#/$defs/localizedString"},
+                "subtitle": {"$ref": "#/$defs/localizedString"},
+                "description": {"$ref": "#/$defs/localizedString"},
+                "evidence": {"type": "array", "items": {"type": "string", "minLength": 1}}
+              }
+            }
+          },
+          "relatedProjects": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"}}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "$schema": "../schemas/awards.schema.json",
+  "awards": [
+    {
+      "id": "recognition-academic-is-foundation",
+      "title": {
+        "en": "B.S. in Information Systems — Core Academic Foundation",
+        "vi": "Nền tảng Học thuật Cử nhân Hệ thống Thông tin"
+      },
+      "category": "academic",
+      "awardType": "recognition",
+      "organizer": {
+        "en": "University Program in Information Systems",
+        "vi": "Chương trình Đào tạo Đại học ngành Hệ thống Thông tin"
+      },
+      "competitionOrProgram": {
+        "en": "Undergraduate Curriculum in Systems Analysis, Databases & Data Science",
+        "vi": "Chương trình Cử nhân Hệ thống Thông tin (SA, BA, CSDL & Khoa học Dữ liệu)"
+      },
+      "level": "institutional",
+      "levelLabel": {
+        "en": "University Academic Milestone",
+        "vi": "Cột mốc Học thuật Đại học"
+      },
+      "awardDate": "2025 – 2026",
+      "awardRank": {
+        "en": "Core Coursework & Applied Capstone Projects Completed",
+        "vi": "Hoàn thành Học phần Chuyên ngành & Đồ án Ứng dụng"
+      },
+      "individualOrTeam": "individual",
+      "teamSize": null,
+      "description": {
+        "en": "Completed core academic training across database management systems, system analysis and design, machine learning, and IoT systems, translating theory into working software prototypes.",
+        "vi": "Hoàn thành các học phần cốt lõi về hệ quản trị cơ sở dữ liệu, phân tích thiết kế hệ thống, học máy và hệ thống nhúng IoT, chuyển hóa thành các đồ án thực nghiệm."
+      },
+      "myContribution": {
+        "en": "Undergraduate Student specializing in System Analysis (SA), Business Analysis (BA), and Data Science (DA/DS).",
+        "vi": "Sinh viên chuyên ngành Hệ thống Thông tin tập trung vào Phân tích Hệ thống (SA), Phân tích Nghiệp vụ (BA) và Dữ liệu (DA/DS)."
+      },
+      "certificateImage": null,
+      "awardImages": [],
+      "verificationUrl": "/cv",
+      "relatedProjectId": "recobridge",
+      "relatedActivityId": "journey-information-systems-education",
+      "relatedRoleId": null,
+      "visibility": "public",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "participation-university-ai-hackathon-2024",
+      "title": {
+        "en": "University AI & Software Engineering 36-Hour Hackathon",
+        "vi": "Hackathon Kỹ thuật Phần mềm & AI Cấp Trường (36 Giờ)"
+      },
+      "category": "competitions",
+      "awardType": "participation",
+      "organizer": {
+        "en": "University Innovation & Engineering Track",
+        "vi": "Khối Kỹ thuật & Đổi mới Sáng tạo Cấp Trường"
+      },
+      "competitionOrProgram": {
+        "en": "36-Hour Rapid Prototyping & AI Product Sprint",
+        "vi": "Cuộc thi Phát triển Sản phẩm Nhanh 36 Giờ (AI & Software Sprint)"
+      },
+      "level": "institutional",
+      "levelLabel": {
+        "en": "University Competition Track",
+        "vi": "Cuộc thi Học thuật Cấp Trường"
+      },
+      "awardDate": "2024",
+      "awardRank": {
+        "en": "Completed 36-Hour Functional Prototype & Demo",
+        "vi": "Hoàn thành Nguyên mẫu & Báo cáo Demo trong 36 Giờ"
+      },
+      "individualOrTeam": "team",
+      "teamSize": null,
+      "description": {
+        "en": "Participated in a 36-hour university hackathon, designing and delivering an end-to-end AI voice/emotion analysis prototype under strict time constraints.",
+        "vi": "Tham gia cuộc thi Hackathon 36 giờ cấp trường, xây dựng và hoàn thiện nguyên mẫu phân tích giọng nói/cảm xúc bằng AI từ đầu đến cuối dưới áp lực thời gian thực."
+      },
+      "myContribution": {
+        "en": "System & Product Designer responsible for pipeline architecture, dataset preparation, and live demonstration flow.",
+        "vi": "Phụ trách thiết kế luồng xử lý dữ liệu, chuẩn bị tập mẫu và kịch bản trình diễn sản phẩm trực tiếp."
+      },
+      "certificateImage": null,
+      "awardImages": [],
+      "verificationUrl": "/work/vocelune",
+      "relatedProjectId": "vocelune",
+      "relatedActivityId": null,
+      "relatedRoleId": null,
+      "visibility": "public",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "recognition-niic-production-launch-2026",
+      "title": {
+        "en": "NIIC Innovation Space — Institutional Production Deployment",
+        "vi": "Triển khai Vận hành Thực tế Không gian Đổi mới Sáng tạo NIIC"
+      },
+      "category": "other-recognitions",
+      "awardType": "recognition",
+      "organizer": {
+        "en": "NTTU Innovation & Incubation Center (NIIC)",
+        "vi": "Trung tâm Sáng tạo và Ươm tạo Khởi nghiệp NTTU (NIIC)"
+      },
+      "competitionOrProgram": {
+        "en": "NIIC Digital Innovation & Competition Operations Platform",
+        "vi": "Chương trình Phát triển Nền tảng Số Đổi mới Sáng tạo & Cuộc thi NIIC"
+      },
+      "level": "institutional",
+      "levelLabel": {
+        "en": "Institutional Production Release (NTTU / NIIC)",
+        "vi": "Cấp Đơn vị / Trung tâm (Vận hành thực tế tại NTTU / NIIC)"
+      },
+      "awardDate": "2026",
+      "awardRank": {
+        "en": "Verified Live Deployment — Technical Lead",
+        "vi": "Vận hành Thực tế — Technical Lead"
+      },
+      "individualOrTeam": "team",
+      "teamSize": 2,
+      "description": {
+        "en": "Verified institutional deployment of the NIIC digital space (nttu.startup.niic.vn) supporting innovation programs and startup competitions.",
+        "vi": "Đưa không gian số của Trung tâm NIIC (nttu.startup.niic.vn) vào vận hành thực tế phục vụ các chương trình đổi mới sáng tạo và cuộc thi khởi nghiệp."
+      },
+      "myContribution": {
+        "en": "Lead Developer and Technical Lead coordinating the 2-member engineering team.",
+        "vi": "Lead Developer và Technical Lead phụ trách kiến trúc và điều phối kỹ thuật."
+      },
+      "certificateImage": "media-niic-hero",
+      "awardImages": ["media-niic-hero"],
+      "verificationUrl": "https://nttu.startup.niic.vn",
+      "relatedProjectId": "niic-platform",
+      "relatedActivityId": "journey-niic-platform-lead-2026",
+      "relatedRoleId": "niic-platform-technical-lead",
+      "visibility": "public",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "recognition-njec-tech-contribution",
+      "title": {
+        "en": "NJEC Technology Committee Contribution Recognition",
+        "vi": "Ghi nhận Đóng góp Ban Công nghệ CLB Khởi nghiệp Trẻ NJEC"
+      },
+      "category": "leadership-contributions",
+      "awardType": "recognition",
+      "organizer": {
+        "en": "NJEC — Young Entrepreneurs Club",
+        "vi": "Câu lạc bộ Nhà Khởi nghiệp Trẻ — NJEC"
+      },
+      "competitionOrProgram": {
+        "en": "NJEC Technology Committee Operations & July 2026 Training Program",
+        "vi": "Hoạt động Ban Công nghệ & Chương trình Tập huấn NJEC (2025 – 2026)"
+      },
+      "level": "institutional",
+      "levelLabel": {
+        "en": "Club / Student Organization Level",
+        "vi": "Cấp Câu lạc bộ / Tổ chức Sinh viên"
+      },
+      "awardDate": "2025 – 2026",
+      "awardRank": {
+        "en": "Organizational Contribution Record (Scan pending)",
+        "vi": "Ghi nhận Đóng góp Tổ chức (Chờ cập nhật bản scan)"
+      },
+      "individualOrTeam": "team",
+      "teamSize": null,
+      "description": {
+        "en": "Documented contribution to NJEC's Technology Committee, including co-developing the internal NJEC Member Portal and supporting club training activities in early July 2026.",
+        "vi": "Ghi nhận quá trình đóng góp tại Ban Công nghệ CLB Nhà Khởi nghiệp Trẻ (NJEC), bao gồm xây dựng Cổng thông tin thành viên nội bộ và hỗ trợ chương trình tập huấn tháng 07/2026."
+      },
+      "myContribution": {
+        "en": "Technology Committee Member contributing to member management workflows, activity tracking, and training program support.",
+        "vi": "Thành viên Ban Công nghệ tham gia thiết kế luồng quản lý thành viên, lịch sử hoạt động và hỗ trợ kỹ thuật cho các đợt tập huấn."
+      },
+      "certificateImage": "media-njec-contribution-cert",
+      "awardImages": ["media-njec-contribution-cert"],
+      "verificationUrl": null,
+      "relatedProjectId": null,
+      "relatedActivityId": "journey-njec-training-2026-07",
+      "relatedRoleId": "njec-technology-committee",
+      "visibility": "public",
+      "verificationStatus": "evidence-pending"
+    },
+    {
+      "id": "recognition-cpv-civic-admission",
+      "title": {
+        "en": "Communist Party of Vietnam — Civic & Political Admission",
+        "vi": "Cột mốc Kết nạp Đảng viên Đảng Cộng sản Việt Nam"
+      },
+      "category": "certifications",
+      "awardType": "recognition",
+      "organizer": {
+        "en": "Communist Party of Vietnam",
+        "vi": "Đảng Cộng sản Việt Nam"
+      },
+      "competitionOrProgram": {
+        "en": "Political, Civic & Ethical Cultivation Milestone",
+        "vi": "Quá trình Rèn luyện Phẩm chất Chính trị, Đạo đức & Trách nhiệm Cộng đồng"
+      },
+      "level": "institutional",
+      "levelLabel": {
+        "en": "Verified Political & Civic Milestone",
+        "vi": "Dấu mốc Chính trị – Xã hội Đã xác nhận"
+      },
+      "awardDate": "2025",
+      "awardRank": {
+        "en": "Official Admission Milestone (ID protected by privacy control)",
+        "vi": "Quyết định Kết nạp Đảng viên (Bảo mật số hiệu định danh)"
+      },
+      "individualOrTeam": "individual",
+      "teamSize": null,
+      "description": {
+        "en": "Admitted as a member of the Communist Party of Vietnam, recognizing sustained discipline in academic study, ethical conduct, and youth community contribution.",
+        "vi": "Được kết nạp vào hàng ngũ Đảng Cộng sản Việt Nam, ghi nhận quá trình phấn đấu bền bỉ trong học tập, rèn luyện đạo đức và đóng góp cho phong trào thanh niên, sinh viên."
+      },
+      "myContribution": {
+        "en": "Party Member maintaining exemplary standards in academic training, professional ethics, and organizational activities.",
+        "vi": "Đảng viên duy trì chuẩn mực trong học tập chuyên môn, đạo đức nghề nghiệp và hoạt động đoàn thể."
+      },
+      "certificateImage": "media-cpv-admission-archive",
+      "awardImages": ["media-cpv-admission-archive"],
+      "verificationUrl": null,
+      "relatedProjectId": null,
+      "relatedActivityId": "journey-cpv-membership-milestone",
+      "relatedRoleId": "cpv-member",
+      "visibility": "public",
+      "verificationStatus": "evidence-pending"
+    }
+  ]
+}

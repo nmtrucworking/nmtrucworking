@@ -71,5 +71,24 @@ npm run build
 ```
 </details>
 
+<details>
+<summary>🗂️ <b>Content Architecture Guide: Roles, Journey, Awards & Media</b></summary>
+
+The portfolio uses a strictly validated, bilingual (`en` / `vi`) JSON Content Model located in `src/content/data/` and verified at build time by `scripts/validate-data.mjs` against JSON Schemas in `src/content/schemas/`:
+
+| Data File | Schema | Purpose |
+|---|---|---|
+| `src/content/data/media.json` | `media.schema.json` | Reusable media asset registry (`portrait`, `logo`, `activity`, `event`, `team-project`, `certificate`, `archive`, `diagram`) with visibility and upload verification states. |
+| `src/content/data/roles.json` | `roles.schema.json` | **Roles & Affiliations** (`political-civic`, `leadership-organizations`, `professional-technical`, `community-volunteering`), distinguishing `leadership`, `specialist`, and `membership` role types, plus `privacySettings` for political affiliation visibility. |
+| `src/content/data/journey.json` | `journey.schema.json` | **My Journey** chronological items (`academic`, `organizations`, `events`, `leadership`, `milestones`) and full Activity Detail pages at `/[locale]/journey/[slug]`. |
+| `src/content/data/awards.json` | `awards.schema.json` | **Honors & Recognitions** (`academic`, `competitions`, `leadership-contributions`, `certifications`, `other-recognitions`), strictly separating `award`, `nomination`, `completion-certificate`, `participation`, and `recognition`. |
+
+### How to Add or Update Content
+1. **Add Media Asset:** Place the real image/scan in `public/media/` (`roles/`, `journey/`, `certificates/`, `logos/`, or `projects/`) and register its `id`, dimensions, bilingual `alt`/`caption`, and `"status": "verified"` in `src/content/data/media.json`.
+2. **Add a Role, Journey Milestone, or Award:** Append an entry to `roles.json`, `journey.json`, or `awards.json` referencing valid IDs across `relatedProjects`, `relatedRoleIds`, `relatedActivityIds`, `relatedAwardIds`, and media IDs.
+3. **Privacy Control:** Set `"visibility": "private"` on any role, journey item, award, link, or media asset to hide it from the public build, or toggle `privacySettings.showPoliticalMembershipByDefault` in `roles.json`.
+4. **Verify Integrity:** Run `npm run validate-data` to check both JSON Schema compliance and cross-entity ID references. See [`DATA_REQUIRED.md`](./DATA_REQUIRED.md) for the checklist of pending documentary photos and certificate scans.
+</details>
+
 ---
 *Maintained by [@nmtrucworking](https://github.com/nmtrucworking) • Systems in Motion*

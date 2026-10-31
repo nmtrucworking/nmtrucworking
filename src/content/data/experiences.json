@@ -1,0 +1,128 @@
+{
+  "$schema": "../schemas/experiences.schema.json",
+  "experiences": [
+    {
+      "id": "njec",
+      "organization": {
+        "en": "NJEC — Young Entrepreneurs Club",
+        "vi": "CLB Nhà Khởi nghiệp Trẻ — NJEC"
+      },
+      "organizationShort": "NJEC",
+      "role": {
+        "en": "Technology Committee Member",
+        "vi": "Thành viên Ban Công nghệ"
+      },
+      "period": {
+        "start": "2026",
+        "end": null
+      },
+      "tags": ["Community", "Technology", "Startup Ecosystem", "Operations"],
+      "summary": {
+        "en": "Contributing to NJEC's Technology Committee, with a focus on applying technology to club operations, member management, and entrepreneurship programs.",
+        "vi": "Tham gia Ban Công nghệ của NJEC, tập trung vào việc ứng dụng công nghệ cho hoạt động vận hành câu lạc bộ, quản lý thành viên và các chương trình hỗ trợ khởi nghiệp."
+      },
+      "dimensions": [
+        {
+          "label": "ROLE",
+          "value": {
+            "en": "Technology Committee",
+            "vi": "Ban Công nghệ"
+          }
+        },
+        {
+          "label": "FOCUS",
+          "value": {
+            "en": "Digital systems & club operations",
+            "vi": "Hệ thống số & vận hành CLB"
+          }
+        },
+        {
+          "label": "DOMAIN",
+          "value": {
+            "en": "Entrepreneurship community",
+            "vi": "Cộng đồng khởi nghiệp"
+          }
+        }
+      ],
+      "activities": [
+        {
+          "id": "training-support-2026-07",
+          "year": 2026,
+          "month": "JUL",
+          "title": {
+            "en": "Club Operations Support",
+            "vi": "Hỗ trợ vận hành CLB"
+          },
+          "description": {
+            "en": "Supported NJEC training activities in early July 2026.",
+            "vi": "Hỗ trợ các chương trình tập huấn của NJEC vào đầu tháng 07/2026."
+          }
+        },
+        {
+          "id": "joined-njec-2026",
+          "year": 2026,
+          "month": null,
+          "title": {
+            "en": "Joined NJEC",
+            "vi": "Gia nhập NJEC"
+          },
+          "description": {
+            "en": "Joined the Technology Committee.",
+            "vi": "Tham gia Ban Công nghệ."
+          }
+        }
+      ],
+      "contributions": [
+        {
+          "id": "member-portal",
+          "title": {
+            "en": "NJEC Member Portal",
+            "vi": "Cổng thông tin thành viên NJEC"
+          },
+          "subtitle": {
+            "en": "Digitalizing club member operations",
+            "vi": "Số hóa hoạt động quản lý thành viên"
+          },
+          "description": {
+            "en": "Contributed to a system supporting member management, activities, achievements, and participation history for NJEC.",
+            "vi": "Tham gia xây dựng hệ thống hỗ trợ quản lý thành viên, hoạt động, thành tích và lịch sử tham gia của NJEC."
+          },
+          "evidence": ["Member management", "Activity history", "Operational workflow", "Documentation"]
+        },
+        {
+          "id": "technology-operations",
+          "title": {
+            "en": "Technology Operations",
+            "vi": "Vận hành công nghệ"
+          },
+          "subtitle": {
+            "en": "Supporting the club's digital infrastructure",
+            "vi": "Hỗ trợ hạ tầng số của câu lạc bộ"
+          },
+          "description": {
+            "en": "Supported internal technology needs and club programs, helping translate manual processes into more structured operational workflows.",
+            "vi": "Hỗ trợ các nhu cầu công nghệ trong hoạt động nội bộ và các chương trình của câu lạc bộ, góp phần chuyển quy trình thủ công thành những luồng vận hành có cấu trúc hơn."
+          },
+          "evidence": []
+        },
+        {
+          "id": "startup-ecosystem",
+          "title": {
+            "en": "Startup Ecosystem",
+            "vi": "Hệ sinh thái khởi nghiệp"
+          },
+          "subtitle": {
+            "en": "Connecting technology with entrepreneurship activities",
+            "vi": "Kết nối công nghệ với hoạt động khởi nghiệp"
+          },
+          "description": {
+            "en": "Connected technology practice with entrepreneurship and community activities through related project work.",
+            "vi": "Kết nối thực hành công nghệ với các hoạt động khởi nghiệp và cộng đồng thông qua những dự án liên quan."
+          },
+          "evidence": []
+        }
+      ],
+      "relatedProjects": ["senova"]
+    }
+  ]
+}

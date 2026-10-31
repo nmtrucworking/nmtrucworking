@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nguyenminhtruc.site/schemas/awards.schema.json",
+  "title": "Portfolio Honors, Awards & Recognitions",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["awards"],
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "vi"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "vi": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "awards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "category",
+          "awardType",
+          "organizer",
+          "competitionOrProgram",
+          "level",
+          "levelLabel",
+          "awardDate",
+          "awardRank",
+          "individualOrTeam",
+          "teamSize",
+          "description",
+          "myContribution",
+          "certificateImage",
+          "awardImages",
+          "verificationUrl",
+          "relatedProjectId",
+          "relatedActivityId",
+          "relatedRoleId",
+          "visibility",
+          "verificationStatus"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "title": { "$ref": "#/$defs/localizedString" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "academic",
+              "competitions",
+              "leadership-contributions",
+              "certifications",
+              "other-recognitions"
+            ]
+          },
+          "awardType": {
+            "type": "string",
+            "enum": [
+              "award",
+              "nomination",
+              "completion-certificate",
+              "participation",
+              "recognition"
+            ]
+          },
+          "organizer": { "$ref": "#/$defs/localizedString" },
+          "competitionOrProgram": { "$ref": "#/$defs/localizedString" },
+          "level": {
+            "type": "string",
+            "enum": [
+              "institutional",
+              "local",
+              "national",
+              "international",
+              "program-verified",
+              "pending-verification"
+            ]
+          },
+          "levelLabel": { "$ref": "#/$defs/localizedString" },
+          "awardDate": { "type": "string", "minLength": 1 },
+          "awardRank": { "$ref": "#/$defs/localizedString" },
+          "individualOrTeam": {
+            "type": "string",
+            "enum": ["individual", "team"]
+          },
+          "teamSize": { "type": ["integer", "null"], "minimum": 1 },
+          "description": { "$ref": "#/$defs/localizedString" },
+          "myContribution": { "$ref": "#/$defs/localizedString" },
+          "certificateImage": { "type": ["string", "null"] },
+          "awardImages": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "verificationUrl": { "type": ["string", "null"] },
+          "relatedProjectId": { "type": ["string", "null"] },
+          "relatedActivityId": { "type": ["string", "null"] },
+          "relatedRoleId": { "type": ["string", "null"] },
+          "visibility": {
+            "type": "string",
+            "enum": ["public", "private"]
+          },
+          "verificationStatus": {
+            "type": "string",
+            "enum": ["verified", "evidence-pending"]
+          }
+        }
+      }
+    }
+  }
+}

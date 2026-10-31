@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nguyenminhtruc.site/schemas/journey.schema.json",
+  "title": "Portfolio Personal Journey & Activities",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["items"],
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "vi"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "vi": { "type": "string", "minLength": 1 }
+      }
+    },
+    "evidenceLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url", "type", "visibility"],
+      "properties": {
+        "label": { "$ref": "#/$defs/localizedString" },
+        "url": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": ["live", "repository", "document", "article", "certificate", "case-study"]
+        },
+        "visibility": {
+          "type": "string",
+          "enum": ["public", "private"]
+        }
+      }
+    }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "slug",
+          "category",
+          "year",
+          "dateDisplay",
+          "sortOrder",
+          "title",
+          "organization",
+          "role",
+          "roleType",
+          "isCurrent",
+          "summary",
+          "overview",
+          "personalRoleDetail",
+          "executedWork",
+          "outcomesAndImpact",
+          "verifiedMetrics",
+          "coverImage",
+          "galleryImages",
+          "evidenceLinks",
+          "tags",
+          "relatedRoleIds",
+          "relatedProjectIds",
+          "relatedAwardIds",
+          "visibility",
+          "hasDetailedView"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "slug": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "academic",
+              "organizations",
+              "events",
+              "leadership",
+              "milestones"
+            ]
+          },
+          "year": { "type": "integer", "minimum": 2000, "maximum": 2100 },
+          "dateDisplay": { "$ref": "#/$defs/localizedString" },
+          "sortOrder": { "type": "integer", "minimum": 1 },
+          "title": { "$ref": "#/$defs/localizedString" },
+          "organization": { "$ref": "#/$defs/localizedString" },
+          "role": { "$ref": "#/$defs/localizedString" },
+          "roleType": {
+            "type": "string",
+            "enum": ["membership", "leadership", "specialist"]
+          },
+          "isCurrent": { "type": "boolean" },
+          "summary": { "$ref": "#/$defs/localizedString" },
+          "overview": { "$ref": "#/$defs/localizedString" },
+          "personalRoleDetail": { "$ref": "#/$defs/localizedString" },
+          "executedWork": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/localizedString" }
+          },
+          "outcomesAndImpact": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/localizedString" }
+          },
+          "verifiedMetrics": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["label", "value", "sourceNote"],
+              "properties": {
+                "label": { "$ref": "#/$defs/localizedString" },
+                "value": { "type": "string", "minLength": 1 },
+                "sourceNote": { "$ref": "#/$defs/localizedString" }
+              }
+            }
+          },
+          "coverImage": { "type": ["string", "null"] },
+          "galleryImages": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "evidenceLinks": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/evidenceLink" }
+          },
+          "tags": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "relatedRoleIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "relatedProjectIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "relatedAwardIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "visibility": {
+            "type": "string",
+            "enum": ["public", "private"]
+          },
+          "hasDetailedView": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nguyenminhtruc.site/schemas/media.schema.json",
+  "title": "Portfolio Media Assets Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assets"],
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "vi"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "vi": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "src",
+          "alt",
+          "caption",
+          "width",
+          "height",
+          "type",
+          "credits",
+          "visibility",
+          "status"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "src": { "type": ["string", "null"] },
+          "alt": { "$ref": "#/$defs/localizedString" },
+          "caption": { "$ref": "#/$defs/localizedString" },
+          "width": { "type": "integer", "minimum": 1 },
+          "height": { "type": "integer", "minimum": 1 },
+          "type": {
+            "type": "string",
+            "enum": [
+              "portrait",
+              "logo",
+              "activity",
+              "event",
+              "team-project",
+              "certificate",
+              "archive",
+              "diagram"
+            ]
+          },
+          "credits": {
+            "oneOf": [
+              { "$ref": "#/$defs/localizedString" },
+              { "type": "null" }
+            ]
+          },
+          "visibility": {
+            "type": "string",
+            "enum": ["public", "private"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["verified", "pending-upload"]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <defs>
+    <radialGradient id="glowFlagship" cx="50%" cy="48%" r="50%">
+      <stop offset="0%" stop-color="#D4A75A" stop-opacity="0.38"/>
+      <stop offset="60%" stop-color="#D4A75A" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7E3A8"/>
+      <stop offset="30%" stop-color="#DFB25B"/>
+      <stop offset="65%" stop-color="#B6822C"/>
+      <stop offset="100%" stop-color="#7D5414"/>
+    </linearGradient>
+    <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF6D6"/>
+      <stop offset="50%" stop-color="#D7A64B"/>
+      <stop offset="100%" stop-color="#8F631B"/>
+    </linearGradient>
+    <linearGradient id="pedestalDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A2E39"/>
+      <stop offset="50%" stop-color="#151820"/>
+      <stop offset="100%" stop-color="#0B0D12"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0F1115" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Soft Ambient Halo -->
+  <circle cx="160" cy="96" r="88" fill="url(#glowFlagship)"/>
+
+  <g filter="url(#dropShadow)">
+    <!-- Left Laurel Wing -->
+    <path d="M108 118 C82 110, 68 86, 74 56 C82 72, 92 84, 112 92 Z" fill="url(#goldBody)" opacity="0.9"/>
+    <path d="M98 128 C72 122, 56 98, 60 70 C70 86, 84 98, 106 104 Z" fill="url(#goldHighlight)" opacity="0.75"/>
+
+    <!-- Right Laurel Wing -->
+    <path d="M212 118 C238 110, 252 86, 246 56 C238 72, 228 84, 208 92 Z" fill="url(#goldBody)" opacity="0.9"/>
+    <path d="M222 128 C248 122, 264 98, 260 70 C250 86, 236 98, 214 104 Z" fill="url(#goldHighlight)" opacity="0.75"/>
+
+    <!-- Trophy Handles -->
+    <path d="M118 52 C92 52, 88 88, 114 96 C120 98, 124 94, 126 90" stroke="url(#goldBody)" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M202 52 C228 52, 232 88, 206 96 C200 98, 196 94, 194 90" stroke="url(#goldBody)" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+    <!-- Trophy Cup Bowl -->
+    <path d="M114 36 H206 L198 86 C194 110, 178 122, 160 122 C142 122, 126 110, 122 86 Z" fill="url(#goldBody)"/>
+    <!-- Specular Sheen on Cup -->
+    <path d="M124 40 H148 L144 92 C142 104, 136 112, 130 106 C126 100, 125 76, 124 40 Z" fill="#FFF7DC" opacity="0.45"/>
+    <!-- Cup Top Rim -->
+    <rect x="110" y="30" width="100" height="8" rx="4" fill="url(#goldHighlight)"/>
+
+    <!-- Center Raised Star Emblem on Cup -->
+    <polygon points="160,52 166,65 180,67 170,77 172,91 160,84 148,91 150,77 140,67 154,65" fill="#FFF9E6" stroke="#9B6B1E" stroke-width="1.2"/>
+
+    <!-- Trophy Stem -->
+    <path d="M152 122 H168 L172 146 H148 Z" fill="url(#goldHighlight)"/>
+    <ellipse cx="160" cy="146" rx="22" ry="5" fill="url(#goldBody)"/>
+
+    <!-- Trophy Pedestal Base -->
+    <path d="M126 148 H194 L202 172 H118 Z" fill="url(#pedestalDark)"/>
+    <rect x="112" y="170" width="96" height="8" rx="3" fill="url(#pedestalDark)"/>
+    <!-- Gold Nameplate on Pedestal -->
+    <rect x="136" y="155" width="48" height="10" rx="2" fill="url(#goldBody)"/>
+    <line x1="144" y1="160" x2="176" y2="160" stroke="#2A1E08" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Subtle Sparkle Accents -->
+  <circle cx="102" cy="36" r="2" fill="#D4A75A"/>
+  <circle cx="220" cy="42" r="2.5" fill="#D4A75A"/>
+  <circle cx="160" cy="18" r="2" fill="#D4A75A"/>
+</svg>

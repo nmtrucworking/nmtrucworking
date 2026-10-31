@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <defs>
+    <radialGradient id="glowEmerald" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.26"/>
+      <stop offset="70%" stop-color="#10B981" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="emeraldMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6EE7B7"/>
+      <stop offset="40%" stop-color="#10B981"/>
+      <stop offset="80%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+    <linearGradient id="goldSeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+    <filter id="shadowCert" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0F1115" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <circle cx="160" cy="98" r="86" fill="url(#glowEmerald)"/>
+
+  <g filter="url(#shadowCert)">
+    <!-- Outer Certificate Frame -->
+    <rect x="68" y="28" width="184" height="132" rx="10" fill="#1E242B" stroke="url(#emeraldMetal)" stroke-width="3"/>
+    <!-- Inner Parchment Paper -->
+    <rect x="76" y="36" width="168" height="116" rx="6" fill="#FAF9F5"/>
+    <!-- Ornamental Guilloche Border -->
+    <rect x="82" y="42" width="156" height="104" rx="4" fill="none" stroke="#047857" stroke-width="1.2" stroke-opacity="0.35"/>
+
+    <!-- Certificate Header Bar -->
+    <rect x="126" y="52" width="68" height="6" rx="3" fill="#065F46"/>
+    <rect x="104" y="66" width="112" height="8" rx="4" fill="#111827"/>
+    <rect x="116" y="82" width="88" height="4" rx="2" fill="#9CA3AF"/>
+    <rect x="108" y="92" width="104" height="4" rx="2" fill="#9CA3AF"/>
+    <rect x="124" y="102" width="72" height="4" rx="2" fill="#D1D5DB"/>
+
+    <!-- Signature Line Left -->
+    <line x1="98" y1="128" x2="138" y2="128" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Embossed Emerald & Gold Ribbon Seal Right -->
+    <path d="M198 134 L192 168 L202 160 L208 170 L208 134 Z" fill="#047857"/>
+    <path d="M210 134 L214 168 L222 158 L230 166 L220 134 Z" fill="#065F46"/>
+    <circle cx="208" cy="126" r="18" fill="url(#goldSeal)" stroke="#FEF3C7" stroke-width="1.5"/>
+    <circle cx="208" cy="126" r="13" fill="none" stroke="#FFFBEB" stroke-width="1" stroke-dasharray="2 2"/>
+    <polygon points="208,117 210.5,122.5 216.5,123 212,127 213.5,133 208,129.8 202.5,133 204,127 199.5,123 205.5,122.5" fill="#FFFBEB"/>
+  </g>
+</svg>

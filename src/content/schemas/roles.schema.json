@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nguyenminhtruc.site/schemas/roles.schema.json",
+  "title": "Portfolio Roles & Affiliations",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["privacySettings", "roles"],
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "vi"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "vi": { "type": "string", "minLength": 1 }
+      }
+    },
+    "evidenceLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url", "type", "visibility"],
+      "properties": {
+        "label": { "$ref": "#/$defs/localizedString" },
+        "url": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": ["live", "repository", "document", "article", "certificate", "case-study"]
+        },
+        "visibility": {
+          "type": "string",
+          "enum": ["public", "private"]
+        }
+      }
+    }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "privacySettings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["showPoliticalMembershipByDefault", "allowVisitorPoliticalToggle"],
+      "properties": {
+        "showPoliticalMembershipByDefault": { "type": "boolean" },
+        "allowVisitorPoliticalToggle": { "type": "boolean" }
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "organization",
+          "organizationShort",
+          "organizationLogo",
+          "category",
+          "roleType",
+          "startDate",
+          "startDateNote",
+          "endDate",
+          "isCurrent",
+          "shortDescription",
+          "detailedDescription",
+          "responsibilities",
+          "contributions",
+          "relatedProjects",
+          "relatedActivityIds",
+          "relatedAwardIds",
+          "coverImage",
+          "galleryImages",
+          "evidenceLinks",
+          "visibility",
+          "verificationStatus"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "title": { "$ref": "#/$defs/localizedString" },
+          "organization": { "$ref": "#/$defs/localizedString" },
+          "organizationShort": { "type": "string", "minLength": 1 },
+          "organizationLogo": { "type": ["string", "null"] },
+          "category": {
+            "type": "string",
+            "enum": [
+              "political-civic",
+              "leadership-organizations",
+              "professional-technical",
+              "community-volunteering"
+            ]
+          },
+          "roleType": {
+            "type": "string",
+            "enum": ["membership", "leadership", "specialist"]
+          },
+          "startDate": { "type": ["string", "null"] },
+          "startDateNote": {
+            "oneOf": [
+              { "$ref": "#/$defs/localizedString" },
+              { "type": "null" }
+            ]
+          },
+          "endDate": { "type": ["string", "null"] },
+          "isCurrent": { "type": "boolean" },
+          "shortDescription": { "$ref": "#/$defs/localizedString" },
+          "detailedDescription": { "$ref": "#/$defs/localizedString" },
+          "responsibilities": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/localizedString" }
+          },
+          "contributions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "title", "subtitle", "description", "evidence"],
+              "properties": {
+                "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+                "title": { "$ref": "#/$defs/localizedString" },
+                "subtitle": { "$ref": "#/$defs/localizedString" },
+                "description": { "$ref": "#/$defs/localizedString" },
+                "evidence": {
+                  "type": "array",
+                  "items": { "type": "string", "minLength": 1 }
+                }
+              }
+            }
+          },
+          "relatedProjects": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "relatedActivityIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "relatedAwardIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "coverImage": { "type": ["string", "null"] },
+          "galleryImages": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+          },
+          "evidenceLinks": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/evidenceLink" }
+          },
+          "visibility": {
+            "type": "string",
+            "enum": ["public", "private"]
+          },
+          "verificationStatus": {
+            "type": "string",
+            "enum": ["verified", "partial-pending-documents"]
+          }
+        }
+      }
+    }
+  }
+}

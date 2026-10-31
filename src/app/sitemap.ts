@@ -1,12 +1,13 @@
 import { MetadataRoute } from 'next';
-import { loadProjects, loadSiteConfig } from '@/content/load';
+import { loadJourneyItems, loadProjects, loadSiteConfig } from '@/content/load';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const site = loadSiteConfig();
   const projects = loadProjects();
+  const journeyItems = loadJourneyItems();
   const baseUrl = site.baseUrl;
 
-  const routes = ['', '/work', '/about', '/contact', '/cv', '/privacy'];
+  const routes = ['', '/work', '/journey', '/about', '/contact', '/cv', '/privacy'];
   const locales = ['en', 'vi'];
 
   const sitemapItems: MetadataRoute.Sitemap = [];
@@ -36,6 +37,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
             languages: {
               en: `${baseUrl}/en/work/${project.slug}`,
               vi: `${baseUrl}/vi/work/${project.slug}`,
+            },
+          },
+        });
+      }
+    }
+
+    for (const item of journeyItems) {
+      if (item.visibility === 'public') {
+        sitemapItems.push({
+          url: `${baseUrl}/${locale}/journey/${item.slug}`,
+          changeFrequency: 'monthly',
+          priority: 0.8,
+          alternates: {
+            languages: {
+              en: `${baseUrl}/en/journey/${item.slug}`,
+              vi: `${baseUrl}/vi/journey/${item.slug}`,
             },
           },
         });
