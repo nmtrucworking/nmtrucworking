@@ -41,6 +41,18 @@ I specialize in bridging the gap between business strategy, system architecture,
 
 ---
 
+### 🧠 Vocelune — Adaptive Vocabulary Learning
+
+**[Vocelune](https://github.com/nmtrucworking/Vocelune)** is an English vocabulary-learning application focused on **Active Recall**, **FSRS-6 adaptive spaced repetition**, configurable assessments, and measurable study activity.
+
+- **Product workflows:** Flashcard self-grading, vocabulary decks, CSV/XLSX imports, practice tests, and review statistics.
+- **Architecture:** Next.js 15, NestJS 11, TypeScript, Prisma/PostgreSQL, Redis/BullMQ, and `ts-fsrs`.
+- **Project stage:** Functional application in active development; learning-outcome gains and production readiness have not been independently verified.
+
+[Explore the portfolio case study](https://nguyenminhtruc.site/en/work/vocelune) · [View source code](https://github.com/nmtrucworking/Vocelune)
+
+---
+
 ### 🌐 Connect & Portfolio Repository
 
 This repository (`nmtrucworking/nmtrucworking`) contains the source code for my **Bilingual Personal Portfolio Website** built with Next.js App Router, Tailwind CSS, and JSON Schema Data Validation.
